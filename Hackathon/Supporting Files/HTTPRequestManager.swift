@@ -72,19 +72,19 @@ class HTTPRequestManager {
             case HttpStatusCode.ok.statusCode,
                  HttpStatusCode.accepted.statusCode,
                  HttpStatusCode.created.statusCode:
-                let json = JSON(data: response.data!)
-                if json["error"].stringValue.isEmpty {
-                    completion(JSON(data: response.data!))
+                let json = try? JSON(data: response.data!)
+                if json!["error"].stringValue.isEmpty {
+                    completion( try! JSON(data: response.data!))
                     break;
                 }
-                error(json["error"].stringValue)
+                error(json!["error"].stringValue)
                 break
             default:
                 
-                let json = JSON(data: response.data!)
-                if !json.isEmpty {
+                let json = try? JSON(data: response.data!)
+                if (json?.isEmpty)! {
                     print(json)
-                    let message = json["error"].stringValue
+                    let message = json!["error"].stringValue
                     if  message != ""
                     {
                         error(message)
