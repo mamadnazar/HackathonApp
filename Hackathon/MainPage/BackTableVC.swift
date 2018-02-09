@@ -10,8 +10,11 @@ import UIKit
 
 class BackTableVC: UITableViewController {
 
-    private let tableArray = ["" , "о хакатоне" , "новости и объявления" , "лайфхаки" , "спонсоры" ,
+    private let tableArray = ["расписание","о хакатоне" , "новости и объявления" , "лайфхаки" , "спонсоры" ,
                               "менторы" , "вопросы и ответы" , "правила поведения и участия" , "списки команд" , "о приложении"]
+    
+    private let vcs = ["ScheduleVC" , "AboutHackVC" , "NewsVC" , "LifehacksVC" , "SponsorsVC" , "MenyorsVC" , "QuestionsVC" , "RulesVC" , "TeamsVC" , "AboutAppVC"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,5 +35,13 @@ class BackTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         cell.textLabel?.text = tableArray[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let revealVC = revealViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: vcs[indexPath.row])
+        revealVC?.pushFrontViewController(vc, animated: true)
+        
     }
 }

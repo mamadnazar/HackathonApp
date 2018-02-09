@@ -65,41 +65,41 @@ class HTTPRequestManager {
             
             print("\(statusCode) - \(api)")
             
-//            switch(statusCode) {
-//            case HttpStatusCode.unauthorized.statusCode:
-//                error("Вам нужно войти, чтобы выполнить это действие")
-//                break
-//            case HttpStatusCode.ok.statusCode,
-//                 HttpStatusCode.accepted.statusCode,
-//                 HttpStatusCode.created.statusCode:
-//                let json = JSON(data: response.data!)
-//                if json["error"].stringValue.isEmpty {
-//                    completion(JSON(data: response.data!))
-//                    break;
-//                }
-//                error(json["error"].stringValue)
-//                break
-//            default:
-//
-//                let json = JSON(data: response.data!)
-//                if !json.isEmpty {
-//                    print(json)
-//                    let message = json["error"].stringValue
-//                    if  message != ""
-//                    {
-//                        error(message)
-//                    } else {
-//                        error("Неизвестная ошибка")
-//                    }
-//                } else {
-//                    if let data = response.data {
-//                        let json = String(data: data, encoding: String.Encoding.utf8)
-//                        error(json!)
-//                    } else {
-//                        error("")
-//                    }
-//                }
-//            }
+            switch(statusCode) {
+            case HttpStatusCode.unauthorized.statusCode:
+                error("Вам нужно войти, чтобы выполнить это действие")
+                break
+            case HttpStatusCode.ok.statusCode,
+                 HttpStatusCode.accepted.statusCode,
+                 HttpStatusCode.created.statusCode:
+                let json = try? JSON(data: response.data!)
+                if json!["error"].stringValue.isEmpty {
+                    completion( try! JSON(data: response.data!))
+                    break;
+                }
+                error(json!["error"].stringValue)
+                break
+            default:
+                
+                let json = try? JSON(data: response.data!)
+                if (json?.isEmpty)! {
+                    print(json)
+                    let message = json!["error"].stringValue
+                    if  message != ""
+                    {
+                        error(message)
+                    } else {
+                        error("Неизвестная ошибка")
+                    }
+                } else {
+                    if let data = response.data {
+                        let json = String(data: data, encoding: String.Encoding.utf8)
+                        error(json!)
+                    } else {
+                        error("")
+                    }
+                }
+            }
         }
     }
     
