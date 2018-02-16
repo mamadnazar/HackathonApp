@@ -19,6 +19,15 @@
 		842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99D2028639F00F731D0 /* ServerManager.swift */; };
 		842DAD4B202B145300027534 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DAD4A202B145300027534 /* BackTableVC.swift */; };
 		844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */; };
+		FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */; };
+		FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D82034163B00827B40 /* NewsViewController.swift */; };
+		FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660DB2034487800827B40 /* LifehacksViewController.swift */; };
+		FC8660DE203448C000827B40 /* LifehacksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660DD203448C000827B40 /* LifehacksTableViewCell.swift */; };
+		FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660E0203451E500827B40 /* FAQTableViewCell.swift */; };
+		FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660E2203451FE00827B40 /* FAQViewController.swift */; };
+		FC8660E620345CA800827B40 /* PartnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660E520345CA800827B40 /* PartnersViewController.swift */; };
+		FC8660EA2034635300827B40 /* PartnersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660E92034635300827B40 /* PartnersTableViewCell.swift */; };
+		FC9BE4B82036D37F00034B12 /* PartnersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9BE4B72036D37F00034B12 /* PartnersCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +49,15 @@
 		844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		844CBD0B2029DF64002DBB01 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FB390A269A2C3948B29F0D27 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		FC8660D82034163B00827B40 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		FC8660DB2034487800827B40 /* LifehacksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifehacksViewController.swift; sourceTree = "<group>"; };
+		FC8660DD203448C000827B40 /* LifehacksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifehacksTableViewCell.swift; sourceTree = "<group>"; };
+		FC8660E0203451E500827B40 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		FC8660E2203451FE00827B40 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		FC8660E520345CA800827B40 /* PartnersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersViewController.swift; sourceTree = "<group>"; };
+		FC8660E92034635300827B40 /* PartnersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersTableViewCell.swift; sourceTree = "<group>"; };
+		FC9BE4B72036D37F00034B12 /* PartnersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,10 @@
 		842BA99F2028668800F731D0 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				FC8660E420345C8B00827B40 /* Partners */,
+				FC8660DF203451CF00827B40 /* FAQ */,
+				FC8660DA2034485F00827B40 /* Lifehacks */,
+				FC8660D32034157900827B40 /* News */,
 				842BA98420285CCE00F731D0 /* ViewController.swift */,
 				842BA98620285CCE00F731D0 /* Main.storyboard */,
 				842DAD4A202B145300027534 /* BackTableVC.swift */,
@@ -124,6 +146,43 @@
 				616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC8660D32034157900827B40 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */,
+				FC8660D82034163B00827B40 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		FC8660DA2034485F00827B40 /* Lifehacks */ = {
+			isa = PBXGroup;
+			children = (
+				FC8660DB2034487800827B40 /* LifehacksViewController.swift */,
+				FC8660DD203448C000827B40 /* LifehacksTableViewCell.swift */,
+			);
+			path = Lifehacks;
+			sourceTree = "<group>";
+		};
+		FC8660DF203451CF00827B40 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				FC8660E0203451E500827B40 /* FAQTableViewCell.swift */,
+				FC8660E2203451FE00827B40 /* FAQViewController.swift */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		FC8660E420345C8B00827B40 /* Partners */ = {
+			isa = PBXGroup;
+			children = (
+				FC8660E520345CA800827B40 /* PartnersViewController.swift */,
+				FC8660E92034635300827B40 /* PartnersTableViewCell.swift */,
+				FC9BE4B72036D37F00034B12 /* PartnersCollectionViewCell.swift */,
+			);
+			path = Partners;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +321,19 @@
 			files = (
 				844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */,
 				842BA98520285CCE00F731D0 /* ViewController.swift in Sources */,
+				FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */,
+				FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */,
+				FC8660DE203448C000827B40 /* LifehacksTableViewCell.swift in Sources */,
+				FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */,
+				FC8660E620345CA800827B40 /* PartnersViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
+				FC9BE4B82036D37F00034B12 /* PartnersCollectionViewCell.swift in Sources */,
+				FC8660EA2034635300827B40 /* PartnersTableViewCell.swift in Sources */,
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
 				842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */,
+				FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */,
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
+				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				842DAD4B202B145300027534 /* BackTableVC.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
 			);
