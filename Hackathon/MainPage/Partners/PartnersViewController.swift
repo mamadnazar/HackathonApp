@@ -8,29 +8,27 @@
 
 import UIKit
 
-class PartnersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
- 
-    let partnersDictionary = ["Sponsors": ["ArabMoney", "Rakuten"], "Partners": ["Fly Emirates", "AIG", "Yokohama", "Shoro", "Nashe"], "Organizers": ["Neobis", "MadDevs"]]
+class PartnersViewController: UIViewController//, UICollectionViewDelegate, UICollectionViewDataSource
+{
     
-    @IBOutlet weak var partnersTableView: UITableView!
+    let partnersDictionary = ["Sponsors": ["ArabMoney", "Rakuten"], "Partners": ["Fly Emirates", "AIG", "Yokohama", "Shoro", "Nashe"], "Organizers": ["Neobis", "MadDevs"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
 
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        <#code#>
+//    }
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return partnersDictionary.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = partnersTableView.dequeueReusableCell(withIdentifier: "partnersTableViewCell") as! PartnersTableViewCell
-        cell.partnersLbl.text = Array(partnersDictionary.keys)[indexPath.row]
-        
-        return cell
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableCell(withReuseIdentifier: "partnersHeaderView", for: indexPath)
+        return headerView
     }
     
 }

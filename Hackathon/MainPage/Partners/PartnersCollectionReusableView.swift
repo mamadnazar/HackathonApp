@@ -1,5 +1,5 @@
 //
-//  PartnersCollectionViewCell.swift
+//  PartnersCollectionReusableView.swift
 //  Hackathon
 //
 //  Created by ITLabAdmin on 2/19/18.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class PartnersCollectionViewCell: UICollectionViewCell {
-    
+class PartnersCollectionReusableView: UICollectionReusableView {
+        
 }

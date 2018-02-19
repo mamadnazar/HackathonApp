@@ -19,10 +19,9 @@ class ServerManager: HTTPRequestManager  {
         return Static.instance
     }
     
-
 // Commented lines below are kind of a template
-//    func getAllStories(_ completion: @escaping (Stories)-> Void, error: @escaping (String)-> Void) {
-//        self.get(api: "stories", completion: { (json) in
+//    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
+//        self.get(api: "info/about", completion: { (json) in
 //            completion(Stories(json: json))
 //        }, error: error)
 //    }

@@ -17,7 +17,7 @@ class HTTPRequestManager {
     typealias FailureHandler = (String)-> Void
     typealias Parameter = [String: Any]?
     
-    let url = ""
+    let url = "http://165.227.147.84/"
     
     private func request(method: HTTPMethod, api: String, parameters: Parameter, header: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         

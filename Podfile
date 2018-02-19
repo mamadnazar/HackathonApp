@@ -9,6 +9,6 @@ target 'Hackathon' do
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 4.4'
     pod 'IQKeyboardManagerSwift', '5.0.0'
-
+    pod 'SJSegmentedScrollView'
 
 end
