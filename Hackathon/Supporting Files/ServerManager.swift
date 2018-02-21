@@ -19,6 +19,12 @@ class ServerManager: HTTPRequestManager  {
         return Static.instance
     }
     
+    func getAboutHack(_ completion: @escaping (AboutHack)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "info/about/1", completion: { (json) in
+            completion(AboutHack(json: json))
+        }, error: error)
+    }
+    
 // Commented lines below are kind of a template
 //    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "info/about", completion: { (json) in

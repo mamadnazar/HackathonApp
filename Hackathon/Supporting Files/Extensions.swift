@@ -49,6 +49,20 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func setNavigationBar() {
+        let revealVC =  self.revealViewController()
+        if revealVC != nil {
+            let leftButton = UIBarButtonItem(image: UIImage(named: "burger"),
+                                             style: .plain,
+                                             target: revealVC,
+                                             action:  #selector(SWRevealViewController.revealToggle(_:)))
+            
+            self.navigationItem.leftBarButtonItem = leftButton
+            // self.navigationController!.navigationItem.leftBarButtonItem = leftButton
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
     
 }
 extension UIColor {
