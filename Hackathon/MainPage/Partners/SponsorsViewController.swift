@@ -11,9 +11,6 @@ import Kingfisher
 
 class SponsorsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    let sponsorsType = ["Sponsors", "Partners", "Organizers"]
-    let partnersSponsors = [["ArabMoney", "Rakuten"], ["Fly Emirates", "AIG", "Yokohama", "Shoro", "Nashe"], ["Neobis", "MadDevs"]]
-    
     var sponsorTypes = SponsorTypes()
     
     @IBOutlet weak var sponsorsCollectionView: UICollectionView!
