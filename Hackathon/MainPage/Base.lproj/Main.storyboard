@@ -346,7 +346,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vF-Y7-dtn">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="50"/>
+                                            <rect key="frame" x="8" y="0.0" width="339" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -927,5 +927,6 @@
         <image name="burger" width="25" height="25"/>
         <image name="festLogoRed" width="283" height="210"/>
         <image name="festLogoWhite" width="261" height="193"/>
+        <image name="lifehacksImg" width="495" height="495"/>
     </resources>
 </document>
