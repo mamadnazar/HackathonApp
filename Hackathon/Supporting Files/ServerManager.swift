@@ -25,6 +25,12 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
     
+    func getSponsors(_ completion: @escaping (SponsorTypes)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "info/companies", completion: { (json) in
+            completion(SponsorTypes(json: json))
+        }, error: error)
+    }
+  
 // Commented lines below are kind of a template
 //    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "info/about", completion: { (json) in

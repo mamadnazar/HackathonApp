@@ -10,5 +10,9 @@ import UIKit
 
 class SponsorsCollectionReusableView: UICollectionReusableView {
         
-    @IBOutlet weak var sponsorsHeaderLabel: UILabel!
+    @IBOutlet weak var sponsorsHeaderLabel: UILabel! {
+        didSet {
+            sponsorsHeaderLabel.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+        }
+    }
 }

@@ -19,6 +19,8 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         self.setNavigationBar()
+        
+        newsTableView.tableFooterView = UIView()
         newsTableView.rowHeight = UITableViewAutomaticDimension
         newsTableView.estimatedRowHeight = 110
         // Do any additional setup after loading the view.

@@ -191,32 +191,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="157" height="176"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-BF-PP6">
-                                                    <rect key="frame" x="0.0" y="155.5" width="157" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lifehacksImg" translatesAutoresizingMaskIntoConstraints="NO" id="L9r-Lq-ac2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="155.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lifehacksImg" translatesAutoresizingMaskIntoConstraints="NO" id="L9r-Lq-ac2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="176"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="YQZ-BF-PP6" firstAttribute="leading" secondItem="eRo-fb-Nh5" secondAttribute="leading" id="25l-mA-tQi"/>
-                                            <constraint firstAttribute="trailing" secondItem="YQZ-BF-PP6" secondAttribute="trailing" id="40c-TA-e0v"/>
-                                            <constraint firstItem="YQZ-BF-PP6" firstAttribute="top" secondItem="L9r-Lq-ac2" secondAttribute="bottom" id="Ek2-N7-VRr"/>
-                                            <constraint firstAttribute="bottom" secondItem="YQZ-BF-PP6" secondAttribute="bottom" id="Yqe-sk-i02"/>
+                                            <constraint firstAttribute="bottom" secondItem="L9r-Lq-ac2" secondAttribute="bottom" id="BzB-QR-ne6"/>
                                             <constraint firstAttribute="trailing" secondItem="L9r-Lq-ac2" secondAttribute="trailing" id="Z7V-3u-Gdx"/>
                                             <constraint firstItem="L9r-Lq-ac2" firstAttribute="top" secondItem="eRo-fb-Nh5" secondAttribute="top" id="hjh-qO-xgy"/>
                                             <constraint firstItem="L9r-Lq-ac2" firstAttribute="leading" secondItem="eRo-fb-Nh5" secondAttribute="leading" id="zic-js-WGj"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="sponsorsImageView" destination="L9r-Lq-ac2" id="cWM-ra-97w"/>
-                                            <outlet property="sponsorsLabel" destination="YQZ-BF-PP6" id="9eZ-K9-oys"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -230,10 +226,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkm-5O-osf">
+                                            <rect key="frame" x="8" y="37" width="287" height="1"/>
+                                            <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="Vuq-3L-sJM"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jkm-5O-osf" secondAttribute="trailing" constant="60" id="GsM-wD-ffv"/>
+                                        <constraint firstItem="jkm-5O-osf" firstAttribute="top" secondItem="kk9-uU-aHV" secondAttribute="top" constant="37" id="Oji-rk-UfS"/>
                                         <constraint firstAttribute="bottom" secondItem="4vF-Y7-dtn" secondAttribute="bottom" id="WZ7-Dk-G71"/>
                                         <constraint firstAttribute="trailing" secondItem="4vF-Y7-dtn" secondAttribute="trailing" constant="8" id="fXw-qy-7io"/>
+                                        <constraint firstItem="jkm-5O-osf" firstAttribute="leading" secondItem="4vF-Y7-dtn" secondAttribute="leading" id="gBL-tY-e8C"/>
                                         <constraint firstItem="4vF-Y7-dtn" firstAttribute="top" secondItem="kk9-uU-aHV" secondAttribute="top" id="jnz-9M-gd1"/>
                                         <constraint firstItem="4vF-Y7-dtn" firstAttribute="leading" secondItem="kk9-uU-aHV" secondAttribute="leading" constant="8" id="rbq-q6-oHr"/>
                                     </constraints>
@@ -263,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qa2-er-aIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="1535"/>
+            <point key="canvasLocation" x="876" y="1597"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="peL-F1-1eg">
