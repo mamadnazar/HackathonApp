@@ -11,9 +11,9 @@ import UIKit
 class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let tableArray = ["Расписание","О хакатоне" , "Новости и объявления" , "Лайфхаки" , "Спонсоры" ,
-                              "Менторы" , "Вопросы и ответы" , "Правила поведения и участия" , "Списки команд" , "О приложении"]
+                              "Менторы" , "Вопросы и ответы" , "Правила поведения и участия" , "Списки команд" , "О приложении" , "Отзывы"]
     
-    private let vcs = ["ScheduleVC" , "AboutHackathonVC" , "NewsVC" , "LifehacksVC" , "PartnersVC" , "MentorsVC" , "QuestionsVC" , "RulesVC" , "TeamsViewController" , "AboutAppVC"]
+    private let vcs = ["ScheduleVC" , "AboutHackathonVC" , "NewsVC" , "LifehacksVC" , "PartnersVC" , "MentorsVC" , "QuestionsVC" , "RulesVC" , "TeamsVC" , "AboutAppVC" ,"FeedbackVC"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

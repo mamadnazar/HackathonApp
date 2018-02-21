@@ -610,7 +610,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6F-Iy-q3i">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Оставьте отзыв или задайте вопрос" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6F-Iy-q3i">
                                 <rect key="frame" x="16" y="132" width="343" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="pQ6-7a-grY"/>
@@ -628,22 +628,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NN-1h-zu7">
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Ваши данные" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NN-1h-zu7">
                                 <rect key="frame" x="16" y="398" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iSL-bj-mbv"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardAppearance="light"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-rx-O70">
-                                <rect key="frame" x="0.0" y="577" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-rx-O70">
+                                <rect key="frame" x="88" y="577" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.96279579401016235" green="0.33162254095077515" blue="0.31571149826049805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GFm-aa-KrB"/>
+                                    <constraint firstAttribute="width" constant="200" id="zAL-0Q-JkV"/>
                                 </constraints>
-                                <state key="normal" title=" отправить">
+                                <size key="titleShadowOffset" width="5" height="0.0"/>
+                                <state key="normal" title="Отправить">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -662,12 +664,11 @@
                             <constraint firstItem="Bgh-U0-8Fg" firstAttribute="trailing" secondItem="OVF-gE-foB" secondAttribute="trailing" constant="16" id="Xuj-O1-QuV"/>
                             <constraint firstItem="OVF-gE-foB" firstAttribute="leading" secondItem="Bgh-U0-8Fg" secondAttribute="leading" constant="16" id="acc-CS-lMn"/>
                             <constraint firstItem="nEk-g9-UaC" firstAttribute="leading" secondItem="Bgh-U0-8Fg" secondAttribute="leading" id="ebd-S7-jaN"/>
-                            <constraint firstItem="Z9d-rx-O70" firstAttribute="leading" secondItem="Bgh-U0-8Fg" secondAttribute="leading" id="jtF-Zs-xpm"/>
                             <constraint firstItem="Bgh-U0-8Fg" firstAttribute="trailing" secondItem="c6F-Iy-q3i" secondAttribute="trailing" constant="16" id="lUX-eK-sXW"/>
                             <constraint firstItem="Bgh-U0-8Fg" firstAttribute="bottom" secondItem="Z9d-rx-O70" secondAttribute="bottom" constant="40" id="lgr-yh-aU4"/>
+                            <constraint firstItem="Z9d-rx-O70" firstAttribute="centerX" secondItem="X0e-pe-ECh" secondAttribute="centerX" id="r5b-0c-F9M"/>
                             <constraint firstItem="c6F-Iy-q3i" firstAttribute="leading" secondItem="Bgh-U0-8Fg" secondAttribute="leading" constant="16" id="uV6-K3-kZo"/>
                             <constraint firstItem="OVF-gE-foB" firstAttribute="top" secondItem="c6F-Iy-q3i" secondAttribute="bottom" constant="20" id="xBc-d8-fjD"/>
-                            <constraint firstItem="Bgh-U0-8Fg" firstAttribute="trailing" secondItem="Z9d-rx-O70" secondAttribute="trailing" id="zRK-mT-nVs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bgh-U0-8Fg"/>
                     </view>
@@ -679,7 +680,7 @@
         <!--Team List View Controller-->
         <scene sceneID="NtF-rp-04o">
             <objects>
-                <viewController restorationIdentifier="TeamListViewController" storyboardIdentifier="TeamsViewController" id="NuW-Lc-kQm" customClass="TeamListViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="TeamListViewController" storyboardIdentifier="TeamsVC" id="NuW-Lc-kQm" customClass="TeamListViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmW-BN-zOp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
