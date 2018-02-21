@@ -18,8 +18,15 @@ class SponsorsViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setNavigationBar()
         // Do any additional setup after loading the view.
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Спонсоры"
+    }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return partnersSponsors.count

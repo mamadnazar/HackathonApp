@@ -19,8 +19,15 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setNavigationBar()
+        
         LifeHacksTableView.rowHeight = UITableViewAutomaticDimension
         LifeHacksTableView.estimatedRowHeight = 110
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Sponsors and Partners"
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

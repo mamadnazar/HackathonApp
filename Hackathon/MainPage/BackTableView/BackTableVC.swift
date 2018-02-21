@@ -40,7 +40,8 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let revealVC = revealViewController()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: vcs[indexPath.row])
-        revealVC?.pushFrontViewController(vc, animated: true)
+        let nvc = UINavigationController(rootViewController: vc)
+        revealVC?.pushFrontViewController(nvc, animated: true)
         
     }
 }

@@ -21,6 +21,11 @@ class AboutHackathonViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "О хакатоне"
+    }
+    
     func setAboutHack(aboutHack: AboutHack) {
         aboutHackathonDescriptionLbl.text = aboutHack.title
         print(aboutHack)

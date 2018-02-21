@@ -18,10 +18,15 @@ class FAQViewController: UIViewController, UITableViewDataSource, UITableViewDel
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        self.setNavigationBar()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Вопросы и ответы"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return faqQuestions.count
     }

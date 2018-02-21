@@ -14,6 +14,8 @@ class ScheduleViewController: SJSegmentedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setNavigationBar()
+        
         if let storyboard = self.storyboard {
             
             let headerController = storyboard
@@ -50,6 +52,11 @@ class ScheduleViewController: SJSegmentedViewController {
         }
         title = "Segment"
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Расписание"
     }
 
 

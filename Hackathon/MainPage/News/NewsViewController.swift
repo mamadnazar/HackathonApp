@@ -18,9 +18,15 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setNavigationBar()
         newsTableView.rowHeight = UITableViewAutomaticDimension
         newsTableView.estimatedRowHeight = 110
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Новости и объявления"
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
