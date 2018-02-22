@@ -22,9 +22,20 @@ class TeamListViewController: UIViewController {
         setNavigationBar()
         
         let cn : String = Shared.shared.companyName ?? "Select Team"
-        btnSelect.setTitle(cn,for: .normal)
+        btnSelect.setTitle(cn,for: .selected)
+        btnSelect.backgroundColor = UIColor.white
+        btnSelect.layer.shadowColor = UIColor.lightGray.cgColor
+        btnSelect.layer.shadowRadius = 10
+        btnSelect.layer.shadowOpacity = 50
+        btnSelect.layer.shadowOffset = CGSize(width: 0, height: 0)
         
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Список команд"
     }
     
     @IBAction func openTeamListVC(_ sender: UIButton) {
@@ -52,9 +63,10 @@ class TeamListViewController: UIViewController {
     }
     
     func hideListView() {
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.4, animations: {
             self.listView.alpha = 0
             self.listView.center = CGPoint(x: self.view.bounds.midX, y: -200)
+        }) { (success) in
             self.listView.removeFromSuperview()
         }
     }
@@ -74,6 +86,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell()
         cell.textLabel?.text = listOfTeams[indexPath.row]
         cell.backgroundColor = .clear
+        cell.textLabel?.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
         return cell
     }
     

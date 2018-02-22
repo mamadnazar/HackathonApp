@@ -30,6 +30,7 @@
 		8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C203203D8AD4007DA602 /* SponsorsViewController.swift */; };
 		8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */; };
 		8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */; };
+		84CDE750203DB2210007F978 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDE74F203DB2210007F978 /* FeedbackViewController.swift */; };
 		FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */; };
 		FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D82034163B00827B40 /* NewsViewController.swift */; };
 		FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660DB2034487800827B40 /* LifehacksViewController.swift */; };
@@ -67,6 +68,7 @@
 		8488C203203D8AD4007DA602 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionReusableView.swift; sourceTree = "<group>"; };
+		84CDE74F203DB2210007F978 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		FB390A269A2C3948B29F0D27 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		FC8660D82034163B00827B40 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		842BA99F2028668800F731D0 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				84CDE74E203DB20B0007F978 /* Feedback */,
 				8419F9DE203D8B3500342EDE /* BackTableView */,
 				8419F9DB203D8ADB00342EDE /* TeamList */,
 				84059DF8203AE7FB00229ED8 /* Schedule */,
@@ -218,6 +221,15 @@
 				842BA98620285CCE00F731D0 /* Main.storyboard */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		84CDE74E203DB20B0007F978 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				84CDE74F203DB2210007F978 /* FeedbackViewController.swift */,
+			);
+			name = Feedback;
+			path = ../Feedback;
 			sourceTree = "<group>";
 		};
 		E4C7135FEFEFB313FA67D28F /* Frameworks */ = {
@@ -424,6 +436,7 @@
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
+				84CDE750203DB2210007F978 /* FeedbackViewController.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
 				8419F9DD203D8AF400342EDE /* TeamListVC.swift in Sources */,
 			);
