@@ -35,6 +35,7 @@
 		CE06ECCE203EA3BC00ACE8E0 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */; };
 		CE06ECD0203EAA5600ACE8E0 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */; };
 		CE06ECD2203EAA7000ACE8E0 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */; };
+		CE06ECD4203EB44B00ACE8E0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD3203EB44B00ACE8E0 /* News.swift */; };
 		CEFD126D203E07E600B90F94 /* ASponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */; };
 		CEFD1270203E0D8800B90F94 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */; };
 		CEFD1272203E0D9C00B90F94 /* MentorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */; };
@@ -83,6 +84,7 @@
 		CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		CE06ECD3203EB44B00ACE8E0 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
 		CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				CEFD1275203E0FB800B90F94 /* Mentor.swift */,
 				CEFD1277203E101600B90F94 /* MentorType.swift */,
 				CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */,
+				CE06ECD3203EB44B00ACE8E0 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
 				CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */,
+				CE06ECD4203EB44B00ACE8E0 /* News.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
 				CE06ECD0203EAA5600ACE8E0 /* MyCustomCell.swift in Sources */,
 				8419F9DD203D8AF400342EDE /* TeamListVC.swift in Sources */,

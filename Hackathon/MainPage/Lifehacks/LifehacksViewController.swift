@@ -37,9 +37,9 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LifeHacksTableView.dequeueReusableCell(withIdentifier: "lifehacksCell") as! LifehacksTableViewCell
         
-        cell.lifehacksTitleLbl.text = lifehacks[indexPath.row]
-        cell.lifehacksLinkLbl.text = lifehackLinks[indexPath.row]
-        cell.lifehacksImage.image = UIImage(named: "lifehacksImg")
+//        cell.lifehacksTitleLbl.text = lifehacks[indexPath.row]
+//        cell.lifehacksLinkLbl.text = lifehackLinks[indexPath.row]
+//        cell.lifehacksImage.image = UIImage(named: "lifehacksImg")
         return cell
     }
 }

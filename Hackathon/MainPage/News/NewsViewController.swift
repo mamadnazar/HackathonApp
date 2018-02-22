@@ -13,16 +13,18 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let newsTitles = ["President sovershil sui..", "Cho-to cho-to", "Fake news", "Weather"]
     let newsDescriptions = ["President sovershil sui-koi", "Cho-to cho-to prosto eshe dlinee", "Not Fake News", "esli vam ochen xolodno to skoree vsego temperatura nizhe nulya"]
     
+    var newses = Newses()
+    
     @IBOutlet weak var newsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setNavigationBar()
-        
+        ServerManager.shared.getNewses(getNewses, error: showErrorAlert)
         newsTableView.tableFooterView = UIView()
         newsTableView.rowHeight = UITableViewAutomaticDimension
-        newsTableView.estimatedRowHeight = 110
+        newsTableView.estimatedRowHeight = 150
         // Do any additional setup after loading the view.
     }
     
@@ -31,17 +33,36 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.title = "Новости и объявления"
     }
 
+    func getNewses(newses: Newses) {
+        self.newses = newses
+        self.newsTableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsTitles.count
+        print(newses.array.count)
+        return newses.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = newsTableView.dequeueReusableCell(withIdentifier: "newsTableViewCell") as! NewsTableViewCell
-        
-        cell.newsTitleLbl.text = newsTitles[indexPath.row]
-        cell.newsDescriptionLbl.text = newsDescriptions[indexPath.row]
-        cell.newsImage.image = UIImage(named: "newsImg")
-        
+        //let url = URL(string: newses.array[indexPath.item].image_url)
+       // cell.newsImage.kf.setImage(with: url)
+//        cell.newsImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, erro, type, url) in
+//            guard let image = image else {return }
+//            let imageWidth = image.size.width
+//            let imageHeight = image.size.height
+//            if imageWidth > imageHeight {
+//                cell.newsImage.contentMode = .scaleAspectFit
+//            } else {
+//                cell.newsImage.contentMode = .scaleAspectFill
+//            }
+//
+//         }
+        cell.newsTitle.text = newses.array[indexPath.item].title
+        cell.newsDateLabel.text = newses.array[indexPath.item].updated_at
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

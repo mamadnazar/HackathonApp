@@ -11,10 +11,9 @@ import UIKit
 class LifehacksTableViewCell: UITableViewCell {
 
     
-    
-    @IBOutlet weak var lifehacksTitleLbl: UILabel!
-    @IBOutlet weak var lifehacksLinkLbl: UILabel!
-    @IBOutlet weak var lifehacksImage: UIImageView!
+    @IBOutlet weak var lifeHacksImage: UIImageView!
+    @IBOutlet weak var lifeHacksTitle: UILabel!
+    @IBOutlet weak var lifeHacksDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
