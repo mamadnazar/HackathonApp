@@ -17,6 +17,7 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBar()
+        mentorsCollectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         ServerManager.shared.getMentors(getMentors, error: showErrorAlert)
     }
     
