@@ -32,6 +32,9 @@
 		8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C203203D8AD4007DA602 /* SponsorsViewController.swift */; };
 		8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */; };
 		8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */; };
+		CE06ECCE203EA3BC00ACE8E0 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */; };
+		CE06ECD0203EAA5600ACE8E0 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */; };
+		CE06ECD2203EAA7000ACE8E0 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */; };
 		CEFD126D203E07E600B90F94 /* ASponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */; };
 		CEFD1270203E0D8800B90F94 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */; };
 		CEFD1272203E0D9C00B90F94 /* MentorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */; };
@@ -77,6 +80,9 @@
 		8488C203203D8AD4007DA602 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionReusableView.swift; sourceTree = "<group>"; };
+		CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
 		CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 				84083C35203DB6E4004C69E8 /* SponsorType.swift */,
 				CEFD1275203E0FB800B90F94 /* Mentor.swift */,
 				CEFD1277203E101600B90F94 /* MentorType.swift */,
+				CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +244,8 @@
 				FC8660D32034157900827B40 /* News */,
 				842BA98420285CCE00F731D0 /* ViewController.swift */,
 				842BA98620285CCE00F731D0 /* Main.storyboard */,
+				CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */,
+				CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -370,6 +379,7 @@
 			files = (
 				842BA98D20285CCE00F731D0 /* LaunchScreen.storyboard in Resources */,
 				842BA98A20285CCE00F731D0 /* Assets.xcassets in Resources */,
+				CE06ECD2203EAA7000ACE8E0 /* MyCustomCell.xib in Resources */,
 				842BA98820285CCE00F731D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +475,7 @@
 				8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */,
 				84083C34203DB647004C69E8 /* Sponsor.swift in Sources */,
 				842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */,
+				CE06ECCE203EA3BC00ACE8E0 /* FAQ.swift in Sources */,
 				FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */,
 				84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */,
 				84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */,
@@ -473,6 +484,7 @@
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
 				CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
+				CE06ECD0203EAA5600ACE8E0 /* MyCustomCell.swift in Sources */,
 				8419F9DD203D8AF400342EDE /* TeamListVC.swift in Sources */,
 				CEFD1278203E101600B90F94 /* MentorType.swift in Sources */,
 				84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */,

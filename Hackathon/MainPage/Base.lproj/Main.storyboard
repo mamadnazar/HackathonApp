@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="134" y="866"/>
         </scene>
-        <!--View Controller-->
+        <!--FAQ View Controller-->
         <scene sceneID="SR3-LS-bCH">
             <objects>
-                <viewController storyboardIdentifier="QuestionsVC" id="avJ-AK-wuJ" customClass="FAQViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionsVC" title="FAQ View Controller" id="avJ-AK-wuJ" customClass="FAQViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKC-kd-GzO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjR-Sp-q0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="865.81709145427294"/>
+            <point key="canvasLocation" x="1615" y="860"/>
         </scene>
         <!--About Hackathon View Controller-->
         <scene sceneID="20L-2J-ket">
@@ -548,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d99-pw-SaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="865.81709145427294"/>
+            <point key="canvasLocation" x="2329" y="850"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="CN3-HU-lT9">
@@ -587,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sp0-kd-hTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997.5999999999999" y="865.81709145427294"/>
+            <point key="canvasLocation" x="3014" y="850"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="Pom-dK-Xl8">

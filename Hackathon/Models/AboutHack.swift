@@ -33,3 +33,21 @@ struct AboutHack {
         
     }
 }
+
+//struct AboutHacks {
+//    
+//    var array: Array = Array<AboutHack>()
+//    
+//    init() {}
+//    
+//    init(json: JSON) {
+//        let jsonArray: [JSON] = json.arrayValue
+//        for i in jsonArray {
+//            array.append(AboutHack(json: i))
+//        }
+//    }
+//}
+
+
+
+

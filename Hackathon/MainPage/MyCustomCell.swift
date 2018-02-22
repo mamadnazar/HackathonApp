@@ -1,23 +1,18 @@
 //
-//  FAQTableViewCell.swift
+//  MyCustomCell.swift
 //  Hackathon
 //
-//  Created by Mamadnazar on 2/14/18.
+//  Created by Risolat Fayzmamadova on 2/22/18.
 //  Copyright © 2018 neobis. All rights reserved.
 //
 
 import UIKit
 
-class FAQTableViewCell: UITableViewCell {
+class MyCustomCell: UITableViewCell {
 
+    @IBOutlet weak var customCellImage: UIImageView!
+    @IBOutlet weak var customCellTitleLabel: UILabel!
     
-    @IBOutlet weak var FAQQuestionLbl: UILabel! {
-        didSet {
-            FAQQuestionLbl.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
-        }
-    }
-    
-    @IBOutlet weak var FAQAnswerLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
