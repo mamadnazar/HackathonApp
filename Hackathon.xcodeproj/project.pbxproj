@@ -234,7 +234,7 @@
 		842BA99F2028668800F731D0 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				CEFD126E203E0D7900B90F94 /* Mentors */,
+				84CDE74E203DB20B0007F978 /* Feedback */,
 				8419F9DE203D8B3500342EDE /* BackTableView */,
 				8419F9DB203D8ADB00342EDE /* TeamList */,
 				84059DF8203AE7FB00229ED8 /* Schedule */,
@@ -253,22 +253,13 @@
 			path = MainPage;
 			sourceTree = "<group>";
 		};
-		CEFD126B203E07C600B90F94 /* Partner */ = {
+		84CDE74E203DB20B0007F978 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
-				CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */,
+				84CDE74F203DB2210007F978 /* FeedbackViewController.swift */,
 			);
-			path = Partner;
-			sourceTree = "<group>";
-		};
-		CEFD126E203E0D7900B90F94 /* Mentors */ = {
-			isa = PBXGroup;
-			children = (
-				CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */,
-				CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */,
-				CEFD1273203E0DB700B90F94 /* MentorsCollectionReusableView.swift */,
-			);
-			path = Mentors;
+			name = Feedback;
+			path = ../Feedback;
 			sourceTree = "<group>";
 		};
 		E4C7135FEFEFB313FA67D28F /* Frameworks */ = {
