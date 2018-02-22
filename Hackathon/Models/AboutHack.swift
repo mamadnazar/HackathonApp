@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+ 
 struct AboutHack {
     var id: Int
     var title: String
@@ -32,3 +33,21 @@ struct AboutHack {
         
     }
 }
+
+//struct AboutHacks {
+//    
+//    var array: Array = Array<AboutHack>()
+//    
+//    init() {}
+//    
+//    init(json: JSON) {
+//        let jsonArray: [JSON] = json.arrayValue
+//        for i in jsonArray {
+//            array.append(AboutHack(json: i))
+//        }
+//    }
+//}
+
+
+
+

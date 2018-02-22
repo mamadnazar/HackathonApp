@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SponsorsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-   
-    let sponsorsType = ["Sponsors", "Partners", "Organizers"]
-    let partnersSponsors = [["ArabMoney", "Rakuten"], ["Fly Emirates", "AIG", "Yokohama", "Shoro", "Nashe"], ["Neobis", "MadDevs"]]
+    
+    var sponsorTypes = SponsorTypes()
     
     @IBOutlet weak var sponsorsCollectionView: UICollectionView!
     
@@ -19,6 +19,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
 
         self.setNavigationBar()
+        ServerManager.shared.getSponsors(getSponsors, error: showErrorAlert)
         // Do any additional setup after loading the view.
     }
 
@@ -26,26 +27,31 @@ class SponsorsViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewWillAppear(animated)
         self.title = "Спонсоры"
     }
-    
+
+    func getSponsors(sponsorTypes: SponsorTypes) {
+        self.sponsorTypes = sponsorTypes
+        self.sponsorsCollectionView.reloadData()
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return partnersSponsors.count
+        return sponsorTypes.array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return partnersSponsors[section].count
+        return sponsorTypes.array[section].items.array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sponsorsCollectionViewCellID", for: indexPath) as! SponsorsCollectionViewCell
-        cell.sponsorsLabel.text = partnersSponsors[indexPath.section][indexPath.item]
+        let url = URL(string: sponsorTypes.array[indexPath.section].items.array[indexPath.item].logo_url)
+        cell.sponsorsImageView.kf.setImage(with: url)
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerID", for: indexPath) as! SponsorsCollectionReusableView
-        headerView.sponsorsHeaderLabel.text = sponsorsType[indexPath.section]
+        headerView.sponsorsHeaderLabel.text = sponsorTypes.array[indexPath.section].type
         return headerView
     }
     

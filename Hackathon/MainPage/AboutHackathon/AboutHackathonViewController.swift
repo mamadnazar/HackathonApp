@@ -12,13 +12,14 @@ class AboutHackathonViewController: UIViewController {
 
     @IBOutlet weak var aboutHackathonDescriptionLbl: UILabel!
     
+    //var aboutHacks = AboutHacks()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNavigationBar()
         showErrorAlert(message: "ne spi")
         ServerManager.shared.getAboutHack(setAboutHack, error: showErrorAlert)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +30,6 @@ class AboutHackathonViewController: UIViewController {
     func setAboutHack(aboutHack: AboutHack) {
         aboutHackathonDescriptionLbl.text = aboutHack.title
         print(aboutHack)
-        
     }
+    
 }

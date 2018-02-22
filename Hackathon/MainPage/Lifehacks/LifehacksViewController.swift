@@ -20,7 +20,7 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
 
         self.setNavigationBar()
-        
+        LifeHacksTableView.tableFooterView = UIView()
         LifeHacksTableView.rowHeight = UITableViewAutomaticDimension
         LifeHacksTableView.estimatedRowHeight = 110
     }
