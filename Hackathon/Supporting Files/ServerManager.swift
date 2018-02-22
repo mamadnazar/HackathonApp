@@ -49,6 +49,12 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
     
+    func getLifehacks(_ completion: @escaping (Lifehacks)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "info/lifehacks", completion: { (json) in
+            completion(Lifehacks(json: json))
+        }, error: error)
+    }
+    
 // Commented lines below are kind of a template
 //    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "info/about", completion: { (json) in

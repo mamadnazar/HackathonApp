@@ -10,9 +10,6 @@ import UIKit
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let newsTitles = ["President sovershil sui..", "Cho-to cho-to", "Fake news", "Weather"]
-    let newsDescriptions = ["President sovershil sui-koi", "Cho-to cho-to prosto eshe dlinee", "Not Fake News", "esli vam ochen xolodno to skoree vsego temperatura nizhe nulya"]
-    
     var newses = Newses()
     
     @IBOutlet weak var newsTableView: UITableView!
@@ -65,4 +62,14 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "aNewsVC") as! ANewsViewController
+        vc.newsImage = newses.array[indexPath.item].image_url
+        vc.newsTitle = newses.array[indexPath.item].title
+        vc.newsDescription = newses.array[indexPath.item].body
+        self.navigationController?.show(vc, sender: self)
+    }
+    
 }

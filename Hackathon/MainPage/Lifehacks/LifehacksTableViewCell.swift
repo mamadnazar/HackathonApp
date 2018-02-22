@@ -11,9 +11,12 @@ import UIKit
 class LifehacksTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var lifeHacksImage: UIImageView!
-    @IBOutlet weak var lifeHacksTitle: UILabel!
-    @IBOutlet weak var lifeHacksDateLabel: UILabel!
+    @IBOutlet weak var lifeHacksView: UIView! {
+        didSet {
+            self.lifeHacksView.layer.cornerRadius = 10
+        }
+    }
+    @IBOutlet weak var lifeHacksTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

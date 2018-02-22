@@ -61,4 +61,14 @@ class SponsorsViewController: UIViewController, UICollectionViewDelegate, UIColl
         return CGSize(width: cellWidth, height: cellWidth)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "aSponsorVC") as! ASponsorViewController
+        vc.sponsor_name = sponsorTypes.array[indexPath.section].items.array[indexPath.item].title
+        vc.sponsor_description = sponsorTypes.array[indexPath.section].items.array[indexPath.item].description
+        vc.sponsor_url = sponsorTypes.array[indexPath.section].items.array[indexPath.item].website
+        vc.sponsor_image = sponsorTypes.array[indexPath.section].items.array[indexPath.item].logo_url
+        self.navigationController?.show(vc, sender: self)
+    }
+    
 }
