@@ -12,7 +12,11 @@ class ALifehackViewController: UIViewController {
 
     
     @IBOutlet weak var aLifehackImage: UIImageView!
-    @IBOutlet weak var aLifehackTitleLabel: UILabel!
+    @IBOutlet weak var aLifehackTitleLabel: UILabel! {
+        didSet {
+            aLifehackTitleLabel.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+        }
+    }
     @IBOutlet weak var aLifehackDescriptionLabel: UILabel!
     @IBOutlet weak var aLifehackLink: UITextView!
     var lifehackImg: String?

@@ -64,12 +64,16 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 0.7)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "aNewsVC") as! ANewsViewController
         vc.newsImage = newses.array[indexPath.item].image_url
         vc.newsTitle = newses.array[indexPath.item].title
         vc.newsDescription = newses.array[indexPath.item].body
         self.navigationController?.show(vc, sender: self)
+        
     }
     
 }

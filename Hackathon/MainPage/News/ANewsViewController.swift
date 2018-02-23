@@ -13,7 +13,11 @@ class ANewsViewController: UIViewController {
 
     
     @IBOutlet weak var aNewsImage: UIImageView!
-    @IBOutlet weak var aNewsTitle: UILabel!
+    @IBOutlet weak var aNewsTitle: UILabel! {
+        didSet {
+            aNewsTitle.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+        }
+    }
     @IBOutlet weak var aNewsDescriptionLabel: UILabel!
     var newsTitle: String?
     var newsDescription: String?
