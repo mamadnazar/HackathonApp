@@ -11,7 +11,11 @@ import UIKit
 class ASponsorViewController: UIViewController {
 
     @IBOutlet weak var sponsorImage: UIImageView!
-    @IBOutlet weak var sponsorNameLabel: UILabel!
+    @IBOutlet weak var sponsorNameLabel: UILabel! {
+        didSet {
+            sponsorNameLabel.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+        }
+    }
     @IBOutlet weak var sponsorDescriptionLabel: UILabel!
     @IBOutlet weak var sponsorURLLabel: UITextView!
     var sponsor_image: String?

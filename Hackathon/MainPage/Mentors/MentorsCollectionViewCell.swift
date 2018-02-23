@@ -12,6 +12,11 @@ class MentorsCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var mentorsImage: UIImageView!
+//    {
+//        didSet {
+//            mentorsImage.layer.cornerRadius = mentorsImage.frame.size.height / 2
+//        }
+//    }
     @IBOutlet weak var mentorsNameLabel: UILabel!
     @IBOutlet weak var mentorsWorkareaLabel: UILabel!
     

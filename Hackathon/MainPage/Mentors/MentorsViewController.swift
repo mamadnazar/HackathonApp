@@ -42,7 +42,7 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mentorsCollectionViewCellID", for: indexPath) as! MentorsCollectionViewCell
         let url = URL(string: mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url)
-        cell.mentorsImage.kf.setImage(with: url)
+        cell.mentorsImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
         cell.mentorsNameLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
         cell.mentorsWorkareaLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
         return cell
@@ -59,4 +59,16 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
         headerView.mentorsHeaderLabel.text = mentorTypes.array[indexPath.section].type
         return headerView
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "aMentorVC") as! AMentorViewController
+        vc.mentor_name = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+        vc.mentor_workarea = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_area + " " + mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
+        vc.mentor_image = mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url
+        vc.mentor_description = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+        self.navigationController?.show(vc, sender: self)
+    }
+    
+    
 }

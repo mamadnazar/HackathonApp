@@ -43,6 +43,7 @@
 		CE06ECD8203F601200ACE8E0 /* ANewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */; };
 		CE06ECDA203F703200ACE8E0 /* Lifehack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD9203F703200ACE8E0 /* Lifehack.swift */; };
 		CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */; };
+		CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */; };
 		CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1275203E0FB800B90F94 /* Mentor.swift */; };
 		CEFD1278203E101600B90F94 /* MentorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1277203E101600B90F94 /* MentorType.swift */; };
 		FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */; };
@@ -95,6 +96,7 @@
 		CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANewsViewController.swift; sourceTree = "<group>"; };
 		CE06ECD9203F703200ACE8E0 /* Lifehack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifehack.swift; sourceTree = "<group>"; };
 		CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALifehackViewController.swift; sourceTree = "<group>"; };
+		CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMentorViewController.swift; sourceTree = "<group>"; };
 		CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
 		CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				84D1D127203F481000A5FEB8 /* MentorsCollectionReusableView.swift */,
 				84D1D128203F481000A5FEB8 /* MentorsCollectionViewCell.swift */,
 				84D1D129203F481000A5FEB8 /* MentorsViewController.swift */,
+				CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */,
 			);
 			path = Mentors;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
 				CE06ECD8203F601200ACE8E0 /* ANewsViewController.swift in Sources */,
+				CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */,
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
 				8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */,
 				84083C34203DB647004C69E8 /* Sponsor.swift in Sources */,

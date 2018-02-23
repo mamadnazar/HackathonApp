@@ -342,6 +342,83 @@
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="2218.7406296851577"/>
         </scene>
+        <!--Mentor View Controller-->
+        <scene sceneID="O3W-LJ-eCd">
+            <objects>
+                <viewController storyboardIdentifier="aMentorVC" id="G0w-Oh-ko9" customClass="AMentorViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJS-fc-3Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3v-TV-jqn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZL-tO-mSs">
+                                        <rect key="frame" x="87.5" y="20" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="B45-OB-XxT"/>
+                                            <constraint firstAttribute="height" constant="200" id="iPN-bL-QWX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFw-MP-wrz">
+                                        <rect key="frame" x="16" y="224" width="343" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIb-ld-O0s">
+                                        <rect key="frame" x="16" y="248" width="343" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Kj-OWP">
+                                        <rect key="frame" x="16" y="284" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EFw-MP-wrz" firstAttribute="leading" secondItem="k3v-TV-jqn" secondAttribute="leading" constant="16" id="0qX-mD-rf6"/>
+                                    <constraint firstItem="N08-Kj-OWP" firstAttribute="leading" secondItem="k3v-TV-jqn" secondAttribute="leading" constant="16" id="2Qw-Bt-aNY"/>
+                                    <constraint firstItem="HIb-ld-O0s" firstAttribute="centerX" secondItem="k3v-TV-jqn" secondAttribute="centerX" id="3sm-qf-Fl1"/>
+                                    <constraint firstItem="HIb-ld-O0s" firstAttribute="leading" secondItem="k3v-TV-jqn" secondAttribute="leading" constant="16" id="3tI-e8-VcJ"/>
+                                    <constraint firstItem="WZL-tO-mSs" firstAttribute="top" secondItem="k3v-TV-jqn" secondAttribute="top" constant="20" id="7y0-KW-YVo"/>
+                                    <constraint firstItem="N08-Kj-OWP" firstAttribute="top" secondItem="HIb-ld-O0s" secondAttribute="bottom" constant="12" id="HZy-gv-Cvb"/>
+                                    <constraint firstItem="N08-Kj-OWP" firstAttribute="centerX" secondItem="k3v-TV-jqn" secondAttribute="centerX" id="TRf-ym-HG7"/>
+                                    <constraint firstItem="HIb-ld-O0s" firstAttribute="top" secondItem="EFw-MP-wrz" secondAttribute="bottom" constant="8" id="YwM-kg-NF1"/>
+                                    <constraint firstAttribute="trailing" secondItem="EFw-MP-wrz" secondAttribute="trailing" constant="16" id="a41-V9-obg"/>
+                                    <constraint firstAttribute="trailing" secondItem="HIb-ld-O0s" secondAttribute="trailing" constant="16" id="h7P-dj-Q6S"/>
+                                    <constraint firstItem="EFw-MP-wrz" firstAttribute="centerX" secondItem="k3v-TV-jqn" secondAttribute="centerX" id="hWk-vB-X9q"/>
+                                    <constraint firstItem="EFw-MP-wrz" firstAttribute="top" secondItem="WZL-tO-mSs" secondAttribute="bottom" constant="4" id="hs2-MF-Dk5"/>
+                                    <constraint firstAttribute="trailing" secondItem="N08-Kj-OWP" secondAttribute="trailing" constant="16" id="hub-LL-4Eg"/>
+                                    <constraint firstItem="WZL-tO-mSs" firstAttribute="centerX" secondItem="k3v-TV-jqn" secondAttribute="centerX" id="lv6-zt-e8a"/>
+                                    <constraint firstAttribute="bottom" secondItem="N08-Kj-OWP" secondAttribute="bottom" constant="16" id="oML-5Y-183"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z2e-da-90Z" firstAttribute="bottom" secondItem="k3v-TV-jqn" secondAttribute="bottom" id="9kn-ko-Bke"/>
+                            <constraint firstItem="z2e-da-90Z" firstAttribute="trailing" secondItem="k3v-TV-jqn" secondAttribute="trailing" id="Drz-YC-bMh"/>
+                            <constraint firstItem="k3v-TV-jqn" firstAttribute="leading" secondItem="z2e-da-90Z" secondAttribute="leading" id="QOJ-Pf-8Gk"/>
+                            <constraint firstItem="k3v-TV-jqn" firstAttribute="top" secondItem="z2e-da-90Z" secondAttribute="top" id="iZT-YQ-ebt"/>
+                            <constraint firstItem="k3v-TV-jqn" firstAttribute="centerX" secondItem="HJS-fc-3Jd" secondAttribute="centerX" id="sjZ-WT-aeU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z2e-da-90Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="aMentorDescriptionLabel" destination="N08-Kj-OWP" id="eHq-7I-7sM"/>
+                        <outlet property="aMentorImage" destination="WZL-tO-mSs" id="1Wm-vp-wPH"/>
+                        <outlet property="aMentorNameLabel" destination="HIb-ld-O0s" id="xP2-iC-LPA"/>
+                        <outlet property="aMentorWorkareaLabel" destination="EFw-MP-wrz" id="cJR-I4-QD4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrG-Vo-qFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="2239"/>
+        </scene>
         <!--Mentors View Controller-->
         <scene sceneID="1mV-xh-ajy">
             <objects>
