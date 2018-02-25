@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -444,8 +445,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j6u-10-eO1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="173.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j6u-10-eO1">
+                                                    <rect key="frame" x="35" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="j6u-10-eO1" secondAttribute="height" multiplier="1:1" id="Ijg-D3-wvx"/>
+                                                        <constraint firstAttribute="height" constant="100" id="qal-5p-tSK"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpU-LN-bq7">
                                                     <rect key="frame" x="0.0" y="177.5" width="170" height="12"/>
@@ -465,16 +470,15 @@
                                             <constraint firstAttribute="trailing" secondItem="XpU-LN-bq7" secondAttribute="trailing" id="07T-Ih-gFS"/>
                                             <constraint firstItem="Spy-FF-EZn" firstAttribute="leading" secondItem="FIe-gA-7ha" secondAttribute="leading" id="1Ag-g8-OtP"/>
                                             <constraint firstItem="j6u-10-eO1" firstAttribute="top" secondItem="FIe-gA-7ha" secondAttribute="top" id="4Hi-PS-Rn4"/>
-                                            <constraint firstItem="j6u-10-eO1" firstAttribute="leading" secondItem="FIe-gA-7ha" secondAttribute="leading" id="F5W-1H-IsT"/>
                                             <constraint firstItem="XpU-LN-bq7" firstAttribute="leading" secondItem="FIe-gA-7ha" secondAttribute="leading" id="ILR-WE-Nc4"/>
                                             <constraint firstItem="Spy-FF-EZn" firstAttribute="top" secondItem="XpU-LN-bq7" secondAttribute="bottom" constant="4" id="Jkn-tt-bAn"/>
+                                            <constraint firstItem="j6u-10-eO1" firstAttribute="centerX" secondItem="FIe-gA-7ha" secondAttribute="centerX" id="PgZ-xR-E1u"/>
                                             <constraint firstAttribute="bottom" secondItem="Spy-FF-EZn" secondAttribute="bottom" id="dMO-ds-K01"/>
-                                            <constraint firstAttribute="trailing" secondItem="j6u-10-eO1" secondAttribute="trailing" id="iuK-ET-1Ai"/>
-                                            <constraint firstItem="XpU-LN-bq7" firstAttribute="top" secondItem="j6u-10-eO1" secondAttribute="bottom" constant="4" id="lhZ-sO-FDz"/>
                                             <constraint firstAttribute="trailing" secondItem="Spy-FF-EZn" secondAttribute="trailing" id="vsR-wl-Hh4"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="mentorsImage" destination="j6u-10-eO1" id="07u-IK-Y12"/>
+                                            <outlet property="mentorsImageHeight" destination="qal-5p-tSK" id="Ecz-kE-n2S"/>
                                             <outlet property="mentorsNameLabel" destination="XpU-LN-bq7" id="vYj-Pp-9G2"/>
                                             <outlet property="mentorsWorkareaLabel" destination="Spy-FF-EZn" id="OnL-fO-2my"/>
                                         </connections>

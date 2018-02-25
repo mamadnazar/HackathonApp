@@ -42,9 +42,10 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mentorsCollectionViewCellID", for: indexPath) as! MentorsCollectionViewCell
         let url = URL(string: mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url)
-        cell.mentorsImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
         cell.mentorsNameLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
         cell.mentorsWorkareaLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
+        cell.mentorsImage.kf.setImage(with: url, placeholder: UIImage(named: "ril"), options: nil, progressBlock: nil, completionHandler: nil)
+        print("mentorsviewcontroller", cell.mentorsImage.frame.height)
         return cell
     }
     
