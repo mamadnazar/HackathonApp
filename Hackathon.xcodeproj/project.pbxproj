@@ -28,6 +28,8 @@
 		842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA9972028628C00F731D0 /* HTTPStatusCode.swift */; };
 		842BA99C2028633100F731D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99B2028633100F731D0 /* DataManager.swift */; };
 		842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99D2028639F00F731D0 /* ServerManager.swift */; };
+		8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */; };
+		8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429992044281E00F6E77A /* AnAboutHackViewController.swift */; };
 		844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */; };
 		8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C203203D8AD4007DA602 /* SponsorsViewController.swift */; };
 		8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */; };
@@ -80,6 +82,8 @@
 		842BA9972028628C00F731D0 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		842BA99B2028633100F731D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		842BA99D2028639F00F731D0 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackTableViewCell.swift; sourceTree = "<group>"; };
+		843429992044281E00F6E77A /* AnAboutHackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnAboutHackViewController.swift; sourceTree = "<group>"; };
 		844CBD092029DF63002DBB01 /* Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		844CBD0B2029DF64002DBB01 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */,
+				8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */,
+				843429992044281E00F6E77A /* AnAboutHackViewController.swift */,
 			);
 			path = AboutHackathon;
 			sourceTree = "<group>";
@@ -508,6 +514,7 @@
 				FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */,
 				84D1D12F203F4E9A00A5FEB8 /* ASponsorViewController.swift in Sources */,
 				FC8660DE203448C000827B40 /* LifehacksTableViewCell.swift in Sources */,
+				8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */,
 				84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */,
 				FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */,
 				84059DF3203AE0AE00229ED8 /* RulesViewController.swift in Sources */,
@@ -527,6 +534,7 @@
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */,
+				8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
 				CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */,
 				CE06ECD4203EB44B00ACE8E0 /* News.swift in Sources */,
@@ -675,7 +683,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -695,7 +703,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

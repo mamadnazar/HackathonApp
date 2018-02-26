@@ -20,7 +20,7 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSCalendarsUsageDescription</key>
+	<key>NSCameraUsageDescription</key>
 	<string>Need camera access to scan the qr-code so you can vote</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
