@@ -17,6 +17,7 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBar()
+        mentorsCollectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         ServerManager.shared.getMentors(getMentors, error: showErrorAlert)
     }
     
@@ -41,9 +42,10 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mentorsCollectionViewCellID", for: indexPath) as! MentorsCollectionViewCell
         let url = URL(string: mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url)
-        cell.mentorsImage.kf.setImage(with: url)
         cell.mentorsNameLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
         cell.mentorsWorkareaLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
+        cell.mentorsImage.kf.setImage(with: url, placeholder: UIImage(named: "ril"), options: nil, progressBlock: nil, completionHandler: nil)
+        print("mentorsviewcontroller", cell.mentorsImage.frame.height)
         return cell
     }
     
@@ -58,4 +60,16 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
         headerView.mentorsHeaderLabel.text = mentorTypes.array[indexPath.section].type
         return headerView
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "aMentorVC") as! AMentorViewController
+        vc.mentor_name = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+        vc.mentor_workarea = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_area + " " + mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
+        vc.mentor_image = mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url
+        vc.mentor_description = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+        self.navigationController?.show(vc, sender: self)
+    }
+    
+    
 }

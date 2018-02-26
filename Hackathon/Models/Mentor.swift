@@ -29,7 +29,7 @@ struct Mentor {
         full_name = json["full_name"].stringValue
         work_place = json["work_place"].stringValue
         work_area = json["work_area"].stringValue
-        image_url = json["logo_url"].stringValue
+        image_url = json["image_url"].stringValue
     }
 }
 

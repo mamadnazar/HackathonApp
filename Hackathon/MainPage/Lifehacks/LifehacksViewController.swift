@@ -10,9 +10,10 @@ import UIKit
 
 class LifehacksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let lifehacks = ["LifeHack #1", "Don't drink uksus", "Talk with Ismet", "Wear helmet while cutting onion"]
+//    let lifehacks = ["LifeHack #1", "Don't drink uksus", "Talk with Ismet", "Wear helmet while cutting onion"]
+//    let lifehackLinks = ["example.com", "uksus.ru", "ismetzver.tm", "don'tfuckwithonion.com"]
     
-    let lifehackLinks = ["example.com", "uksus.ru", "ismetzver.tm", "don'tfuckwithonion.com"]
+    var lifehacks = Lifehacks()
     
     @IBOutlet weak var LifeHacksTableView: UITableView!
     
@@ -20,6 +21,7 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
 
         self.setNavigationBar()
+        ServerManager.shared.getLifehacks(getLifehacks, error: showErrorAlert)
         LifeHacksTableView.tableFooterView = UIView()
         LifeHacksTableView.rowHeight = UITableViewAutomaticDimension
         LifeHacksTableView.estimatedRowHeight = 110
@@ -30,16 +32,33 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
         self.title = "Sponsors and Partners"
     }
 
+    func getLifehacks(lifehacks: Lifehacks) {
+        self.lifehacks = lifehacks
+        self.LifeHacksTableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lifehacks.count
+        return lifehacks.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LifeHacksTableView.dequeueReusableCell(withIdentifier: "lifehacksCell") as! LifehacksTableViewCell
-        
-        cell.lifehacksTitleLbl.text = lifehacks[indexPath.row]
-        cell.lifehacksLinkLbl.text = lifehackLinks[indexPath.row]
-        cell.lifehacksImage.image = UIImage(named: "lifehacksImg")
+        cell.lifeHacksTitleLabel.text = lifehacks.array[indexPath.item].title
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 0.7)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "aLifehackVC") as! ALifehackViewController
+        vc.lifehackTitle = lifehacks.array[indexPath.item].title
+        vc.lifehackDescription = lifehacks.array[indexPath.item].description
+        vc.lifehackImg = lifehacks.array[indexPath.item].image_url
+        vc.lifehackLink = lifehacks.array[indexPath.item].link
+        self.navigationController?.show(vc, sender: self)
+    }
+    
+    
 }

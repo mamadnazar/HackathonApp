@@ -16,9 +16,6 @@ class FAQTableViewCell: UITableViewCell {
             FAQQuestionLbl.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
         }
     }
-    
-    @IBOutlet weak var FAQAnswerLbl: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,5 +26,13 @@ class FAQTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setQuestion() {
+        FAQQuestionLbl.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
 
+    }
+    func setAnswer() {
+        FAQQuestionLbl.textColor = .black
+
+    }
 }

@@ -10,18 +10,18 @@ import UIKit
 
 class FAQViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let faqQuestions = ["Is throwing your hair into garbage safe?", "HOW DO I TURN OFF CAPSLOCK?", "Which is worse ignorance or apathy?"]
-    let faqAnswers = ["If you're worried about someone stealing your DNA, you could collect your hair and create a hair sculpture", "Emmmm..", "I do not know and I do not care"]
-    
     var faqs = FAQs()
-    
+    var questionCellExpanded = [Bool]()
     @IBOutlet weak var FAQTableView: UITableView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setNavigationBar()
+        questionCellExpanded = [Bool](repeating: false, count: faqs.array.count)
+        FAQTableView.rowHeight = UITableViewAutomaticDimension
+        FAQTableView.estimatedRowHeight = 50
         ServerManager.shared.getFAQs(getFAQs, error: showErrorAlert)
+        self.FAQTableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,19 +31,46 @@ class FAQViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func getFAQs(faqs: FAQs) {
         self.faqs = faqs
+        questionCellExpanded = [Bool](repeating: false, count: faqs.array.count)
         self.FAQTableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return faqs.array.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if questionCellExpanded[section] {
+            return 2
+        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FAQTableView.dequeueReusableCell(withIdentifier: "faqTableViewCell") as! FAQTableViewCell
-        
-        cell.FAQQuestionLbl.text = faqs.array[indexPath.item].question
-        cell.FAQAnswerLbl.text = faqs.array[indexPath.item].answer
+
+        if indexPath.row == 0 {
+            cell.FAQQuestionLbl.text = faqs.array[indexPath.section].question
+            cell.setQuestion()
+        }
+        else {
+            cell.FAQQuestionLbl.text = faqs.array[indexPath.section].answer
+            cell.setAnswer()
+        }
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            questionCellExpanded[indexPath.section] = !questionCellExpanded[indexPath.section]
+            tableView.reloadData()
+            //tableView.beginUpdates()
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 }
