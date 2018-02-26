@@ -44,6 +44,7 @@
 		CE06ECDA203F703200ACE8E0 /* Lifehack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD9203F703200ACE8E0 /* Lifehack.swift */; };
 		CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */; };
 		CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */; };
+		CE66DDB1204357260092EE51 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66DDB0204357260092EE51 /* VotingViewController.swift */; };
 		CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1275203E0FB800B90F94 /* Mentor.swift */; };
 		CEFD1278203E101600B90F94 /* MentorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1277203E101600B90F94 /* MentorType.swift */; };
 		FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */; };
@@ -97,6 +98,7 @@
 		CE06ECD9203F703200ACE8E0 /* Lifehack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifehack.swift; sourceTree = "<group>"; };
 		CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALifehackViewController.swift; sourceTree = "<group>"; };
 		CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMentorViewController.swift; sourceTree = "<group>"; };
+		CE66DDB0204357260092EE51 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
 		CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		842BA99F2028668800F731D0 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				CE66DDAF2043570D0092EE51 /* Voting */,
 				84D1D126203F479900A5FEB8 /* Mentors */,
 				84CDE74E203DB20B0007F978 /* Feedback */,
 				8419F9DE203D8B3500342EDE /* BackTableView */,
@@ -295,6 +298,14 @@
 				CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */,
 			);
 			path = Mentors;
+			sourceTree = "<group>";
+		};
+		CE66DDAF2043570D0092EE51 /* Voting */ = {
+			isa = PBXGroup;
+			children = (
+				CE66DDB0204357260092EE51 /* VotingViewController.swift */,
+			);
+			path = Voting;
 			sourceTree = "<group>";
 		};
 		E4C7135FEFEFB313FA67D28F /* Frameworks */ = {
@@ -507,6 +518,7 @@
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
 				8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */,
 				84083C34203DB647004C69E8 /* Sponsor.swift in Sources */,
+				CE66DDB1204357260092EE51 /* VotingViewController.swift in Sources */,
 				842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */,
 				CE06ECCE203EA3BC00ACE8E0 /* FAQ.swift in Sources */,
 				FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */,
@@ -663,8 +675,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U5DCDBG2W2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Hackathon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -682,8 +695,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U5DCDBG2W2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Hackathon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -420,6 +420,37 @@
             </objects>
             <point key="canvasLocation" x="1632" y="2239"/>
         </scene>
+        <!--Voting View Controller-->
+        <scene sceneID="vdq-pe-F3M">
+            <objects>
+                <viewController storyboardIdentifier="VotingVC" id="Ibu-s9-80i" customClass="VotingViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYk-2f-zxH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCodeFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-F6-VgR">
+                                <rect key="frame" x="27" y="173" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Lnq-Mz-yhj"/>
+                                    <constraint firstAttribute="width" constant="320" id="rBf-BW-S18"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qgt-F6-VgR" firstAttribute="centerX" secondItem="IYk-2f-zxH" secondAttribute="centerX" id="Ui8-BK-fA9"/>
+                            <constraint firstItem="Qgt-F6-VgR" firstAttribute="centerY" secondItem="IYk-2f-zxH" secondAttribute="centerY" id="r1X-X4-8cy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1mF-MB-WcB"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrFrame" destination="Qgt-F6-VgR" id="Xjd-Ga-KW8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifW-7C-kvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="2235"/>
+        </scene>
         <!--Mentors View Controller-->
         <scene sceneID="1mV-xh-ajy">
             <objects>
@@ -1187,5 +1218,6 @@
         <image name="festLogoWhite" width="261" height="193"/>
         <image name="lifehacksImg" width="495" height="495"/>
         <image name="newsImg" width="294" height="171"/>
+        <image name="qrCodeFrame" width="517" height="326"/>
     </resources>
 </document>
