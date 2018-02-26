@@ -1072,7 +1072,7 @@
         <!--Feedback View Controller-->
         <scene sceneID="ibu-KF-4CK">
             <objects>
-                <viewController storyboardIdentifier="FeedbackVC" id="jIu-eM-WNQ" customClass="feedbackViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedbackVC" id="jIu-eM-WNQ" customClass="FeedbackViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X0e-pe-ECh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1106,6 +1106,9 @@
                                 <state key="normal" title="Отправить">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFeedBackButtonAction:" destination="jIu-eM-WNQ" eventType="touchUpInside" id="w10-4U-Z2J"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-fd-xJL">
                                 <rect key="frame" x="16" y="80" width="343" height="160"/>
@@ -1150,6 +1153,9 @@
                     </view>
                     <connections>
                         <outlet property="FeedbackTextView" destination="EiV-fd-xJL" id="8fb-YT-pTh"/>
+                        <outlet property="addFeedbackButton" destination="Z9d-rx-O70" id="8ME-Zb-EKf"/>
+                        <outlet property="contactTextField" destination="4NN-1h-zu7" id="g6c-RA-N8T"/>
+                        <outlet property="feedbackTextView" destination="EiV-fd-xJL" id="yh6-3l-chg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlC-SU-Fcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1170,7 +1176,7 @@
                                 <color key="separatorColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.9233061671257019" green="0.300048828125" blue="0.28366073966026306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" id="She-TR-taW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="memberCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" id="She-TR-taW">
                                         <rect key="frame" x="0.0" y="28" width="358" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="She-TR-taW" id="LSh-O0-t94">
@@ -1235,10 +1241,10 @@
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C7S-LW-DTd" userLabel="List Of TeamsTV">
                             <rect key="frame" x="0.0" y="0.0" width="299" height="365"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="separatorColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="sectionIndexColor" red="0.96279579401016235" green="0.33162254095077515" blue="0.31571149826049805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <prototypes>
-                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" id="6TJ-6p-xTl">
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="teamCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" id="6TJ-6p-xTl">
                                     <rect key="frame" x="0.0" y="28" width="299" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6TJ-6p-xTl" id="8hJ-cz-BHd">

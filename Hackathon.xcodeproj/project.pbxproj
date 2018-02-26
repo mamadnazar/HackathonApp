@@ -15,8 +15,6 @@
 		84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DF9203AE81200229ED8 /* ScheduleViewController.swift */; };
 		84083C34203DB647004C69E8 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84083C33203DB647004C69E8 /* Sponsor.swift */; };
 		84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84083C35203DB6E4004C69E8 /* SponsorType.swift */; };
-		8419F9D9203D89D700342EDE /* AboutHack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F9D8203D89D700342EDE /* AboutHack.swift */; };
-		8419F9DD203D8AF400342EDE /* TeamListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F9DC203D8AF400342EDE /* TeamListVC.swift */; };
 		8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F9DF203D8B5000342EDE /* BackTableVC.swift */; };
 		8419F9E3203D8DBF00342EDE /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F9E2203D8DBF00342EDE /* Shared.swift */; };
 		842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA98220285CCE00F731D0 /* AppDelegate.swift */; };
@@ -31,24 +29,25 @@
 		8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */; };
 		8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429992044281E00F6E77A /* AnAboutHackViewController.swift */; };
 		844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */; };
+		847A7828204451AC0025A9D5 /* MentorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7823204451AB0025A9D5 /* MentorType.swift */; };
+		847A7829204451AC0025A9D5 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7824204451AB0025A9D5 /* FAQ.swift */; };
+		847A782A204451AC0025A9D5 /* Lifehack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7825204451AC0025A9D5 /* Lifehack.swift */; };
+		847A7833204452880025A9D5 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7832204452880025A9D5 /* News.swift */; };
+		847A7835204452E90025A9D5 /* AboutHack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7834204452E90025A9D5 /* AboutHack.swift */; };
+		847A7837204453AB0025A9D5 /* ASponsorViewController 20-38-55-299.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7836204453AB0025A9D5 /* ASponsorViewController 20-38-55-299.swift */; };
+		847A7839204453BA0025A9D5 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7838204453BA0025A9D5 /* Mentor.swift */; };
+		847A783B204453ED0025A9D5 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783A204453ED0025A9D5 /* Feedback.swift */; };
+		847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783C204454390025A9D5 /* FeedbackViewController.swift */; };
+		847A783F20445B270025A9D5 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783E20445B270025A9D5 /* TeamListViewController.swift */; };
 		8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C203203D8AD4007DA602 /* SponsorsViewController.swift */; };
 		8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */; };
 		8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */; };
 		84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D127203F481000A5FEB8 /* MentorsCollectionReusableView.swift */; };
 		84D1D12B203F481000A5FEB8 /* MentorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D128203F481000A5FEB8 /* MentorsCollectionViewCell.swift */; };
-		84D1D12C203F481000A5FEB8 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D129203F481000A5FEB8 /* MentorsViewController.swift */; };
-		84D1D12F203F4E9A00A5FEB8 /* ASponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D12E203F4E9A00A5FEB8 /* ASponsorViewController.swift */; };
-		CE06ECCE203EA3BC00ACE8E0 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */; };
-		CE06ECD0203EAA5600ACE8E0 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */; };
-		CE06ECD2203EAA7000ACE8E0 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */; };
-		CE06ECD4203EB44B00ACE8E0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD3203EB44B00ACE8E0 /* News.swift */; };
 		CE06ECD8203F601200ACE8E0 /* ANewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */; };
-		CE06ECDA203F703200ACE8E0 /* Lifehack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD9203F703200ACE8E0 /* Lifehack.swift */; };
 		CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */; };
 		CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */; };
 		CE66DDB1204357260092EE51 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66DDB0204357260092EE51 /* VotingViewController.swift */; };
-		CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1275203E0FB800B90F94 /* Mentor.swift */; };
-		CEFD1278203E101600B90F94 /* MentorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD1277203E101600B90F94 /* MentorType.swift */; };
 		FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */; };
 		FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D82034163B00827B40 /* NewsViewController.swift */; };
 		FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660DB2034487800827B40 /* LifehacksViewController.swift */; };
@@ -67,8 +66,6 @@
 		84059DF9203AE81200229ED8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		84083C33203DB647004C69E8 /* Sponsor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		84083C35203DB6E4004C69E8 /* SponsorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorType.swift; sourceTree = "<group>"; };
-		8419F9D8203D89D700342EDE /* AboutHack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHack.swift; sourceTree = "<group>"; };
-		8419F9DC203D8AF400342EDE /* TeamListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListVC.swift; sourceTree = "<group>"; };
 		8419F9DF203D8B5000342EDE /* BackTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 		8419F9E2203D8DBF00342EDE /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		842BA97F20285CCE00F731D0 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +84,16 @@
 		844CBD092029DF63002DBB01 /* Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		844CBD0B2029DF64002DBB01 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		847A7823204451AB0025A9D5 /* MentorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorType.swift; sourceTree = "<group>"; };
+		847A7824204451AB0025A9D5 /* FAQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		847A7825204451AC0025A9D5 /* Lifehack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lifehack.swift; sourceTree = "<group>"; };
+		847A7832204452880025A9D5 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		847A7834204452E90025A9D5 /* AboutHack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutHack.swift; sourceTree = "<group>"; };
+		847A7836204453AB0025A9D5 /* ASponsorViewController 20-38-55-299.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASponsorViewController 20-38-55-299.swift"; sourceTree = "<group>"; };
+		847A7838204453BA0025A9D5 /* Mentor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		847A783A204453ED0025A9D5 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		847A783C204454390025A9D5 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		847A783E20445B270025A9D5 /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
 		8488C203203D8AD4007DA602 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -94,12 +101,8 @@
 		84D1D128203F481000A5FEB8 /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D1D129203F481000A5FEB8 /* MentorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		84D1D12E203F4E9A00A5FEB8 /* ASponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
-		CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
-		CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
-		CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		CE06ECD3203EB44B00ACE8E0 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANewsViewController.swift; sourceTree = "<group>"; };
-		CE06ECD9203F703200ACE8E0 /* Lifehack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifehack.swift; sourceTree = "<group>"; };
 		CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALifehackViewController.swift; sourceTree = "<group>"; };
 		CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMentorViewController.swift; sourceTree = "<group>"; };
 		CE66DDB0204357260092EE51 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +111,6 @@
 		CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEFD1273203E0DB700B90F94 /* MentorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionReusableView.swift; sourceTree = "<group>"; };
 		CEFD1275203E0FB800B90F94 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
-		CEFD1277203E101600B90F94 /* MentorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorType.swift; sourceTree = "<group>"; };
 		FB390A269A2C3948B29F0D27 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		FC8660D82034163B00827B40 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -176,12 +178,15 @@
 		8419F9D7203D89AF00342EDE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				843A292A203EBB7700ADF835 /* MentorType.swift */,
-				843A2928203EBB7100ADF835 /* Mentor.swift */,
-				843A2926203EBB6900ADF835 /* FAQ.swift */,
-				8419F9D8203D89D700342EDE /* AboutHack.swift */,
+				847A7838204453BA0025A9D5 /* Mentor.swift */,
+				847A7832204452880025A9D5 /* News.swift */,
+				847A7834204452E90025A9D5 /* AboutHack.swift */,
+				847A7824204451AB0025A9D5 /* FAQ.swift */,
+				847A7825204451AC0025A9D5 /* Lifehack.swift */,
+				847A7823204451AB0025A9D5 /* MentorType.swift */,
 				84083C33203DB647004C69E8 /* Sponsor.swift */,
 				84083C35203DB6E4004C69E8 /* SponsorType.swift */,
+				847A783A204453ED0025A9D5 /* Feedback.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,8 +194,8 @@
 		8419F9DB203D8ADB00342EDE /* TeamList */ = {
 			isa = PBXGroup;
 			children = (
-				8419F9DC203D8AF400342EDE /* TeamListVC.swift */,
 				8419F9E2203D8DBF00342EDE /* Shared.swift */,
+				847A783E20445B270025A9D5 /* TeamListViewController.swift */,
 			);
 			path = TeamList;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 		84CDE74E203DB20B0007F978 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				847A783C204454390025A9D5 /* FeedbackViewController.swift */,
 			);
 			path = Feedback;
 			sourceTree = "<group>";
@@ -287,6 +293,9 @@
 				CEFD1271203E0D9C00B90F94 /* MentorsCollectionViewCell.swift */,
 				CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */,
 				CEFD126F203E0D8800B90F94 /* MentorsViewController.swift */,
+				84D1D12E203F4E9A00A5FEB8 /* ASponsorViewController.swift */,
+				CEFD1275203E0FB800B90F94 /* Mentor.swift */,
+				CE06ECD3203EB44B00ACE8E0 /* News.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -350,6 +359,7 @@
 		FC8660E420345C8B00827B40 /* Partners */ = {
 			isa = PBXGroup;
 			children = (
+				847A7836204453AB0025A9D5 /* ASponsorViewController 20-38-55-299.swift */,
 				8488C203203D8AD4007DA602 /* SponsorsViewController.swift */,
 				8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */,
 				8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */,
@@ -497,21 +507,22 @@
 			files = (
 				8419F9E3203D8DBF00342EDE /* Shared.swift in Sources */,
 				8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */,
+				847A783F20445B270025A9D5 /* TeamListViewController.swift in Sources */,
+				847A7828204451AC0025A9D5 /* MentorType.swift in Sources */,
 				844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */,
-				843A292B203EBB7700ADF835 /* MentorType.swift in Sources */,
 				8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */,
+				847A7829204451AC0025A9D5 /* FAQ.swift in Sources */,
 				842BA98520285CCE00F731D0 /* ViewController.swift in Sources */,
-				8419F9D9203D89D700342EDE /* AboutHack.swift in Sources */,
 				84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */,
 				84D1D12B203F481000A5FEB8 /* MentorsCollectionViewCell.swift in Sources */,
 				FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */,
 				FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */,
-				84D1D12F203F4E9A00A5FEB8 /* ASponsorViewController.swift in Sources */,
+				847A782A204451AC0025A9D5 /* Lifehack.swift in Sources */,
+				847A7839204453BA0025A9D5 /* Mentor.swift in Sources */,
 				FC8660DE203448C000827B40 /* LifehacksTableViewCell.swift in Sources */,
 				8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */,
 				84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */,
 				FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */,
-				843A2927203EBB6900ADF835 /* FAQ.swift in Sources */,
 				84059DF3203AE0AE00229ED8 /* RulesViewController.swift in Sources */,
 				84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
@@ -519,21 +530,23 @@
 				CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */,
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
 				8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */,
+				847A7837204453AB0025A9D5 /* ASponsorViewController 20-38-55-299.swift in Sources */,
 				84083C34203DB647004C69E8 /* Sponsor.swift in Sources */,
 				CE66DDB1204357260092EE51 /* VotingViewController.swift in Sources */,
 				842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */,
+				847A7835204452E90025A9D5 /* AboutHack.swift in Sources */,
 				FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */,
 				84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */,
 				84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */,
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
+				847A7833204452880025A9D5 /* News.swift in Sources */,
+				847A783B204453ED0025A9D5 /* Feedback.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */,
+				847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */,
 				8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
-				CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */,
-				CE06ECD4203EB44B00ACE8E0 /* News.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
-				8419F9DD203D8AF400342EDE /* TeamListVC.swift in Sources */,
 				84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

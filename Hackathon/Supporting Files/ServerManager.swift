@@ -55,6 +55,14 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
     
+    func addFeedbacks(feedback: Feedback,_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
+        self.post(api: "feedback/", parameters: feedback.getDict(), completion: { (json) in
+            completion()
+        }) { (message) in
+            print(message)
+        }
+    }
+    
 // Commented lines below are kind of a template
 //    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "info/about", completion: { (json) in
