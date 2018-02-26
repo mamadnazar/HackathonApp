@@ -176,14 +176,12 @@
 		8419F9D7203D89AF00342EDE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				843A292A203EBB7700ADF835 /* MentorType.swift */,
+				843A2928203EBB7100ADF835 /* Mentor.swift */,
+				843A2926203EBB6900ADF835 /* FAQ.swift */,
 				8419F9D8203D89D700342EDE /* AboutHack.swift */,
 				84083C33203DB647004C69E8 /* Sponsor.swift */,
 				84083C35203DB6E4004C69E8 /* SponsorType.swift */,
-				CEFD1275203E0FB800B90F94 /* Mentor.swift */,
-				CEFD1277203E101600B90F94 /* MentorType.swift */,
-				CE06ECCD203EA3BC00ACE8E0 /* FAQ.swift */,
-				CE06ECD3203EB44B00ACE8E0 /* News.swift */,
-				CE06ECD9203F703200ACE8E0 /* Lifehack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,8 +269,6 @@
 				FC8660D32034157900827B40 /* News */,
 				842BA98420285CCE00F731D0 /* ViewController.swift */,
 				842BA98620285CCE00F731D0 /* Main.storyboard */,
-				CE06ECCF203EAA5600ACE8E0 /* MyCustomCell.swift */,
-				CE06ECD1203EAA7000ACE8E0 /* MyCustomCell.xib */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -354,7 +350,6 @@
 		FC8660E420345C8B00827B40 /* Partners */ = {
 			isa = PBXGroup;
 			children = (
-				84D1D12E203F4E9A00A5FEB8 /* ASponsorViewController.swift */,
 				8488C203203D8AD4007DA602 /* SponsorsViewController.swift */,
 				8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */,
 				8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */,
@@ -427,7 +422,6 @@
 			files = (
 				842BA98D20285CCE00F731D0 /* LaunchScreen.storyboard in Resources */,
 				842BA98A20285CCE00F731D0 /* Assets.xcassets in Resources */,
-				CE06ECD2203EAA7000ACE8E0 /* MyCustomCell.xib in Resources */,
 				842BA98820285CCE00F731D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +498,7 @@
 				8419F9E3203D8DBF00342EDE /* Shared.swift in Sources */,
 				8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */,
 				844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */,
-				84D1D12C203F481000A5FEB8 /* MentorsViewController.swift in Sources */,
+				843A292B203EBB7700ADF835 /* MentorType.swift in Sources */,
 				8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */,
 				842BA98520285CCE00F731D0 /* ViewController.swift in Sources */,
 				8419F9D9203D89D700342EDE /* AboutHack.swift in Sources */,
@@ -517,6 +511,7 @@
 				8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */,
 				84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */,
 				FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */,
+				843A2927203EBB6900ADF835 /* FAQ.swift in Sources */,
 				84059DF3203AE0AE00229ED8 /* RulesViewController.swift in Sources */,
 				84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
@@ -527,7 +522,6 @@
 				84083C34203DB647004C69E8 /* Sponsor.swift in Sources */,
 				CE66DDB1204357260092EE51 /* VotingViewController.swift in Sources */,
 				842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */,
-				CE06ECCE203EA3BC00ACE8E0 /* FAQ.swift in Sources */,
 				FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */,
 				84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */,
 				84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */,
@@ -539,10 +533,7 @@
 				CEFD1276203E0FB800B90F94 /* Mentor.swift in Sources */,
 				CE06ECD4203EB44B00ACE8E0 /* News.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
-				CE06ECD0203EAA5600ACE8E0 /* MyCustomCell.swift in Sources */,
-				CE06ECDA203F703200ACE8E0 /* Lifehack.swift in Sources */,
 				8419F9DD203D8AF400342EDE /* TeamListVC.swift in Sources */,
-				CEFD1278203E101600B90F94 /* MentorType.swift in Sources */,
 				84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
