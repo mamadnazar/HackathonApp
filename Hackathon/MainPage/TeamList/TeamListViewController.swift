@@ -1,23 +1,26 @@
 //
-//  TeamListVC.swift
+//  TeamListViewController.swift
 //  Hackathon
 //
-//  Created by ITLabAdmin on 2/21/18.
+//  Created by ITLabAdmin on 2/26/18.
 //  Copyright © 2018 neobis. All rights reserved.
 //
+
 import UIKit
 
 class TeamListViewController: UIViewController {
     
-    let listOfTeams = ["Neobis" , "Neobis1" , "Neobis2" , "Neobis3" , "Neobis4" , "Neobis5" , "Neobis6" , "Neobis7"]
-    let teamMembers = ["1" , "2" , "3"]
+    let listOfTeams = ["Neobis1" , "Neobis2" , "Neobis3" , "Neobis4" ]
+    var selectedTeam = 0
+    var isSelected = false
+    let teamMembers = [["1" , "2" , "3"],["1" , "3"] , ["1" , "2" , "3" , "4"],["1" , "3" , "5"]]
     
     @IBOutlet weak var btnSelect: UIButton!
     @IBOutlet var listView: UIView!
     @IBOutlet weak var dimissButton: UIButton!
     @IBOutlet weak var teamMembersTV: UITableView!
     @IBOutlet weak var listOfTeamsTV: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,13 +58,13 @@ class TeamListViewController: UIViewController {
     
     func showListView() {
         view.addSubview(listView)
-        listView.center = CGPoint(x: view.bounds.midX, y: 140)
+        listView.center = CGPoint(x: view.bounds.midX, y: 5)
         listView.alpha = 0
         
         
         UIView.animate(withDuration: 0.4) {
             self.listView.alpha = 1
-            self.listView.center = self.view.center
+            self.listView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
             
         }
     }
@@ -69,7 +72,7 @@ class TeamListViewController: UIViewController {
     func hideListView() {
         UIView.animate(withDuration: 0.4, animations: {
             self.listView.alpha = 0
-            self.listView.center = CGPoint(x: self.view.bounds.midX, y: -200)
+            self.listView.center = CGPoint(x: self.view.bounds.midX, y: 5)
         }) { (success) in
             self.listView.removeFromSuperview()
         }
@@ -87,7 +90,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         if tableView == listOfTeamsTV {
             count = listOfTeams.count
         } else {
-            count = teamMembers.count
+            count = teamMembers[selectedTeam].count
         }
         
         return count
@@ -100,29 +103,28 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath)
             cell.textLabel?.text = listOfTeams[indexPath.row]
             cell.backgroundColor = .clear
+            cell.selectionStyle = .none
             cell.textLabel?.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
             
-        } else if tableView == teamMembersTV {
+        } else if tableView == teamMembersTV && isSelected {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-            cell.textLabel?.text = teamMembers[indexPath.row]
+            cell.textLabel?.text = teamMembers[selectedTeam][indexPath.row]
             cell.backgroundColor = .clear
-            cell.textLabel?.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+            cell.selectionStyle = .none
+            cell.textLabel?.textColor = UIColor.lightGray
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        hideListView()
-        self.dimissButton.isHidden = true
-        btnSelect.titleLabel?.text = listOfTeams[indexPath.row]
-        
-        let indexPath = IndexPath(row: indexPath.row, section: indexPath.section)
-        tableView.cellForRow(at: indexPath)
-        tableView.reloadData()
-        //tableView(teamMembersTV, numberOfRowsInSection: Int)
-        //tableView(teamMembersTV, cellForRowAt: indexPath)
-        
+        if tableView == listOfTeamsTV {
+            hideListView()
+            isSelected = true
+            selectedTeam = indexPath.row
+            self.dimissButton.isHidden = true
+            btnSelect.titleLabel?.text = listOfTeams[indexPath.row]
+            teamMembersTV.reloadData()
+        }
     }
-    
-  
 }
+
