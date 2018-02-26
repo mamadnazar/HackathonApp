@@ -8,15 +8,17 @@
 
 import UIKit
 
-class RulesViewController: UIViewController {
+class RulesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var rulesDescriptionLbl: UILabel!
+    @IBOutlet weak var rulesTableView: UITableView!
     
+    var rules = Rules()
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        rulesTableView.tableFooterView = UIView()
         self.setNavigationBar()
-        // Do any additional setup after loading the view.
+        ServerManager.shared.getRules(getRules, error: showErrorAlert)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,4 +26,22 @@ class RulesViewController: UIViewController {
         self.title = "Правила участия"
     }
     
+    func getRules(rules: Rules) {
+        self.rules = rules
+        self.rulesTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(rules.array.count)
+        return rules.array.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rulesCellID", for: indexPath) as! RulesTableViewCell
+        cell.rulesTitleLabel.text = rules.array[indexPath.item].title
+        cell.rulesDescriptionLabel.text = rules.array[indexPath.item].description
+        cell.rulesLinkLabel.text = rules.array[indexPath.item].link
+        return cell
+    }
+
 }
