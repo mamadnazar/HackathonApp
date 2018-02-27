@@ -15,6 +15,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	var newses = Newses()
 	let cellId = "FeedTableViewCell"
 	let noImageCellId = "SimpleFeedTableViewCell"
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		setup()
@@ -61,10 +62,12 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "aNewsVC") as! ANewsViewController
-        vc.newsImage = newses.array[indexPath.item].image_url
-        vc.newsTitle = newses.array[indexPath.item].title
-        vc.newsDescription = newses.array[indexPath.item].body
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailedInfoViewController") as! DetailedInfoViewController
+		let model = newses.array[indexPath.item]
+		vc._title = model.title
+		vc._description = model.body
+		vc.imageUrl = model.image_url
+		vc.date = model.updated_at
         self.navigationController?.show(vc, sender: self)
         
     }

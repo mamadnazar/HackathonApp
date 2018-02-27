@@ -35,6 +35,17 @@ class FeedTableViewCell: SimpleFeedTableViewCell {
 		}
 	}
 	
+	var lifeHackModel: Lifehack? {
+		didSet {
+			if let lifeHackModel = self.lifeHackModel {
+				if let url = URL(string: lifeHackModel.image_url ) {
+					self.imgView.kf.setImage(with: url)
+				}
+				setupLifeHacks(lifeHackModel)
+			}
+		}
+	}
+	
     override func awakeFromNib() {
         super.awakeFromNib()
     }

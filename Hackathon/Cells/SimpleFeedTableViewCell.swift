@@ -32,4 +32,10 @@ class SimpleFeedTableViewCell: UITableViewCell {
 		self.lblDescription.text = aboutHackModel.description
 		self.lblDate.text = ""
 	}
+	
+	func setupLifeHacks(_ lifehackModel: Lifehack) {
+		self.lblTitle.text = lifehackModel.title
+		self.lblDescription.text = lifehackModel.description
+		self.lblDate.text = ""
+	}
 }

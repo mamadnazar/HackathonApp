@@ -13,6 +13,7 @@
 		33EC56C52045D5DD009C040E /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EC56C32045D5DD009C040E /* FeedTableViewCell.xib */; };
 		33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */; };
 		33EC56C92045E1D4009C040E /* SimpleFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */; };
+		33EC56CB2045E680009C040E /* DetailedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */; };
 		84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */; };
 		84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */; };
 		84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DEF203ADCF800229ED8 /* Extensions.swift */; };
@@ -31,8 +32,6 @@
 		842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA9972028628C00F731D0 /* HTTPStatusCode.swift */; };
 		842BA99C2028633100F731D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99B2028633100F731D0 /* DataManager.swift */; };
 		842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99D2028639F00F731D0 /* ServerManager.swift */; };
-		8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */; };
-		8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429992044281E00F6E77A /* AnAboutHackViewController.swift */; };
 		843429AC20444BEA00F6E77A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429AB20444BEA00F6E77A /* Rule.swift */; };
 		843429B420446ABE00F6E77A /* ASponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429B320446ABE00F6E77A /* ASponsorViewController.swift */; };
 		844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */; };
@@ -52,14 +51,10 @@
 		84DBB0BE204594090047F4AE /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBB0BD204594090047F4AE /* RulesTableViewCell.swift */; };
 		84DBB0C120459A7F0047F4AE /* MentorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBB0C020459A7F0047F4AE /* MentorsCollectionViewCell.swift */; };
 		84DBB0C220459AD70047F4AE /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D129203F481000A5FEB8 /* MentorsViewController.swift */; };
-		CE06ECD8203F601200ACE8E0 /* ANewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */; };
-		CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */; };
 		CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */; };
 		CE66DDB1204357260092EE51 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66DDB0204357260092EE51 /* VotingViewController.swift */; };
-		FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */; };
 		FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660D82034163B00827B40 /* NewsViewController.swift */; };
 		FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660DB2034487800827B40 /* LifehacksViewController.swift */; };
-		FC8660DE203448C000827B40 /* LifehacksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660DD203448C000827B40 /* LifehacksTableViewCell.swift */; };
 		FC8660E1203451E500827B40 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660E0203451E500827B40 /* FAQTableViewCell.swift */; };
 		FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8660E2203451FE00827B40 /* FAQViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +66,7 @@
 		33EC56C32045D5DD009C040E /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFeedTableViewCell.swift; sourceTree = "<group>"; };
 		33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFeedTableViewCell.xib; sourceTree = "<group>"; };
+		33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailedInfoViewController.swift; path = Controllers/DetailedInfoViewController.swift; sourceTree = "<group>"; };
 		616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackathonViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +88,6 @@
 		842BA9972028628C00F731D0 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		842BA99B2028633100F731D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		842BA99D2028639F00F731D0 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
-		8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackTableViewCell.swift; sourceTree = "<group>"; };
-		843429992044281E00F6E77A /* AnAboutHackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnAboutHackViewController.swift; sourceTree = "<group>"; };
 		843429AB20444BEA00F6E77A /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		843429B320446ABE00F6E77A /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
 		844CBD092029DF63002DBB01 /* Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -117,8 +111,6 @@
 		84DBB0BD204594090047F4AE /* RulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
 		84DBB0C020459A7F0047F4AE /* MentorsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE06ECD3203EB44B00ACE8E0 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANewsViewController.swift; sourceTree = "<group>"; };
-		CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALifehackViewController.swift; sourceTree = "<group>"; };
 		CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMentorViewController.swift; sourceTree = "<group>"; };
 		CE66DDB0204357260092EE51 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		CEFD126C203E07E600B90F94 /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
@@ -127,10 +119,8 @@
 		CEFD1273203E0DB700B90F94 /* MentorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsCollectionReusableView.swift; sourceTree = "<group>"; };
 		CEFD1275203E0FB800B90F94 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		FB390A269A2C3948B29F0D27 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
-		FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		FC8660D82034163B00827B40 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		FC8660DB2034487800827B40 /* LifehacksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifehacksViewController.swift; sourceTree = "<group>"; };
-		FC8660DD203448C000827B40 /* LifehacksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifehacksTableViewCell.swift; sourceTree = "<group>"; };
 		FC8660E0203451E500827B40 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		FC8660E2203451FE00827B40 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,8 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */,
-				8434299720441D7900F6E77A /* AboutHackTableViewCell.swift */,
-				843429992044281E00F6E77A /* AnAboutHackViewController.swift */,
 			);
 			path = AboutHackathon;
 			sourceTree = "<group>";
@@ -304,6 +292,7 @@
 				FC8660D32034157900827B40 /* News */,
 				842BA98420285CCE00F731D0 /* ViewController.swift */,
 				842BA98620285CCE00F731D0 /* Main.storyboard */,
+				33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -360,9 +349,7 @@
 		FC8660D32034157900827B40 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				FC8660D6203415DA00827B40 /* NewsTableViewCell.swift */,
 				FC8660D82034163B00827B40 /* NewsViewController.swift */,
-				CE06ECD7203F601200ACE8E0 /* ANewsViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -371,8 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				FC8660DB2034487800827B40 /* LifehacksViewController.swift */,
-				FC8660DD203448C000827B40 /* LifehacksTableViewCell.swift */,
-				CE06ECDB203F74F200ACE8E0 /* ALifehackViewController.swift */,
 			);
 			path = Lifehacks;
 			sourceTree = "<group>";
@@ -548,20 +533,17 @@
 				8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */,
 				842BA98520285CCE00F731D0 /* ViewController.swift in Sources */,
 				84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */,
-				FC8660D7203415DA00827B40 /* NewsTableViewCell.swift in Sources */,
 				FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */,
 				84DBB0B620458F050047F4AE /* Mentor.swift in Sources */,
-				FC8660DE203448C000827B40 /* LifehacksTableViewCell.swift in Sources */,
-				8434299A2044281E00F6E77A /* AnAboutHackViewController.swift in Sources */,
 				33EC56BC2045C8F2009C040E /* Style.swift in Sources */,
 				84DBB0C120459A7F0047F4AE /* MentorsCollectionViewCell.swift in Sources */,
 				84DBB0BE204594090047F4AE /* RulesTableViewCell.swift in Sources */,
 				84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */,
 				FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */,
+				33EC56CB2045E680009C040E /* DetailedInfoViewController.swift in Sources */,
 				84059DF3203AE0AE00229ED8 /* RulesViewController.swift in Sources */,
 				84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
-				CE06ECD8203F601200ACE8E0 /* ANewsViewController.swift in Sources */,
 				33EC56C42045D5DD009C040E /* FeedTableViewCell.swift in Sources */,
 				CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */,
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
@@ -580,9 +562,7 @@
 				847A783B204453ED0025A9D5 /* Feedback.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */,
-				CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */,
 				847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */,
-				8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
 				84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */,

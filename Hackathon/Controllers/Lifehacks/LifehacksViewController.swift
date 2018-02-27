@@ -9,32 +9,36 @@
 import UIKit
 
 class LifehacksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-//    let lifehacks = ["LifeHack #1", "Don't drink uksus", "Talk with Ismet", "Wear helmet while cutting onion"]
-//    let lifehackLinks = ["example.com", "uksus.ru", "ismetzver.tm", "don'tfuckwithonion.com"]
-    
+	
+    @IBOutlet weak var tableView: UITableView!
+	
     var lifehacks = Lifehacks()
-    
-    @IBOutlet weak var LifeHacksTableView: UITableView!
-    
+	let cellId = "FeedTableViewCell"
+	let noImageCellId = "SimpleFeedTableViewCell"
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.setNavigationBar()
-        ServerManager.shared.getLifehacks(getLifehacks, error: showErrorAlert)
-        LifeHacksTableView.tableFooterView = UIView()
-        LifeHacksTableView.rowHeight = UITableViewAutomaticDimension
-        LifeHacksTableView.estimatedRowHeight = 110
+		self.setup()
+        ServerManager.shared.getLifehacks(setData, error: showErrorAlert)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "Sponsors and Partners"
     }
+	
+	func setup() {
+		self.setNavigationBar()
+		tableView.tableFooterView = UIView()
+		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.estimatedRowHeight = 110
+		tableView.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
+		tableView.register(UINib.init(nibName: noImageCellId, bundle: nil), forCellReuseIdentifier: noImageCellId)
+	}
 
-    func getLifehacks(lifehacks: Lifehacks) {
+    func setData(lifehacks: Lifehacks) {
         self.lifehacks = lifehacks
-        self.LifeHacksTableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,22 +46,28 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = LifeHacksTableView.dequeueReusableCell(withIdentifier: "lifehacksCell") as! LifehacksTableViewCell
-        cell.lifeHacksTitleLabel.text = lifehacks.array[indexPath.item].title
-        return cell
+		
+		let lifehack = lifehacks.array[indexPath.item]
+		
+		if lifehack.image_url.isEmpty {
+			let cell = tableView.dequeueReusableCell(withIdentifier: noImageCellId) as! SimpleFeedTableViewCell
+			cell.setupLifeHacks(lifehack)
+			return cell
+		}
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! FeedTableViewCell
+		cell.lifeHackModel = lifehack
+		return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 0.7)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "aLifehackVC") as! ALifehackViewController
-        vc.lifehackTitle = lifehacks.array[indexPath.item].title
-        vc.lifehackDescription = lifehacks.array[indexPath.item].description
-        vc.lifehackImg = lifehacks.array[indexPath.item].image_url
-        vc.lifehackLink = lifehacks.array[indexPath.item].link
-        self.navigationController?.show(vc, sender: self)
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyboard.instantiateViewController(withIdentifier: "DetailedInfoViewController") as! DetailedInfoViewController
+		let model = lifehacks.array[indexPath.item]
+		vc._title = model.title
+		vc._description = model.description
+		vc.imageUrl = model.image_url
+		vc.link = model.link
+		self.navigationController?.show(vc, sender: self)
     }
     
     
