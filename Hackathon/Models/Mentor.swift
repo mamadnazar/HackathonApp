@@ -15,6 +15,7 @@ struct Mentor {
     var work_place: String
     var work_area: String
     var image_url: String
+    var description: String
     
     init() {
         id = 0
@@ -22,6 +23,7 @@ struct Mentor {
         work_place = ""
         work_area = ""
         image_url = ""
+        description = ""
     }
     
     init (json: JSON) {
@@ -30,6 +32,7 @@ struct Mentor {
         work_place = json["work_place"].stringValue
         work_area = json["work_area"].stringValue
         image_url = json["image_url"].stringValue
+        description = json["description"].stringValue
     }
 }
 

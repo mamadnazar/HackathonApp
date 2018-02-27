@@ -27,8 +27,20 @@ class FeedbackViewController: UIViewController {
         setNavigationBar()
         super.viewDidLoad()
         
+        self.setNavigationBar()
+        // Do any additional setup after loading the view.
     }
-  
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Отзыв"
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     func alertAppear(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in

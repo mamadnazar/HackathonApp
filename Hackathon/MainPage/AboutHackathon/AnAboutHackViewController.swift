@@ -12,7 +12,7 @@ class AnAboutHackViewController: UIViewController {
 
     @IBOutlet weak var anAboutHackImage: UIImageView!
     @IBOutlet weak var anAboutHackTitleLabel: UILabel!
-    @IBOutlet weak var anAboutHackDescription: UILabel!
+    @IBOutlet weak var anAboutHackDescription: UITextView!
     @IBOutlet weak var anAboutHackLink: UITextView!
     
     var abouthack_image: String?
