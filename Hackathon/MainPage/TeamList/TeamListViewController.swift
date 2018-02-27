@@ -11,7 +11,7 @@ import UIKit
 class TeamListViewController: UIViewController {
     
     let listOfTeams = ["Neobis1" , "Neobis2" , "Neobis3" , "Neobis4" ]
-    var selectedTeam = 0
+    var selectedTeam: Int?
     var isSelected = false
     let teamMembers = [["1" , "2" , "3"],["1" , "3"] , ["1" , "2" , "3" , "4"],["1" , "3" , "5"]]
     
@@ -90,7 +90,13 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         if tableView == listOfTeamsTV {
             count = listOfTeams.count
         } else {
-            count = teamMembers[selectedTeam].count
+            if let selected = selectedTeam {
+                count = teamMembers[selected].count
+            }
+            else {
+                count = 0
+            }
+            
         }
         
         return count
@@ -106,9 +112,9 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             cell.textLabel?.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
             
-        } else if tableView == teamMembersTV && isSelected {
+        } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-            cell.textLabel?.text = teamMembers[selectedTeam][indexPath.row]
+            cell.textLabel?.text = teamMembers[selectedTeam!][indexPath.row]
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             cell.textLabel?.textColor = UIColor.lightGray
@@ -122,7 +128,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             isSelected = true
             selectedTeam = indexPath.row
             self.dimissButton.isHidden = true
-            btnSelect.titleLabel?.text = listOfTeams[indexPath.row]
+            btnSelect.setTitle(listOfTeams[indexPath.row], for: .normal)
             teamMembersTV.reloadData()
         }
     }
