@@ -24,6 +24,7 @@ class AMentorViewController: UIViewController {
         }
     }
     @IBOutlet weak var aMentorDescriptionLabel: UILabel!
+    var mentorID: Int?
     var mentor_image: String?
     var mentor_workarea: String?
     var mentor_name: String?
@@ -32,10 +33,15 @@ class AMentorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ServerManager.shared.getMentorByID(mentorID: mentorID!, setMentor, error: showErrorAlert)
         self.aMentorNameLabel.text = mentor_name
         self.aMentorWorkareaLabel.text = mentor_workarea
-        self.aMentorDescriptionLabel.text = mentor_description
         let url = URL(string: mentor_image!)
         self.aMentorImage.kf.setImage(with: url, placeholder: UIImage(named: "ril"), options: nil, progressBlock: nil, completionHandler: nil)
     }
+    
+    func setMentor(mentor: Mentor) {
+        self.aMentorDescriptionLabel.text = mentor.description
+    }
+    
 }
