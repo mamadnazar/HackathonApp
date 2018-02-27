@@ -23,6 +23,7 @@ class DetailedInfoViewController: UIViewController {
 	var imageUrl: String = ""
 	var date: String = ""
 	var link: String = ""
+	var shouldFitImage = false
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,11 @@ class DetailedInfoViewController: UIViewController {
 			
 			self.navigationItem.rightBarButtonItem = rightBarButtonItem
 		}
+		if shouldFitImage {
+			imgView.contentMode = .scaleAspectFit
+		}
     }
+	
 	@IBAction func openLink() {
 		guard let url = URL(string: self.link) else {
 			return

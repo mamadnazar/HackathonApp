@@ -14,15 +14,13 @@ class AMentorViewController: UIViewController {
     @IBOutlet weak var aMentorImage: UIImageView! {
         didSet {
             aMentorImage.layer.cornerRadius = aMentorImage.frame.size.height / 2.0
+			aMentorImage.layer.borderColor = Style.Color.yellow.cgColor
+			aMentorImage.layer.borderWidth = 2.0
            // aMentorImage.clipsToBounds = true
         }
     }
     @IBOutlet weak var aMentorWorkareaLabel: UILabel!
-    @IBOutlet weak var aMentorNameLabel: UILabel! {
-        didSet {
-            aMentorNameLabel.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
-        }
-    }
+    @IBOutlet weak var aMentorNameLabel: UILabel! 
     @IBOutlet weak var aMentorDescriptionLabel: UILabel!
     var mentorID: Int?
     var mentor_image: String?
@@ -37,7 +35,7 @@ class AMentorViewController: UIViewController {
         self.aMentorNameLabel.text = mentor_name
         self.aMentorWorkareaLabel.text = mentor_workarea
         let url = URL(string: mentor_image!)
-        self.aMentorImage.kf.setImage(with: url, placeholder: UIImage(named: "ril"), options: nil, progressBlock: nil, completionHandler: nil)
+        self.aMentorImage.kf.setImage(with: url, placeholder: UIImage(named: "no_photo"), options: nil, progressBlock: nil, completionHandler: nil)
     }
     
     func setMentor(mentor: Mentor) {

@@ -33,7 +33,6 @@
 		842BA99C2028633100F731D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99B2028633100F731D0 /* DataManager.swift */; };
 		842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99D2028639F00F731D0 /* ServerManager.swift */; };
 		843429AC20444BEA00F6E77A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429AB20444BEA00F6E77A /* Rule.swift */; };
-		843429B420446ABE00F6E77A /* ASponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429B320446ABE00F6E77A /* ASponsorViewController.swift */; };
 		844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */; };
 		847A7835204452E90025A9D5 /* AboutHack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7834204452E90025A9D5 /* AboutHack.swift */; };
 		847A783B204453ED0025A9D5 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783A204453ED0025A9D5 /* Feedback.swift */; };
@@ -89,7 +88,6 @@
 		842BA99B2028633100F731D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		842BA99D2028639F00F731D0 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		843429AB20444BEA00F6E77A /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
-		843429B320446ABE00F6E77A /* ASponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
 		844CBD092029DF63002DBB01 /* Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		844CBD0B2029DF64002DBB01 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -377,7 +375,6 @@
 				8488C203203D8AD4007DA602 /* SponsorsViewController.swift */,
 				8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */,
 				8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */,
-				843429B320446ABE00F6E77A /* ASponsorViewController.swift */,
 			);
 			path = Partners;
 			sourceTree = "<group>";
@@ -558,7 +555,6 @@
 				84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */,
 				84DBB0B820458F050047F4AE /* Lifehack.swift in Sources */,
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
-				843429B420446ABE00F6E77A /* ASponsorViewController.swift in Sources */,
 				847A783B204453ED0025A9D5 /* Feedback.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */,

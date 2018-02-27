@@ -10,10 +10,6 @@ import UIKit
 
 class MentorsCollectionReusableView: UICollectionReusableView {
             
-    @IBOutlet weak var mentorsHeaderLabel: UILabel! {
-        didSet {
-            mentorsHeaderLabel.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
-        }
-    }
+    @IBOutlet weak var mentorsHeaderLabel: UILabel!
     
 }

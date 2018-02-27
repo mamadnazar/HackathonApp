@@ -46,14 +46,14 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
         let url = URL(string: mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url)
         cell.mentorsNameLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
         cell.mentorsWorkareaLabel.text = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
-        cell.mentorsImage.kf.setImage(with: url, placeholder: UIImage(named: "ril"), options: nil, progressBlock: nil, completionHandler: nil)
+        cell.mentorsImage.kf.setImage(with: url, placeholder: UIImage(named: "no_photo"), options: nil, progressBlock: nil, completionHandler: nil)
         print("mentorsviewcontroller", cell.mentorsImage.frame.height)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.view.bounds.width
-        let cellWidth = (width - 40) / 3
+        let cellWidth = (width - 40 - 10) / 3
         return CGSize(width: cellWidth, height: cellWidth)
     }
     
