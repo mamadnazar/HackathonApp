@@ -12,8 +12,8 @@ import Kingfisher
 class AboutHackathonViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var aboutHacks = AboutHacks()
-    
     @IBOutlet weak var aboutHackTableView: UITableView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,24 +38,14 @@ class AboutHackathonViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "aboutHackCellID") as! AboutHackTableViewCell
-        let url = URL(string: aboutHacks.array[indexPath.item].image_url)
-        print(aboutHacks.array[indexPath.item].image_url)
-        cell.aboutHackImage.kf.setImage(with: url)
-        cell.aboutHackTitleLabel.text = aboutHacks.array[indexPath.item].title
-        cell.aboutHackDescriptionLabel.text = aboutHacks.array[indexPath.item].description
+       cell.aboutHackModel = aboutHacks.array[indexPath.item]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 0.7)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "anAboutHackVC") as! AnAboutHackViewController
-		
-        vc.abouthack_image = aboutHacks.array[indexPath.item].image_url
-        vc.abouthack_title = aboutHacks.array[indexPath.item].title
-        vc.abouthack_description = aboutHacks.array[indexPath.item].description
-        vc.abouthack_link = aboutHacks.array[indexPath.item].link
+		vc.aboutHackModel = aboutHacks.array[indexPath.item]
         self.navigationController?.show(vc, sender: self)
     }
     

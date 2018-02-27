@@ -14,20 +14,23 @@ class AnAboutHackViewController: UIViewController {
     @IBOutlet weak var anAboutHackTitleLabel: UILabel!
     @IBOutlet weak var anAboutHackDescription: UITextView!
     @IBOutlet weak var anAboutHackLink: UITextView!
-    
+	
+	var aboutHackModel: AboutHack?
+	
     var abouthack_image: String?
     var abouthack_title: String?
     var abouthack_description: String?
     var abouthack_link: String?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.anAboutHackTitleLabel.text = abouthack_title
-        self.anAboutHackDescription.text = abouthack_description
-        let url = URL(string: abouthack_image!)
-        self.anAboutHackImage.kf.setImage(with: url)
-        self.anAboutHackLink.text = abouthack_link
-        // Do any additional setup after loading the view.
+		
+        self.anAboutHackTitleLabel.text = aboutHackModel?.title
+        self.anAboutHackDescription.text = aboutHackModel?.description
+		if let url = URL(string: (aboutHackModel?.image_url ?? "")) {
+			self.anAboutHackImage.kf.setImage(with: url)
+		}
+        self.anAboutHackLink.text = aboutHackModel?.link
     }
 
     override func didReceiveMemoryWarning() {

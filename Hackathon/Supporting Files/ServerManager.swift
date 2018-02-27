@@ -51,7 +51,7 @@ class ServerManager: HTTPRequestManager  {
     
     func getNewses(_ completion: @escaping (Newses)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "updates/news", completion: { (json) in
-            completion(Newses(json: json))
+            completion(Newses(json: json["results"]))
         }, error: error)
     }
     
