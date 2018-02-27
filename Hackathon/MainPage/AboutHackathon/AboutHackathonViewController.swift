@@ -51,6 +51,7 @@ class AboutHackathonViewController: UIViewController, UITableViewDataSource, UIT
         selectedCell.contentView.backgroundColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 0.7)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "anAboutHackVC") as! AnAboutHackViewController
+		
         vc.abouthack_image = aboutHacks.array[indexPath.item].image_url
         vc.abouthack_title = aboutHacks.array[indexPath.item].title
         vc.abouthack_description = aboutHacks.array[indexPath.item].description

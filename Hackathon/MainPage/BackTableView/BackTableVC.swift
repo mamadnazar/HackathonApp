@@ -9,30 +9,44 @@
 import UIKit
 
 class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    private let tableArray = ["Расписание","О хакатоне" , "Новости и объявления" , "Лайфхаки" , "Спонсоры" ,
-                              "Менторы" , "Вопросы и ответы" , "Правила поведения и участия" , "Списки команд" , "Голосование" , "Отзывы" , "О приложении"]
-    
-    private let vcs = ["ScheduleVC" , "AboutHackathonVC" , "NewsVC" , "LifehacksVC" , "PartnersVC" , "MentorsVC" , "QuestionsVC" , "RulesVC" , "TeamsVC" , "VotingVC" , "FeedbackVC" , "AboutAppVC"]
+	@IBOutlet weak var tableView: UITableView!
+	
+    private let tableArray = [ "О хакатоне", "Новости и объявления",
+							   "Лайфхаки и советы", "Спонсоры и партнеры",
+							   "Менторы и жюри", "Расписание",
+							   "Вопросы и ответы", "Правила участия", "Списки команд",
+							  "Голосование", "Отзывы", "О приложении"]
+
+    private let vcs = ["AboutHackathonVC", "NewsVC",
+					   "LifehacksVC", "PartnersVC",
+					   "MentorsVC", "ScheduleVC",
+					   "QuestionsVC", "RulesVC", "TeamsVC",
+					   "VotingVC", "FeedbackVC", "AboutAppVC"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		tableView.tableFooterView = UIView()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		if section == 0 {
+			return 1
+		}
         return tableArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if indexPath.section == 0 {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "logoHeaderCell", for: indexPath) as UITableViewCell
+			return cell
+		}
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         cell.textLabel?.text = tableArray[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
-        
+        cell.textLabel?.textColor = Style.Color.darkGray
         return cell
     }
     
@@ -44,5 +58,11 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         revealVC?.pushFrontViewController(nvc, animated: true)
         
     }
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if indexPath.section == 0 {
+			return 180
+		}
+		return 44
+	}
 }
 

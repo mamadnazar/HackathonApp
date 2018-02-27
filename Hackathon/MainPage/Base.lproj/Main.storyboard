@@ -39,13 +39,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-yG-bxz">
-                                <rect key="frame" x="0.0" y="229" width="375" height="438"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-yG-bxz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="snp-w3-TWx">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logoHeaderCell" rowHeight="177" id="UdT-Lf-bCw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="177"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UdT-Lf-bCw" id="R3J-ay-o0i">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="176.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="festLogoBlack" translatesAutoresizingMaskIntoConstraints="NO" id="bvV-bL-RmO">
+                                                    <rect key="frame" x="57.5" y="13" width="160" height="150.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="4vy-Zw-4HC"/>
+                                                        <constraint firstAttribute="width" constant="160" id="lzj-Ri-qC1"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bvV-bL-RmO" firstAttribute="centerY" secondItem="R3J-ay-o0i" secondAttribute="centerY" id="Xut-tQ-chf"/>
+                                                <constraint firstItem="bvV-bL-RmO" firstAttribute="centerX" secondItem="R3J-ay-o0i" secondAttribute="centerX" constant="-50" id="dPL-Ie-y5p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="snp-w3-TWx">
+                                        <rect key="frame" x="0.0" y="205" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="snp-w3-TWx" id="xP4-U2-dBn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -59,22 +82,19 @@
                                     <outlet property="delegate" destination="PsV-cx-ivs" id="8Fh-vE-IPa"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="festLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="3Z2-CC-2BM">
-                                <rect key="frame" x="20" y="20" width="260" height="193"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96470588239999999" green="0.33333333329999998" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.84705882352941175" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3Z2-CC-2BM" firstAttribute="top" secondItem="Zct-RC-2yV" secondAttribute="topMargin" id="7p7-Ll-Sdg"/>
-                            <constraint firstItem="eKF-yG-bxz" firstAttribute="top" secondItem="3Z2-CC-2BM" secondAttribute="bottom" constant="16" id="YhZ-sU-Xk1"/>
-                            <constraint firstItem="3Z2-CC-2BM" firstAttribute="leading" secondItem="fUA-bC-gdZ" secondAttribute="leading" constant="20" id="byi-r2-Bx9"/>
+                            <constraint firstItem="eKF-yG-bxz" firstAttribute="top" secondItem="fUA-bC-gdZ" secondAttribute="top" id="GMc-e4-Pb9"/>
                             <constraint firstItem="eKF-yG-bxz" firstAttribute="leading" secondItem="fUA-bC-gdZ" secondAttribute="leading" id="f3Q-61-e4E"/>
                             <constraint firstItem="fUA-bC-gdZ" firstAttribute="trailing" secondItem="eKF-yG-bxz" secondAttribute="trailing" id="nUR-LT-BLS"/>
-                            <constraint firstItem="fUA-bC-gdZ" firstAttribute="trailing" secondItem="3Z2-CC-2BM" secondAttribute="trailing" constant="95" id="qki-HU-icG"/>
                             <constraint firstItem="fUA-bC-gdZ" firstAttribute="bottom" secondItem="eKF-yG-bxz" secondAttribute="bottom" id="zxQ-2J-Y0l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fUA-bC-gdZ"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="eKF-yG-bxz" id="xAK-B4-B6I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WdU-wT-V6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1409,8 +1429,8 @@
     </scenes>
     <resources>
         <image name="burger" width="32" height="32"/>
+        <image name="festLogoBlack" width="261" height="193"/>
         <image name="festLogoRed" width="283" height="210"/>
-        <image name="festLogoWhite" width="261" height="193"/>
         <image name="lifehacksImg" width="495" height="495"/>
         <image name="newsImg" width="294" height="171"/>
     </resources>

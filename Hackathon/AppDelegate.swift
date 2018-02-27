@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().barTintColor = .red
 //        return true
         UIApplication.shared.statusBarStyle = .lightContent
-        UINavigationBar.appearance().barTintColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = Style.Color.yellow
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:
             UIColor.white]
