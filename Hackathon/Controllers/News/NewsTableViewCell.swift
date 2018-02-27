@@ -8,17 +8,12 @@
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
-
-    //@IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var newsTitle: UILabel!
-    @IBOutlet weak var newsDateLabel: UILabel!
-    @IBOutlet weak var newsView: UIView! {
-        didSet {
-            newsView.layer.cornerRadius = 10
-        }
-    }
-    
+class NewsTableViewCell: AboutHackTableViewCell {
+	var news : News? {
+		didSet {
+			
+		}
+	}
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

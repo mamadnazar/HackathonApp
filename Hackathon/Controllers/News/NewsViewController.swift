@@ -9,63 +9,56 @@
 import UIKit
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    var newses = Newses()
     
     @IBOutlet weak var newsTableView: UITableView!
-    
+	
+	var newses = Newses()
+	let cellId = "FeedTableViewCell"
+	let noImageCellId = "SimpleFeedTableViewCell"
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.setNavigationBar()
-        ServerManager.shared.getNewses(getNewses, error: showErrorAlert)
-        newsTableView.tableFooterView = UIView()
-        newsTableView.rowHeight = UITableViewAutomaticDimension
-        newsTableView.estimatedRowHeight = 150
-        // Do any additional setup after loading the view.
+		setup()
+        ServerManager.shared.getNewses(setNewsFeed, error: showErrorAlert)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "Новости и объявления"
     }
+	
+	func setup() {
+		self.setNavigationBar()
+		newsTableView.tableFooterView = UIView()
+		newsTableView.rowHeight = UITableViewAutomaticDimension
+		newsTableView.estimatedRowHeight = 150
+		newsTableView.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
+		newsTableView.register(UINib.init(nibName: noImageCellId, bundle: nil), forCellReuseIdentifier: noImageCellId)
+	}
 
-    func getNewses(newses: Newses) {
+    func setNewsFeed(newses: Newses) {
         self.newses = newses
         self.newsTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(newses.array.count)
         return newses.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = newsTableView.dequeueReusableCell(withIdentifier: "newsTableViewCell") as! NewsTableViewCell
-        //let url = URL(string: newses.array[indexPath.item].image_url)
-       // cell.newsImage.kf.setImage(with: url)
-//        cell.newsImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, erro, type, url) in
-//            guard let image = image else {return }
-//            let imageWidth = image.size.width
-//            let imageHeight = image.size.height
-//            if imageWidth > imageHeight {
-//                cell.newsImage.contentMode = .scaleAspectFit
-//            } else {
-//                cell.newsImage.contentMode = .scaleAspectFill
-//            }
-//
-//         }
-        cell.newsTitle.text = newses.array[indexPath.item].title
-        cell.newsDateLabel.text = newses.array[indexPath.item].updated_at
+		if newses.array[indexPath.item].image_url.isEmpty {
+			let cell = newsTableView.dequeueReusableCell(withIdentifier: noImageCellId) as! SimpleFeedTableViewCell
+			cell.setupNews(newses.array[indexPath.item])
+			return cell
+		}
+        let cell = newsTableView.dequeueReusableCell(withIdentifier: cellId) as! FeedTableViewCell
+		cell.news = newses.array[indexPath.item]
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
+	
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 0.7)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "aNewsVC") as! ANewsViewController

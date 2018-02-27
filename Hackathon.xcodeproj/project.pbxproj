@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1D7608F3C9FD6FDDA56DEFDA /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */; };
 		33EC56BC2045C8F2009C040E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56BB2045C8F2009C040E /* Style.swift */; };
+		33EC56C42045D5DD009C040E /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56C22045D5DD009C040E /* FeedTableViewCell.swift */; };
+		33EC56C52045D5DD009C040E /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EC56C32045D5DD009C040E /* FeedTableViewCell.xib */; };
+		33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */; };
+		33EC56C92045E1D4009C040E /* SimpleFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */; };
 		84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */; };
 		84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */; };
 		84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DEF203ADCF800229ED8 /* Extensions.swift */; };
@@ -63,6 +67,10 @@
 /* Begin PBXFileReference section */
 		2A601F0E689F5FDB4C1C71B5 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		33EC56BB2045C8F2009C040E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		33EC56C22045D5DD009C040E /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		33EC56C32045D5DD009C040E /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFeedTableViewCell.swift; sourceTree = "<group>"; };
+		33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFeedTableViewCell.xib; sourceTree = "<group>"; };
 		616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackathonViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +154,17 @@
 				2A601F0E689F5FDB4C1C71B5 /* Pods-Hackathon.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		33EC56BF2045D59A009C040E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				33EC56C22045D5DD009C040E /* FeedTableViewCell.swift */,
+				33EC56C32045D5DD009C040E /* FeedTableViewCell.xib */,
+				33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */,
+				33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		84059DEB203AD4BF00229ED8 /* AboutApp */ = {
@@ -239,8 +258,9 @@
 		842BA98120285CCE00F731D0 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				33EC56BF2045D59A009C040E /* Cells */,
 				8419F9D7203D89AF00342EDE /* Models */,
-				842BA99F2028668800F731D0 /* MainPage */,
+				842BA99F2028668800F731D0 /* Controllers */,
 				842BA99420285FC400F731D0 /* Supporting Files */,
 				842BA98220285CCE00F731D0 /* AppDelegate.swift */,
 				842BA98920285CCE00F731D0 /* Assets.xcassets */,
@@ -266,7 +286,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		842BA99F2028668800F731D0 /* MainPage */ = {
+		842BA99F2028668800F731D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CE66DDAF2043570D0092EE51 /* Voting */,
@@ -285,7 +305,7 @@
 				842BA98420285CCE00F731D0 /* ViewController.swift */,
 				842BA98620285CCE00F731D0 /* Main.storyboard */,
 			);
-			path = MainPage;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		84CDE74E203DB20B0007F978 /* Feedback */ = {
@@ -440,7 +460,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EC56C92045E1D4009C040E /* SimpleFeedTableViewCell.xib in Resources */,
 				842BA98D20285CCE00F731D0 /* LaunchScreen.storyboard in Resources */,
+				33EC56C52045D5DD009C040E /* FeedTableViewCell.xib in Resources */,
 				842BA98A20285CCE00F731D0 /* Assets.xcassets in Resources */,
 				842BA98820285CCE00F731D0 /* Main.storyboard in Resources */,
 			);
@@ -540,6 +562,7 @@
 				84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
 				CE06ECD8203F601200ACE8E0 /* ANewsViewController.swift in Sources */,
+				33EC56C42045D5DD009C040E /* FeedTableViewCell.swift in Sources */,
 				CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */,
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
 				84DBB0C220459AD70047F4AE /* MentorsViewController.swift in Sources */,
@@ -556,6 +579,7 @@
 				843429B420446ABE00F6E77A /* ASponsorViewController.swift in Sources */,
 				847A783B204453ED0025A9D5 /* Feedback.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
+				33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */,
 				CE06ECDC203F74F200ACE8E0 /* ALifehackViewController.swift in Sources */,
 				847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */,
 				8434299820441D7900F6E77A /* AboutHackTableViewCell.swift in Sources */,

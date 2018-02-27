@@ -29,7 +29,17 @@ struct News {
         title = json["title"].stringValue
         body = json["body"].stringValue
         image_url = json["image_url"].stringValue
-        updated_at = json["updated_at"].stringValue
+		let tempDate = json["updated_at"].stringValue
+		let start = String.Index(encodedOffset: 0)
+		let end = String.Index(encodedOffset: 16)
+		let newDate = String(tempDate[start..<end])
+		
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+		let date = dateFormatter.date(from: newDate)!
+		dateFormatter.locale = Locale(identifier: "ru_RU")
+		dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
+		updated_at = dateFormatter.string(from: date)
     }
     
 }
