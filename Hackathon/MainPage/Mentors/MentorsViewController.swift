@@ -11,9 +11,11 @@ import Kingfisher
 
 class MentorsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet weak var mentorsCollectionView: UICollectionView!
-    var mentorTypes = MentorTypes()
     
+    @IBOutlet weak var mentorsCollectionView: UICollectionView!
+    
+    var mentorTypes = MentorTypes()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBar()
@@ -67,7 +69,8 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
         vc.mentor_name = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
         vc.mentor_workarea = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_area + " " + mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
         vc.mentor_image = mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url
-        vc.mentor_description = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+        //vc.mentor_description = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+        vc.mentorID = mentorTypes.array[indexPath.section].items.array[indexPath.item].id
         self.navigationController?.show(vc, sender: self)
     }
     

@@ -37,6 +37,12 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
     
+    func getMentorByID(mentorID: Int,_ completion: @escaping (Mentor)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "info/people/\(mentorID)", completion: { (json) in
+            completion(Mentor(json: json))
+        }, error: error)
+    }
+    
     func getFAQs(_ completion: @escaping (FAQs)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "info/faq", completion: { (json) in
             completion(FAQs(json: json))
@@ -59,6 +65,8 @@ class ServerManager: HTTPRequestManager  {
         self.get(api: "info/rules", completion: { (json) in
             completion(Rules(json: json))
         }, error: error)
+    }
+    
     func addFeedbacks(feedback: Feedback,_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
         self.post(api: "feedback/", parameters: feedback.getDict(), completion: { (json) in
             completion()

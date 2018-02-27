@@ -38,9 +38,9 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rulesCellID", for: indexPath) as! RulesTableViewCell
-        cell.rulesTitleLabel.text = rules.array[indexPath.item].title
-        cell.rulesDescriptionLabel.text = rules.array[indexPath.item].description
-        cell.rulesLinkLabel.text = rules.array[indexPath.item].link
+        cell.rulesTableViewTitle.text = rules.array[indexPath.item].title
+        cell.rulesTableViewDescription.text = rules.array[indexPath.item].description
+        cell.rulesTableViewLink.text = rules.array[indexPath.item].link
         return cell
     }
 

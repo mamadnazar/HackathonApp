@@ -373,7 +373,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Kj-OWP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Kj-OWP">
                                         <rect key="frame" x="16" y="284" width="343" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -552,7 +552,7 @@
                         <viewLayoutGuide key="safeArea" id="XQc-mi-dkp"/>
                     </view>
                     <connections>
-                        <outlet property="mentorsCollectionView" destination="4LX-Zp-FGj" id="eVs-Uc-oMr"/>
+                        <outlet property="mentorsCollectionView" destination="4LX-Zp-FGj" id="Jhw-rL-sws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7UP-MY-V0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -795,7 +795,7 @@
                                 <rect key="frame" x="0.0" y="238" width="375" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="rulesCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="WCM-hh-Lsy" customClass="RulesTableViewCell" customModule="Hackathon" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rulesCellID" rowHeight="117" id="WCM-hh-Lsy" customClass="RulesTableViewCell" customModule="Hackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WCM-hh-Lsy" id="47h-gq-wxt">
@@ -822,6 +822,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sfj-pz-p4M" secondAttribute="bottom" constant="35.5" id="1qy-SC-Ia2"/>
                                                 <constraint firstItem="sfj-pz-p4M" firstAttribute="top" secondItem="V1O-uE-kK5" secondAttribute="bottom" constant="4" id="5QU-hN-jsM"/>
                                                 <constraint firstAttribute="trailing" secondItem="pOF-SG-wp6" secondAttribute="trailing" constant="12" id="R8k-Zz-tSz"/>
                                                 <constraint firstItem="V1O-uE-kK5" firstAttribute="leading" secondItem="47h-gq-wxt" secondAttribute="leading" constant="12" id="SWo-cj-0Qy"/>
@@ -834,10 +835,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="rulesDescriptionLabel" destination="V1O-uE-kK5" id="CzE-bU-zhD"/>
-                                            <outlet property="rulesDescriptionLable" destination="V1O-uE-kK5" id="paD-6g-D2y"/>
-                                            <outlet property="rulesLinkLabel" destination="sfj-pz-p4M" id="cCJ-2J-hUO"/>
-                                            <outlet property="rulesTitleLabel" destination="pOF-SG-wp6" id="zV3-k8-dYI"/>
+                                            <outlet property="rulesTableViewDescription" destination="V1O-uE-kK5" id="xRL-md-gdz"/>
+                                            <outlet property="rulesTableViewLink" destination="sfj-pz-p4M" id="zPx-aa-G6B"/>
+                                            <outlet property="rulesTableViewTitle" destination="pOF-SG-wp6" id="YAD-Ss-nKJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1224,7 +1224,7 @@
                                 <color key="separatorColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.9233061671257019" green="0.300048828125" blue="0.28366073966026306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="memberCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" id="She-TR-taW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" id="She-TR-taW">
                                         <rect key="frame" x="0.0" y="28" width="358" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="She-TR-taW" id="LSh-O0-t94">
@@ -1292,7 +1292,7 @@
                             <color key="separatorColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="sectionIndexColor" red="0.96279579401016235" green="0.33162254095077515" blue="0.31571149826049805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <prototypes>
-                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="teamCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" id="6TJ-6p-xTl">
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" id="6TJ-6p-xTl">
                                     <rect key="frame" x="0.0" y="28" width="299" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6TJ-6p-xTl" id="8hJ-cz-BHd">

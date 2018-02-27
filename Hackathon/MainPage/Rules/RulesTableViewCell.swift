@@ -2,7 +2,7 @@
 //  RulesTableViewCell.swift
 //  Hackathon
 //
-//  Created by ITLabAdmin on 2/26/18.
+//  Created by Khasanza on 2/27/18.
 //  Copyright © 2018 neobis. All rights reserved.
 //
 
@@ -10,10 +10,10 @@ import UIKit
 
 class RulesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var rulesTitleLabel: UILabel!
-    @IBOutlet weak var rulesDescriptionLabel: UILabel!
-    @IBOutlet weak var rulesLinkLabel: UILabel!
-    
+    @IBOutlet weak var rulesTableViewTitle: UILabel!
+    @IBOutlet weak var rulesTableViewDescription: UILabel!
+    @IBOutlet weak var rulesTableViewLink: UILabel!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
