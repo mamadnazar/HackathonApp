@@ -110,7 +110,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = listOfTeams[indexPath.row]
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
-            cell.textLabel?.textColor = UIColor(red: 246/255, green: 85/255, blue: 81/255, alpha: 1)
+            cell.textLabel?.textColor = Style.Color.darkGray
             
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)

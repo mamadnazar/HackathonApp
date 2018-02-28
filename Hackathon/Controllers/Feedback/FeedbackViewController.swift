@@ -10,8 +10,23 @@ class FeedbackViewController: UIViewController {
             feedbackTextView.layer.borderWidth = 1
         }
     }
-    @IBOutlet weak var contactTextField: UITextField!
-    @IBOutlet weak var addFeedbackButton: UIButton!
+    @IBOutlet weak var contactTextField: UITextField! {
+        
+        didSet {
+            contactTextField.layer.borderColor = UIColor.lightGray.cgColor
+            contactTextField.layer.borderWidth = 1
+            contactTextField.layer.cornerRadius = 5
+        }
+    }
+    
+    
+    @IBOutlet weak var addFeedbackButton: UIButton! {
+        didSet {
+            addFeedbackButton.layer.cornerRadius = 5
+            addFeedbackButton.tintColor = Style.Color.yellow
+        }
+    }
+    
     @IBAction func addFeedBackButtonAction(_ sender: Any) {
         
         let feedback = Feedback(feedback_text: feedbackTextView.text!, contact: contactTextField.text!, time_added: "")

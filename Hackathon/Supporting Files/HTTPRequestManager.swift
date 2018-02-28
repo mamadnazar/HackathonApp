@@ -29,14 +29,9 @@ class HTTPRequestManager {
         let APIaddress = "\(url)\(api)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         //print(APIaddress)
         
-        var head: HTTPHeaders = [:]
+        let head: HTTPHeaders = [:]
         
-        
-        if let lang = UserDefaults.standard.string(forKey: "language") {
-            head.updateValue(lang, forKey: "language")
-        } else {
-            head.updateValue("ru", forKey: "language")
-        }
+ 
         
         Alamofire.request(APIaddress!, method: method, parameters: parameters, encoding: JSONEncoding.default , headers: head).responseJSON { (response:DataResponse<Any>) in
             
@@ -110,6 +105,7 @@ class HTTPRequestManager {
     internal func delete(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         request(method: .delete, api: api, parameters: parameters, header: header, completion: completion, error: error)
     }
+    
     internal func put(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         request(method: .put, api: api, parameters: parameters, header: header, completion: completion, error: error)
     }

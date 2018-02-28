@@ -44,7 +44,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logoHeaderCell" rowHeight="177" id="UdT-Lf-bCw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="logoHeaderCell" rowHeight="177" id="UdT-Lf-bCw">
                                         <rect key="frame" x="0.0" y="28" width="375" height="177"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UdT-Lf-bCw" id="R3J-ay-o0i">
@@ -552,10 +552,10 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEL-AY-iqy">
                                         <rect key="frame" x="16" y="210" width="359" height="477.5"/>
-                                        <mutableString key="text">Мобильное приложение для хакатана было разработано IT клубом программирования Neobis, студентами АУЦА, в партнерстве с zurz.pro, который предоставил графический дизайн.  
+                                        <string key="text">Мобильное приложение для хакатана было разработано IT клубом программирования Neobis, студентами АУЦА, в партнерстве с zurz.pro, который предоставил графический дизайн.  
 Мобильное приложение предназначено для центральноазиатского хакатона в рамках HackFest "Поколение Z: благополучие детей" который состоится 23-25 марта 2018 г. Организованный Центральноазиатской коалицией по продвижению прав детей и женщин, ОФ “ Лига Защитников Прав Ребенка”, IT организацией Neobis совместно с Детским фондом ООН (ЮНИСЕФ), Посольством Нидерландов, Информационным агентством АКИpress, Американским университетом Центральной Азии.
 
-Основная цель данного мероприятия - разработать инновационные решения на базе цифровых технологий, нацеленные на улучшение качества жизни и искоренения насилия в отношении детей в Центральной Азии.</mutableString>
+Основная цель данного мероприятия - разработать инновационные решения на базе цифровых технологий, нацеленные на улучшение качества жизни и искоренения насилия в отношении детей в Центральной Азии.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -821,10 +821,10 @@
                                     <constraint firstAttribute="height" constant="40" id="Tip-4c-j7k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ваши данные" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NN-1h-zu7">
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NN-1h-zu7">
                                 <rect key="frame" x="16" y="288.5" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iSL-bj-mbv"/>
@@ -835,14 +835,14 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-rx-O70">
                                 <rect key="frame" x="87.5" y="577" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.96279579401016235" green="0.33162254095077515" blue="0.31571149826049805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GFm-aa-KrB"/>
                                     <constraint firstAttribute="width" constant="200" id="zAL-0Q-JkV"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" title="Отправить">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addFeedBackButtonAction:" destination="jIu-eM-WNQ" eventType="touchUpInside" id="w10-4U-Z2J"/>
@@ -863,10 +863,10 @@
                                     <outlet property="delegate" destination="jIu-eM-WNQ" id="DxH-5f-Jhw"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="оставьте эл.почту или номер телефона, если хотите чтобы с вами связались" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-gE-foB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оставьте эл.почту или номер телефона, если хотите чтобы с вами связались" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-gE-foB">
                                 <rect key="frame" x="16" y="260" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -943,8 +943,8 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="13" minY="7" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title=" Select team">
-                                    <color key="titleColor" red="0.96279579401016235" green="0.33162254095077515" blue="0.31571149826049805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Выберите команду">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="openTeamListVC:" destination="NuW-Lc-kQm" eventType="touchUpInside" id="ojB-vk-lSQ"/>

@@ -29,8 +29,8 @@ class AboutHackathonViewController: UIViewController, UITableViewDataSource, UIT
     }
 	
 	func setup() {
-		tableView.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
-		tableView.register(UINib.init(nibName: noImageCellId, bundle: nil), forCellReuseIdentifier: noImageCellId)
+		tableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
+		tableView.register(UINib(nibName: noImageCellId, bundle: nil), forCellReuseIdentifier: noImageCellId)
 		tableView.tableFooterView = UIView()
 		setNavigationBar()
 	}
