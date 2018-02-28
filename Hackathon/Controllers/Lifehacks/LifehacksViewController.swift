@@ -24,7 +24,7 @@ class LifehacksViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Sponsors and Partners"
+        self.title = Constants.faq
     }
 	
 	func setup() {

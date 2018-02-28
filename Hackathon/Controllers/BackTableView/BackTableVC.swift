@@ -11,11 +11,18 @@ import UIKit
 class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	@IBOutlet weak var tableView: UITableView!
 	
-    private let tableArray = [ "О хакатоне", "Новости и объявления",
-							   "Лайфхаки и советы", "Спонсоры и партнеры",
-							   "Менторы и жюри", "Расписание",
-							   "Вопросы и ответы", "Правила участия", "Списки команд",
-							  "Голосование", "Отзывы", "О приложении"]
+    private let tableArray = [Constants.aboutHack,
+							  Constants.news,
+							  Constants.lifehacks,
+							  Constants.companies,
+							  Constants.mentors,
+							  Constants.shedulle,
+							  Constants.faq,
+							  Constants.rules,
+							  Constants.teams,
+							  Constants.voting,
+							  Constants.feedback,
+							  Constants.aboutApp]
 
     private let vcs = ["AboutHackathonVC", "NewsVC",
 					   "LifehacksVC", "PartnersVC",

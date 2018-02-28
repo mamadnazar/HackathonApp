@@ -24,7 +24,7 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Правила участия"
+        self.title = Constants.rules
     }
     
     func getRules(rules: Rules) {

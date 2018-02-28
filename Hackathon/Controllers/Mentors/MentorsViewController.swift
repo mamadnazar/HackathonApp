@@ -25,7 +25,7 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.title = "Менторы и жюри"
+        self.title = Constants.mentors
     }
 
     func getMentors(mentorTypes: MentorTypes) {

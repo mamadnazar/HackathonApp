@@ -25,7 +25,7 @@ class AboutHackathonViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "О хакатоне"
+        self.title = Constants.aboutHack
     }
 	
 	func setup() {

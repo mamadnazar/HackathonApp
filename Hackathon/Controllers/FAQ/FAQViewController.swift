@@ -26,7 +26,7 @@ class FAQViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Вопросы и ответы"
+        self.title = Constants.faq
     }
     
     func getFAQs(faqs: FAQs) {

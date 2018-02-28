@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = Style.Color.yellow
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:
-            UIColor.white]
-        UINavigationBar.appearance().tintColor = .white
+            Style.Color.darkGray]
+        UINavigationBar.appearance().tintColor = Style.Color.darkGray
         return true
         
     }

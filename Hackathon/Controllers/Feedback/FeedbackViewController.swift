@@ -33,7 +33,7 @@ class FeedbackViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Отзыв"
+        self.title = Constants.feedback
     }
     
     override func didReceiveMemoryWarning() {

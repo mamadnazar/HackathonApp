@@ -56,7 +56,7 @@ class ScheduleViewController: SJSegmentedViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Расписание"
+        self.title = Constants.shedulle
     }
 
 

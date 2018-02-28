@@ -21,7 +21,7 @@ class AboutAppViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "О приложении"
+        self.title = Constants.aboutApp
     }
 
 }

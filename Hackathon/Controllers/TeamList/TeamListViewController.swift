@@ -42,7 +42,7 @@ class TeamListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Список команд"
+        self.title = Constants.teams
     }
     
     @IBAction func openTeamListVC(_ sender: UIButton) {

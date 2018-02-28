@@ -25,7 +25,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Спонсоры"
+        self.title = Constants.companies
     }
 
     func getSponsors(sponsorTypes: SponsorTypes) {

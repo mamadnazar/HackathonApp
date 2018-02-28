@@ -14,6 +14,7 @@
 		33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */; };
 		33EC56C92045E1D4009C040E /* SimpleFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */; };
 		33EC56CB2045E680009C040E /* DetailedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */; };
+		33EFD2F12046A393001C967F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD2F02046A392001C967F /* Constants.swift */; };
 		84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */; };
 		84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */; };
 		84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DEF203ADCF800229ED8 /* Extensions.swift */; };
@@ -66,6 +67,7 @@
 		33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFeedTableViewCell.swift; sourceTree = "<group>"; };
 		33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFeedTableViewCell.xib; sourceTree = "<group>"; };
 		33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailedInfoViewController.swift; path = Controllers/DetailedInfoViewController.swift; sourceTree = "<group>"; };
+		33EFD2F02046A392001C967F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackathonViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				844CBD092029DF63002DBB01 /* Hackathon-Bridging-Header.h */,
 				84059DEF203ADCF800229ED8 /* Extensions.swift */,
 				33EC56BB2045C8F2009C040E /* Style.swift */,
+				33EFD2F02046A392001C967F /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -488,7 +491,7 @@
 		};
 		7F7C299BB140BB95D4AEA436 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -542,6 +545,7 @@
 				84059DFA203AE81200229ED8 /* ScheduleViewController.swift in Sources */,
 				842BA99C2028633100F731D0 /* DataManager.swift in Sources */,
 				33EC56C42045D5DD009C040E /* FeedTableViewCell.swift in Sources */,
+				33EFD2F12046A393001C967F /* Constants.swift in Sources */,
 				CE06ECDE203F9D4000ACE8E0 /* AMentorViewController.swift in Sources */,
 				842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */,
 				84DBB0C220459AD70047F4AE /* MentorsViewController.swift in Sources */,
@@ -710,7 +714,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Hackathon/Supporting Files/Hackathon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -729,7 +733,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hackathon/Supporting Files/Hackathon-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
