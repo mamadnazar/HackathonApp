@@ -59,8 +59,4 @@ class DetailedInfoViewController: UIViewController {
 			UIApplication.shared.openURL(url)
 		}
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
