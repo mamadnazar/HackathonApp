@@ -540,20 +540,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEL-AY-iqy">
-                                <rect key="frame" x="20" y="96" width="335" height="20.5"/>
-                                <string key="text">текст о приложении текст о приложении текст о приложении текст о приложении текст о приложении текст о приложениитекст о приложении текст о приложении текст о приложении</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1H-dt-QcX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neobis_logo" translatesAutoresizingMaskIntoConstraints="NO" id="d1r-MH-xSU">
+                                        <rect key="frame" x="37" y="24" width="300" height="98.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="rzE-8k-Ymu"/>
+                                            <constraint firstAttribute="width" secondItem="d1r-MH-xSU" secondAttribute="height" multiplier="180:59" id="u40-Ub-t0X"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEL-AY-iqy">
+                                        <rect key="frame" x="16" y="210" width="359" height="477.5"/>
+                                        <mutableString key="text">Мобильное приложение для хакатана было разработано IT клубом программирования Neobis, студентами АУЦА, в партнерстве с zurz.pro, который предоставил графический дизайн.  
+Мобильное приложение предназначено для центральноазиатского хакатона в рамках HackFest "Поколение Z: благополучие детей" который состоится 23-25 марта 2018 г. Организованный Центральноазиатской коалицией по продвижению прав детей и женщин, ОФ “ Лига Защитников Прав Ребенка”, IT организацией Neobis совместно с Детским фондом ООН (ЮНИСЕФ), Посольством Нидерландов, Информационным агентством АКИpress, Американским университетом Центральной Азии.
+
+Основная цель данного мероприятия - разработать инновационные решения на базе цифровых технологий, нацеленные на улучшение качества жизни и искоренения насилия в отношении детей в Центральной Азии.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zurzpro" translatesAutoresizingMaskIntoConstraints="NO" id="yfu-Aa-fEg">
+                                        <rect key="frame" x="64" y="146.5" width="247" height="39.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yfu-Aa-fEg" secondAttribute="height" multiplier="495:79" id="DaO-u3-fHq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yfu-Aa-fEg" firstAttribute="centerX" secondItem="R1H-dt-QcX" secondAttribute="centerX" id="1ts-44-e2U"/>
+                                    <constraint firstAttribute="trailing" secondItem="yEL-AY-iqy" secondAttribute="trailing" constant="16" id="2dI-kL-tXC"/>
+                                    <constraint firstAttribute="bottom" secondItem="yEL-AY-iqy" secondAttribute="bottom" constant="16" id="9vw-H5-mpT"/>
+                                    <constraint firstItem="yEL-AY-iqy" firstAttribute="centerX" secondItem="R1H-dt-QcX" secondAttribute="centerX" constant="8" id="Shc-DL-ark"/>
+                                    <constraint firstItem="yfu-Aa-fEg" firstAttribute="top" secondItem="d1r-MH-xSU" secondAttribute="bottom" constant="24" id="TVP-0p-jXu"/>
+                                    <constraint firstItem="yEL-AY-iqy" firstAttribute="leading" secondItem="R1H-dt-QcX" secondAttribute="leading" constant="16" id="Vb1-WC-aRh"/>
+                                    <constraint firstItem="d1r-MH-xSU" firstAttribute="top" secondItem="R1H-dt-QcX" secondAttribute="top" constant="24" id="idq-Lu-Sxi"/>
+                                    <constraint firstItem="d1r-MH-xSU" firstAttribute="centerX" secondItem="R1H-dt-QcX" secondAttribute="centerX" id="oWV-yz-yHK"/>
+                                    <constraint firstItem="yEL-AY-iqy" firstAttribute="top" secondItem="yfu-Aa-fEg" secondAttribute="bottom" constant="24" id="z7Z-gF-brv"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ugd-GK-Ovu" firstAttribute="trailing" secondItem="yEL-AY-iqy" secondAttribute="trailing" constant="20" id="FbK-5o-enj"/>
-                            <constraint firstItem="yEL-AY-iqy" firstAttribute="top" secondItem="Ugd-GK-Ovu" secondAttribute="top" constant="76" id="bUq-du-Xgc"/>
-                            <constraint firstItem="yEL-AY-iqy" firstAttribute="centerX" secondItem="3oI-N3-GLY" secondAttribute="centerX" id="ekY-V8-gqm"/>
-                            <constraint firstItem="yEL-AY-iqy" firstAttribute="leading" secondItem="Ugd-GK-Ovu" secondAttribute="leading" constant="20" id="r0L-hB-nfA"/>
+                            <constraint firstItem="R1H-dt-QcX" firstAttribute="leading" secondItem="Ugd-GK-Ovu" secondAttribute="leading" id="dRj-8B-LYC"/>
+                            <constraint firstItem="Ugd-GK-Ovu" firstAttribute="trailing" secondItem="R1H-dt-QcX" secondAttribute="trailing" id="ez6-3D-svE"/>
+                            <constraint firstItem="Ugd-GK-Ovu" firstAttribute="bottom" secondItem="R1H-dt-QcX" secondAttribute="bottom" id="j8J-QX-0NB"/>
+                            <constraint firstItem="R1H-dt-QcX" firstAttribute="top" secondItem="Ugd-GK-Ovu" secondAttribute="top" id="qgw-Vw-mVX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ugd-GK-Ovu"/>
                     </view>
@@ -1082,7 +1114,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="burger" width="32" height="32"/>
+        <image name="burger" width="37" height="41"/>
         <image name="festLogoBlack" width="261" height="193"/>
+        <image name="neobis_logo" width="900" height="295"/>
+        <image name="zurzpro" width="247" height="39"/>
     </resources>
 </document>
