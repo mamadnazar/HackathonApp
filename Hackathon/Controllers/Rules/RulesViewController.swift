@@ -10,13 +10,14 @@ import UIKit
 
 class RulesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var rulesTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var rules = Rules()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        rulesTableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView()
+		tableView.estimatedRowHeight = 50
+		tableView.rowHeight = UITableViewAutomaticDimension
         self.setNavigationBar()
         ServerManager.shared.getRules(getRules, error: showErrorAlert)
     }
@@ -28,19 +29,20 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func getRules(rules: Rules) {
         self.rules = rules
-        self.rulesTableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(rules.array.count)
-        return rules.array.count
+        return rules.array.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "rulesCellID", for: indexPath) as! RulesTableViewCell
-        cell.rulesTableViewTitle.text = rules.array[indexPath.item].title
-        cell.rulesTableViewDescription.text = rules.array[indexPath.item].description
-        cell.rulesTableViewLink.text = rules.array[indexPath.item].link
+		if indexPath.row == 0 {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "rulesLogoHeaderCell", for: indexPath)
+			return cell
+		}
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RulesTableViewCell", for: indexPath) as! RulesTableViewCell
+		cell.rule = rules.array[indexPath.row - 1]
         return cell
     }
 

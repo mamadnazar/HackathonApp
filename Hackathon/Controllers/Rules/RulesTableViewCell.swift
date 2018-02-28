@@ -10,19 +10,23 @@ import UIKit
 
 class RulesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var rulesTableViewTitle: UILabel!
-    @IBOutlet weak var rulesTableViewDescription: UILabel!
-    @IBOutlet weak var rulesTableViewLink: UILabel!
-   
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+	var rule : Rule? {
+		didSet {
+			if let rule = self.rule,  lblTitle != nil {
+				lblTitle.text = rule.title
+				lblDescription.text = rule.description
+			}
+		}
+	}
+	
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
