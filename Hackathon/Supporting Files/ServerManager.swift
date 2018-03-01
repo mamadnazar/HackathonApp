@@ -75,6 +75,12 @@ class ServerManager: HTTPRequestManager  {
         }
     }
     
+    func getScheduleTypes(_ completion: @escaping (ScheduleTypes)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "updates/getSchedule", completion: { (json) in
+            completion(ScheduleTypes(json: json))
+        }, error: error)
+    }
+    
 // Commented lines below are kind of a template
 //    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "info/about", completion: { (json) in

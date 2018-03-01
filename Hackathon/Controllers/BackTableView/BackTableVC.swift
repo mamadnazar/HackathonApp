@@ -16,7 +16,7 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 							  Constants.lifehacks,
 							  Constants.companies,
 							  Constants.mentors,
-							  Constants.shedulle,
+							  Constants.schedule,
 							  Constants.faq,
 							  Constants.rules,
 							  Constants.teams,
@@ -26,7 +26,8 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     private let vcs = ["AboutHackathonVC", "NewsVC",
 					   "LifehacksVC", "PartnersVC",
-					   "MentorsVC", "ScheduleVC",
+					   "MentorsVC",
+                       "ScheduleVC",
 					   "QuestionsVC", "RulesVC", "TeamsVC",
 					   "VotingVC", "FeedbackVC", "AboutAppVC"]
     
@@ -63,8 +64,8 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let vc = storyboard.instantiateViewController(withIdentifier: vcs[indexPath.row])
         let nvc = UINavigationController(rootViewController: vc)
         revealVC?.pushFrontViewController(nvc, animated: true)
-        
     }
+    
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		if indexPath.section == 0 {
 			return 180

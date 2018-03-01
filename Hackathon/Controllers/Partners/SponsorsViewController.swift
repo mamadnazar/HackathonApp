@@ -36,7 +36,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDelegate, UIColl
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sponsorTypes.array.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sponsorTypes.array[section].items.array.count
     }

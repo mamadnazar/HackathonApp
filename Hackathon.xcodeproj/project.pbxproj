@@ -33,6 +33,7 @@
 		842BA9982028628C00F731D0 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA9972028628C00F731D0 /* HTTPStatusCode.swift */; };
 		842BA99C2028633100F731D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99B2028633100F731D0 /* DataManager.swift */; };
 		842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA99D2028639F00F731D0 /* ServerManager.swift */; };
+		842E78A82047F53F004EABAD /* ScheduleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E78A72047F53F004EABAD /* ScheduleType.swift */; };
 		843429AC20444BEA00F6E77A /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843429AB20444BEA00F6E77A /* Rule.swift */; };
 		844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */; };
 		847A7835204452E90025A9D5 /* AboutHack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A7834204452E90025A9D5 /* AboutHack.swift */; };
@@ -42,6 +43,8 @@
 		8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C203203D8AD4007DA602 /* SponsorsViewController.swift */; };
 		8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */; };
 		8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */; };
+		84BB86492046F0A9005AE0D6 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86482046F0A9005AE0D6 /* Schedule.swift */; };
+		84BB864B2046F7B5005AE0D6 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB864A2046F7B5005AE0D6 /* ScheduleTableViewCell.swift */; };
 		84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D127203F481000A5FEB8 /* MentorsCollectionReusableView.swift */; };
 		84DBB0B520458F050047F4AE /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBB0B020458F050047F4AE /* FAQ.swift */; };
 		84DBB0B620458F050047F4AE /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBB0B120458F050047F4AE /* Mentor.swift */; };
@@ -89,6 +92,7 @@
 		842BA9972028628C00F731D0 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		842BA99B2028633100F731D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		842BA99D2028639F00F731D0 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		842E78A72047F53F004EABAD /* ScheduleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleType.swift; sourceTree = "<group>"; };
 		843429AB20444BEA00F6E77A /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		844CBD092029DF63002DBB01 /* Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		844CBD0A2029DF64002DBB01 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		8488C203203D8AD4007DA602 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionReusableView.swift; sourceTree = "<group>"; };
+		84BB86482046F0A9005AE0D6 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		84BB864A2046F7B5005AE0D6 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		84D1D127203F481000A5FEB8 /* MentorsCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsCollectionReusableView.swift; sourceTree = "<group>"; };
 		84D1D129203F481000A5FEB8 /* MentorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		84D1D12E203F4E9A00A5FEB8 /* ASponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASponsorViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				84059DF9203AE81200229ED8 /* ScheduleViewController.swift */,
+				84BB864A2046F7B5005AE0D6 /* ScheduleTableViewCell.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -203,6 +210,8 @@
 				84083C35203DB6E4004C69E8 /* SponsorType.swift */,
 				843429AB20444BEA00F6E77A /* Rule.swift */,
 				847A783A204453ED0025A9D5 /* Feedback.swift */,
+				84BB86482046F0A9005AE0D6 /* Schedule.swift */,
+				842E78A72047F53F004EABAD /* ScheduleType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -525,8 +534,10 @@
 				8419F9E3203D8DBF00342EDE /* Shared.swift in Sources */,
 				8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */,
 				847A783F20445B270025A9D5 /* TeamListViewController.swift in Sources */,
+				84BB86492046F0A9005AE0D6 /* Schedule.swift in Sources */,
 				84DBB0B920458F050047F4AE /* News.swift in Sources */,
 				844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */,
+				84BB864B2046F7B5005AE0D6 /* ScheduleTableViewCell.swift in Sources */,
 				84DBB0B720458F050047F4AE /* MentorType.swift in Sources */,
 				843429AC20444BEA00F6E77A /* Rule.swift in Sources */,
 				84DBB0B520458F050047F4AE /* FAQ.swift in Sources */,
@@ -535,6 +546,7 @@
 				84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */,
 				FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */,
 				84DBB0B620458F050047F4AE /* Mentor.swift in Sources */,
+				842E78A82047F53F004EABAD /* ScheduleType.swift in Sources */,
 				33EC56BC2045C8F2009C040E /* Style.swift in Sources */,
 				84DBB0C120459A7F0047F4AE /* MentorsCollectionViewCell.swift in Sources */,
 				84DBB0BE204594090047F4AE /* RulesTableViewCell.swift in Sources */,
