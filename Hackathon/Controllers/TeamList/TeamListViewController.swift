@@ -1,25 +1,21 @@
-//
-//  TeamListViewController.swift
-//  Hackathon
-//
-//  Created by ITLabAdmin on 2/26/18.
-//  Copyright © 2018 neobis. All rights reserved.
-//
+
 
 import UIKit
 
 class TeamListViewController: UIViewController {
     
-    let listOfTeams = ["Neobis1" , "Neobis2" , "Neobis3" , "Neobis4" ]
     var selectedTeam: Int?
     var isSelected = false
-    let teamMembers = [["1" , "2" , "3"],["1" , "3"] , ["1" , "2" , "3" , "4"],["1" , "3" , "5"]]
+    private var teams = Teams()
+    private var members = Members()
     
     @IBOutlet weak var btnSelect: UIButton!
     @IBOutlet var listView: UIView!
     @IBOutlet weak var dimissButton: UIButton!
     @IBOutlet weak var teamMembersTV: UITableView!
     @IBOutlet weak var listOfTeamsTV: UITableView!
+    
+    private let arrat = [[] , [] , ["" , ""]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +24,7 @@ class TeamListViewController: UIViewController {
         setNavigationBar()
         
         let cn : String = Shared.shared.companyName ?? "Выберите команду"
+        
         btnSelect.setTitle(cn,for: .selected)
         btnSelect.backgroundColor = UIColor.white
         btnSelect.layer.shadowColor = UIColor.lightGray.cgColor
@@ -37,8 +34,19 @@ class TeamListViewController: UIViewController {
         
         
         
+        ServerManager.shared.getTeams(getTeams, error: showErrorAlert)
+        //ServerManager.shared.getMembers(getMembers, error: showErrorAlert)
     }
     
+    private func getTeams(teams: Teams) {
+        self.teams = teams
+        self.listOfTeamsTV.reloadData()
+    }
+    private func getMembers (members: Members) {
+        self.members = members
+        self.teamMembersTV.reloadData()
+    
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -88,15 +96,15 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         var count = 0
         
         if tableView == listOfTeamsTV {
-            count = listOfTeams.count
+            count = teams.array.count
         } else {
             if let selected = selectedTeam {
-                count = teamMembers[selected].count
+                count = teams.array[section].members.array.count
+                print(teams.array[section].members.array.count)
             }
             else {
                 count = 0
             }
-            
         }
         
         return count
@@ -107,17 +115,17 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         
         if tableView == listOfTeamsTV {
             cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath)
-            cell.textLabel?.text = listOfTeams[indexPath.row]
+            cell.textLabel?.text = teams.array[indexPath.row].name
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             cell.textLabel?.textColor = Style.Color.darkGray
             
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-            cell.textLabel?.text = teamMembers[selectedTeam!][indexPath.row]
+            cell.textLabel?.text = "h"
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
-            cell.textLabel?.textColor = UIColor.lightGray
+            cell.textLabel?.textColor = Style.Color.darkGray
         }
         return cell
     }
@@ -128,7 +136,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             isSelected = true
             selectedTeam = indexPath.row
             self.dimissButton.isHidden = true
-            btnSelect.setTitle(listOfTeams[indexPath.row], for: .normal)
+            //btnSelect.setTitle(listOfTeams[indexPath.row], for: .normal)
             teamMembersTV.reloadData()
         }
     }
