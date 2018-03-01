@@ -30,6 +30,8 @@ class ServerManager: HTTPRequestManager  {
             completion(SponsorTypes(json: json))
         }, error: error)
     }
+    
+    
   
     func getMentors(_ completion: @escaping (MentorTypes)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "info/people", completion: { (json) in
@@ -73,6 +75,12 @@ class ServerManager: HTTPRequestManager  {
         }) { (message) in
             print(message)
         }
+    }
+    
+    func getTeams(_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "participants/teams/", completion: { (json) in
+            completion(Teams(json: json))
+        }, error: error)
     }
     
 // Commented lines below are kind of a template

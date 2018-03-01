@@ -39,6 +39,8 @@
 		847A783B204453ED0025A9D5 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783A204453ED0025A9D5 /* Feedback.swift */; };
 		847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783C204454390025A9D5 /* FeedbackViewController.swift */; };
 		847A783F20445B270025A9D5 /* TeamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A783E20445B270025A9D5 /* TeamListViewController.swift */; };
+		84805FF22048084600DFAA65 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84805FF12048084600DFAA65 /* Member.swift */; };
+		84805FF420480C1200DFAA65 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84805FF320480C1200DFAA65 /* Team.swift */; };
 		8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C203203D8AD4007DA602 /* SponsorsViewController.swift */; };
 		8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */; };
 		8488C208203D8F2C007DA602 /* SponsorsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */; };
@@ -97,6 +99,8 @@
 		847A783A204453ED0025A9D5 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		847A783C204454390025A9D5 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		847A783E20445B270025A9D5 /* TeamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewController.swift; sourceTree = "<group>"; };
+		84805FF12048084600DFAA65 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		84805FF320480C1200DFAA65 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		8488C203203D8AD4007DA602 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		8488C205203D8B03007DA602 /* SponsorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8488C207203D8F2C007DA602 /* SponsorsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				84083C35203DB6E4004C69E8 /* SponsorType.swift */,
 				843429AB20444BEA00F6E77A /* Rule.swift */,
 				847A783A204453ED0025A9D5 /* Feedback.swift */,
+				84805FF12048084600DFAA65 /* Member.swift */,
+				84805FF320480C1200DFAA65 /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */,
 				847A783F20445B270025A9D5 /* TeamListViewController.swift in Sources */,
 				84DBB0B920458F050047F4AE /* News.swift in Sources */,
+				84805FF22048084600DFAA65 /* Member.swift in Sources */,
 				844CBD0C2029DF64002DBB01 /* SWRevealViewController.m in Sources */,
 				84DBB0B720458F050047F4AE /* MentorType.swift in Sources */,
 				843429AC20444BEA00F6E77A /* Rule.swift in Sources */,
@@ -563,6 +570,7 @@
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
 				33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */,
 				847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */,
+				84805FF420480C1200DFAA65 /* Team.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,
 				842BA9962028624500F731D0 /* HTTPRequestManager.swift in Sources */,
 				84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */,
