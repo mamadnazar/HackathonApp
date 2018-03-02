@@ -22,7 +22,7 @@ class TeamListViewController: UIViewController {
         
         dimissButton.isHidden = true
         setNavigationBar()
-        
+        listOfTeamsTV.tableFooterView = UIView()
         let cn : String = Shared.shared.companyName ?? "Выберите команду"
         
         btnSelect.setTitle(cn,for: .selected)
@@ -99,8 +99,8 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             count = teams.array.count
         } else {
             if let selected = selectedTeam {
-                count = teams.array[section].members.array.count
-                print(teams.array[section].members.array.count)
+                count = teams.array[selected].members.array.count
+                print(teams.array[selected].members.array.count)
             }
             else {
                 count = 0
@@ -122,7 +122,10 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-            cell.textLabel?.text = "h"
+            
+            if let index = selectedTeam {
+                cell.textLabel?.text = teams.array[index].members.array[indexPath.item].full_name
+            }
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             cell.textLabel?.textColor = Style.Color.darkGray
@@ -136,7 +139,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             isSelected = true
             selectedTeam = indexPath.row
             self.dimissButton.isHidden = true
-            //btnSelect.setTitle(listOfTeams[indexPath.row], for: .normal)
+            btnSelect.setTitle(teams.array[indexPath.item].name, for: .normal)
             teamMembersTV.reloadData()
         }
     }
