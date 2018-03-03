@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SJSegmentedScrollView
 
-class ScheduleViewController: SJSegmentedViewController, UITableViewDataSource, UITableViewDelegate {
+class ScheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var scheduleTypes = ScheduleTypes()
     
@@ -42,7 +41,7 @@ class ScheduleViewController: SJSegmentedViewController, UITableViewDataSource, 
 //            schedule_location = "Nerede"
 //            schedule_time = "Ne zaman"
 //        default:
-//            break // buy ia am out of internet now ok  after 3 min ok bye thanks ))
+//            break
 //        }
 //    }
     
@@ -52,14 +51,13 @@ class ScheduleViewController: SJSegmentedViewController, UITableViewDataSource, 
         super.viewDidLoad()
         self.setNavigationBar()
         self.view.backgroundColor = .black
-        self.scheduleTableView.backgroundColor = .red
-
+        self.scheduleTableView.tableFooterView = UIView()
         ServerManager.shared.getScheduleTypes(getSchedules, error: showErrorAlert)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = Constants.schedule /// nice try)) HAHA // you should
+        self.title = Constants.schedule
     }
     
     func getSchedules(scheduleTypes: ScheduleTypes) {
@@ -67,22 +65,27 @@ class ScheduleViewController: SJSegmentedViewController, UITableViewDataSource, 
         self.scheduleTableView.reloadData()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {///zzzzzzver;  w tb twg whoe aawarge you?
-        //wtf why da hell it behaves like this
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("numOfSections", scheduleTypes.array.count)
         return scheduleTypes.array.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numOfRowsInSection", scheduleTypes.array[section].events.array.count)
         return scheduleTypes.array[section].events.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleTableViewCellID", for: indexPath) as! ScheduleTableViewCell
-        cell.backgroundColor = .blue
+//        cell.backgroundColor = .blue
+//        cell.textLabel?.text = "dasdasdasd"
         cell.scheduleTitleLabel.text = scheduleTypes.array[indexPath.section].events.array[indexPath.item].title
         cell.scheduleTimeLabel.text = scheduleTypes.array[indexPath.section].events.array[indexPath.item].start_time
         cell.scheduleLocationLabel.text = scheduleTypes.array[indexPath.section].events.array[indexPath.item].location
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
 }

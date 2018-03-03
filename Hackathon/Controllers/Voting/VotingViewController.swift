@@ -22,7 +22,7 @@ class VotingViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let session = AVCaptureSession()
         
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-        
+            
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice!)
             session.addInput(input)
@@ -30,7 +30,7 @@ class VotingViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         catch {
             print("ERROR")
         }
-     
+
         let output = AVCaptureMetadataOutput()
         session.addOutput(output)
         

@@ -22,6 +22,7 @@ class TeamListViewController: UIViewController {
         
         dimissButton.isHidden = true
         setNavigationBar()
+        listOfTeamsTV.tableFooterView = UIView()
         
         let cn : String = Shared.shared.companyName ?? "Выберите команду"
         
@@ -32,16 +33,14 @@ class TeamListViewController: UIViewController {
         btnSelect.layer.shadowOpacity = 50
         btnSelect.layer.shadowOffset = CGSize(width: 0, height: 0)
         
-        
-        
         ServerManager.shared.getTeams(getTeams, error: showErrorAlert)
-        //ServerManager.shared.getMembers(getMembers, error: showErrorAlert)
     }
     
     private func getTeams(teams: Teams) {
         self.teams = teams
         self.listOfTeamsTV.reloadData()
     }
+
     private func getMembers (members: Members) {
         self.members = members
         self.teamMembersTV.reloadData()
@@ -97,13 +96,13 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         
         if tableView == listOfTeamsTV {
             count = teams.array.count
-        } else {
-            if let selected = selectedTeam {
-                count = teams.array[section].members.array.count
+        } else if tableView == teamMembersTV {
+            if isSelected{
                 print(teams.array[section].members.array.count)
+                count = teams.array[section].members.array.count
             }
             else {
-                count = 0
+                return 0
             }
         }
         
@@ -120,9 +119,9 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             cell.textLabel?.textColor = Style.Color.darkGray
             
-        } else {
+        } else if tableView == teamMembersTV {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-            cell.textLabel?.text = "h"
+            cell.textLabel?.text = teams.array[indexPath.section].members.array[indexPath.item].full_name
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             cell.textLabel?.textColor = Style.Color.darkGray
@@ -135,9 +134,15 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             hideListView()
             isSelected = true
             selectedTeam = indexPath.row
+            print(indexPath.row)
+            print(indexPath.section)
             self.dimissButton.isHidden = true
-            //btnSelect.setTitle(listOfTeams[indexPath.row], for: .normal)
+            btnSelect.setTitle(teams.array[indexPath.section].name, for: .normal)
+            print(teams.array[indexPath.section].name)
             teamMembersTV.reloadData()
+        }
+        else {
+            btnSelect.setTitle(teams.array[indexPath.section].name, for: .normal)
         }
     }
 }

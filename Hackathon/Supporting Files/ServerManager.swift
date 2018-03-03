@@ -82,8 +82,14 @@ class ServerManager: HTTPRequestManager  {
             completion(ScheduleTypes(json: json))
         }, error: error)
     }
+            
+    func getTeams(_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "participants/teams/", completion: { (json) in
+            completion(Teams(json: json))
+        }, error: error)
+    }
     
-// Commented lines below are kind of a template
+// Commented lines below are a template
 //    func getAboutApp(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "info/about", completion: { (json) in
 //            completion(Stories(json: json))
