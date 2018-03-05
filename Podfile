@@ -11,5 +11,6 @@ target 'Hackathon' do
     pod 'IQKeyboardManagerSwift', '5.0.0'
     pod 'SJSegmentedScrollView'
     pod 'Kingfisher'
+    pod 'SVProgressHUD'
 
 end

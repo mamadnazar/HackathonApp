@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:
             Style.Color.darkGray]
         UINavigationBar.appearance().tintColor = Style.Color.darkGray
+        
+        IQKeyboardManager.sharedManager().enable = true
         return true
         
     }
