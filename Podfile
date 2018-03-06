@@ -12,5 +12,7 @@ target 'Hackathon' do
     pod 'SJSegmentedScrollView'
     pod 'Kingfisher'
     pod 'SVProgressHUD'
+	pod 'Firebase/Core'
+	pod 'Firebase/Messaging'
 
 end

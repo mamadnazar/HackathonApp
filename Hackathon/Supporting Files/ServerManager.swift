@@ -88,6 +88,11 @@ class ServerManager: HTTPRequestManager  {
             completion(Teams(json: json))
         }, error: error)
     }
+	func registerFirebaseToken(model: NotificationModel, _ completion: @escaping ()-> Void) {
+		self.post(api: "fcm/devices", parameters: model.toDic(), completion: { (json) in
+			completion()
+		}) { (error) in }
+	}
     
 //    func getTeams(_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "participants/teams", completion: { (json) in

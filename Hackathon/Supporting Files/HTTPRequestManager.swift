@@ -75,25 +75,27 @@ class HTTPRequestManager {
                 error(json!["error"].stringValue)
                 break
             default:
-                
-                let json = try? JSON(data: response.data!)
-                if (json?.isEmpty)! {
-                    print(json)
-                    let message = json!["error"].stringValue
-                    if  message != ""
-                    {
-                        error(message)
-                    } else {
-                        error("Неизвестная ошибка")
-                    }
-                } else {
-                    if let data = response.data {
-                        let json = String(data: data, encoding: String.Encoding.utf8)
-                        error(json!)
-                    } else {
-                        error("")
-                    }
-                }
+				guard let json = try? JSON(data: response.data!) else {
+					error("Неизвестная ошибка")
+					return
+				}
+				if (json.isEmpty) {
+					print(json)
+					let message = json["error"].stringValue
+					if  message != ""
+					{
+						error(message)
+					} else {
+						error("Неизвестная ошибка")
+					}
+				} else {
+					if let data = response.data {
+						let json = String(data: data, encoding: String.Encoding.utf8)
+						error(json!)
+					} else {
+						error("")
+					}
+				}
             }
         }
     }
