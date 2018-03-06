@@ -96,10 +96,10 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
         
         if tableView == listOfTeamsTV {
             count = teams.array.count
-        } else if tableView == teamMembersTV {
-            if isSelected{
-                print(teams.array[section].members.array.count)
-                count = teams.array[section].members.array.count
+        } else {
+            if let selected = selectedTeam {
+                count = teams.array[selected].members.array.count
+                print(teams.array[selected].members.array.count)
             }
             else {
                 return 0
@@ -121,7 +121,10 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else if tableView == teamMembersTV {
             cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-            cell.textLabel?.text = teams.array[indexPath.section].members.array[indexPath.item].full_name
+            
+            if let index = selectedTeam {
+                cell.textLabel?.text = teams.array[index].members.array[indexPath.item].full_name
+            }
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             cell.textLabel?.textColor = Style.Color.darkGray
@@ -137,8 +140,7 @@ extension TeamListViewController: UITableViewDelegate, UITableViewDataSource {
             print(indexPath.row)
             print(indexPath.section)
             self.dimissButton.isHidden = true
-            btnSelect.setTitle(teams.array[indexPath.section].name, for: .normal)
-            print(teams.array[indexPath.section].name)
+            btnSelect.setTitle(teams.array[indexPath.item].name, for: .normal)
             teamMembersTV.reloadData()
         }
         else {
