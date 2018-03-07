@@ -27,6 +27,10 @@
 		84083C36203DB6E4004C69E8 /* SponsorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84083C35203DB6E4004C69E8 /* SponsorType.swift */; };
 		8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F9DF203D8B5000342EDE /* BackTableVC.swift */; };
 		8419F9E3203D8DBF00342EDE /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F9E2203D8DBF00342EDE /* Shared.swift */; };
+		841D4B27204F989500856C98 /* MainScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4B26204F989500856C98 /* MainScheduleViewController.swift */; };
+		841D4B29204F98BB00856C98 /* ScheduleBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4B28204F98BB00856C98 /* ScheduleBarCollectionViewCell.swift */; };
+		841D4B2B204F98CA00856C98 /* ScheduleDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4B2A204F98CA00856C98 /* ScheduleDataCollectionViewCell.swift */; };
+		841D4B2D204F9D5600856C98 /* MainScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4B2C204F9D5600856C98 /* MainScheduleTableViewCell.swift */; };
 		842BA98320285CCE00F731D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA98220285CCE00F731D0 /* AppDelegate.swift */; };
 		842BA98520285CCE00F731D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BA98420285CCE00F731D0 /* ViewController.swift */; };
 		842BA98820285CCE00F731D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842BA98620285CCE00F731D0 /* Main.storyboard */; };
@@ -91,6 +95,10 @@
 		84083C35203DB6E4004C69E8 /* SponsorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorType.swift; sourceTree = "<group>"; };
 		8419F9DF203D8B5000342EDE /* BackTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 		8419F9E2203D8DBF00342EDE /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		841D4B26204F989500856C98 /* MainScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScheduleViewController.swift; sourceTree = "<group>"; };
+		841D4B28204F98BB00856C98 /* ScheduleBarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBarCollectionViewCell.swift; sourceTree = "<group>"; };
+		841D4B2A204F98CA00856C98 /* ScheduleDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDataCollectionViewCell.swift; sourceTree = "<group>"; };
+		841D4B2C204F9D5600856C98 /* MainScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		842BA97F20285CCE00F731D0 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842BA98220285CCE00F731D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842BA98420285CCE00F731D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +260,17 @@
 			path = BackTableView;
 			sourceTree = "<group>";
 		};
+		841D4B25204F986C00856C98 /* MainSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				841D4B26204F989500856C98 /* MainScheduleViewController.swift */,
+				841D4B28204F98BB00856C98 /* ScheduleBarCollectionViewCell.swift */,
+				841D4B2A204F98CA00856C98 /* ScheduleDataCollectionViewCell.swift */,
+				841D4B2C204F9D5600856C98 /* MainScheduleTableViewCell.swift */,
+			);
+			path = MainSchedule;
+			sourceTree = "<group>";
+		};
 		842BA97620285CCE00F731D0 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +328,7 @@
 		842BA99F2028668800F731D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				841D4B25204F986C00856C98 /* MainSchedule */,
 				CE66DDAF2043570D0092EE51 /* Voting */,
 				84D1D126203F479900A5FEB8 /* Mentors */,
 				84CDE74E203DB20B0007F978 /* Feedback */,
@@ -525,7 +545,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7F7C299BB140BB95D4AEA436 /* [CP] Embed Pods Frameworks */ = {
@@ -536,20 +556,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -563,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841D4B27204F989500856C98 /* MainScheduleViewController.swift in Sources */,
 				8419F9E3203D8DBF00342EDE /* Shared.swift in Sources */,
 				8488C204203D8AD4007DA602 /* SponsorsViewController.swift in Sources */,
 				847A783F20445B270025A9D5 /* TeamListViewController.swift in Sources */,
@@ -585,6 +612,8 @@
 				84DBB0BE204594090047F4AE /* RulesTableViewCell.swift in Sources */,
 				84D1D12A203F481000A5FEB8 /* MentorsCollectionReusableView.swift in Sources */,
 				FC8660D92034163B00827B40 /* NewsViewController.swift in Sources */,
+				841D4B2D204F9D5600856C98 /* MainScheduleTableViewCell.swift in Sources */,
+				841D4B29204F98BB00856C98 /* ScheduleBarCollectionViewCell.swift in Sources */,
 				33761A7C204E95E600238D48 /* NotificationModel.swift in Sources */,
 				33EC56CB2045E680009C040E /* DetailedInfoViewController.swift in Sources */,
 				84059DF3203AE0AE00229ED8 /* RulesViewController.swift in Sources */,
@@ -609,6 +638,7 @@
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
 				847A783B204453ED0025A9D5 /* Feedback.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
+				841D4B2B204F98CA00856C98 /* ScheduleDataCollectionViewCell.swift in Sources */,
 				33EC56C82045E1D4009C040E /* SimpleFeedTableViewCell.swift in Sources */,
 				847A783D204454390025A9D5 /* FeedbackViewController.swift in Sources */,
 				8419F9E0203D8B5000342EDE /* BackTableVC.swift in Sources */,

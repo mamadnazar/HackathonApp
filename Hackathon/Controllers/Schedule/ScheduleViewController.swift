@@ -12,41 +12,10 @@ import SVProgressHUD
 class ScheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var scheduleTypes = ScheduleTypes()
-//    var schedule_title = ""
-//    var schedule_time = ""
-//    var schedule_location = ""
-    
-//    @IBOutlet weak var scheduleSegmentedController: UISegmentedControl!
-//    @IBAction func scheduleSegmentedControllerAction(_ sender: Any) {
-//        switch scheduleSegmentedController.selectedSegmentIndex
-//        {
-//        case 0:
-//            schedule_title = "Hackathon starts"
-//            schedule_location = "AUCA"
-//            schedule_time = "9:00"
-//        case 1:
-//            schedule_title = "Hackathon continues"
-//            schedule_location = "AUCA"
-//            schedule_time = "8:00"
-//        case 2:
-//            schedule_title = "Wake up"
-//            schedule_location = "G30"
-//            schedule_time = "12:00"
-//        case 3:
-//            schedule_title = "Cho-to"
-//            schedule_location = "Gde-to"
-//            schedule_time = "Kogda-to"
-//        case 4:
-//            schedule_title = "Ne"
-//            schedule_location = "Nerede"
-//            schedule_time = "Ne zaman"
-//        default:
-//            break
-//        }
-//    }
     
     @IBOutlet weak var scheduleTableView: UITableView!
     @IBOutlet weak var scheduleCollectionView: UICollectionView!
+   
     var isSelected = false
     var selectedCollectionCell = 0
     
@@ -104,7 +73,7 @@ extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / CGFloat(scheduleTypes.array.count), height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

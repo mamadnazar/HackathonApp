@@ -1016,16 +1016,16 @@
         <!--Schedule View Controller-->
         <scene sceneID="oxw-8S-cfq">
             <objects>
-                <viewController storyboardIdentifier="ScheduleVC" id="D6i-pz-5tr" customClass="ScheduleViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D6i-pz-5tr" customClass="ScheduleViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oxb-Vk-63q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GlV-3t-Kcj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Xit-Lf-Tuo"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xit-Lf-Tuo"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2px-O6-QHB">
                                     <size key="itemSize" width="108" height="50"/>
@@ -1035,7 +1035,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="scheduleCollectionViewCellID" id="1UO-3R-qUx" customClass="ScheduleCollectionViewCell" customModule="Hackathon" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-10" width="108" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
@@ -1050,10 +1050,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="9Yl-tB-M3e" firstAttribute="top" secondItem="1UO-3R-qUx" secondAttribute="top" id="8Fq-4j-hi9"/>
-                                            <constraint firstAttribute="trailing" secondItem="9Yl-tB-M3e" secondAttribute="trailing" id="D7A-LL-B94"/>
-                                            <constraint firstAttribute="bottom" secondItem="9Yl-tB-M3e" secondAttribute="bottom" id="Zkv-c7-DiD"/>
-                                            <constraint firstItem="9Yl-tB-M3e" firstAttribute="leading" secondItem="1UO-3R-qUx" secondAttribute="leading" id="wXO-Qu-Y81"/>
+                                            <constraint firstItem="9Yl-tB-M3e" firstAttribute="leading" secondItem="1UO-3R-qUx" secondAttribute="leading" id="Ffl-a7-oxV"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Yl-tB-M3e" secondAttribute="bottom" id="Gpa-jF-ROo"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Yl-tB-M3e" secondAttribute="trailing" id="vvI-if-9JY"/>
+                                            <constraint firstItem="9Yl-tB-M3e" firstAttribute="top" secondItem="1UO-3R-qUx" secondAttribute="top" id="zMf-2i-m52"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="scheduleDateLabel" destination="9Yl-tB-M3e" id="scG-iY-KNd"/>
@@ -1066,7 +1066,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sbA-Xo-BqC">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleTableViewCellID" rowHeight="147" id="KQf-pt-bOc" customClass="ScheduleTableViewCell" customModule="Hackathon" customModuleProvider="target">
@@ -1165,6 +1165,195 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1q-7b-TbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3072.8000000000002" y="139.880059970015"/>
+        </scene>
+        <!--Main Schedule View Controller-->
+        <scene sceneID="khX-oM-q6W">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleVC" id="XRI-Bw-pqf" customClass="MainScheduleViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5YW-te-cL6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iTs-vA-sWg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lsg-Pb-7HX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="eWO-H6-1TZ">
+                                    <size key="itemSize" width="108" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="scheduleBarCellID" id="3n8-fA-HhG" customClass="ScheduleBarCollectionViewCell" customModule="Hackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2t-1R-sZ9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.49376991149999999" green="0.51034610859999996" blue="0.52845415610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="o2t-1R-sZ9" firstAttribute="top" secondItem="3n8-fA-HhG" secondAttribute="top" id="PfI-eF-AYM"/>
+                                            <constraint firstItem="o2t-1R-sZ9" firstAttribute="leading" secondItem="3n8-fA-HhG" secondAttribute="leading" id="QSf-OO-qH2"/>
+                                            <constraint firstAttribute="trailing" secondItem="o2t-1R-sZ9" secondAttribute="trailing" id="QY7-Yy-goL"/>
+                                            <constraint firstAttribute="bottom" secondItem="o2t-1R-sZ9" secondAttribute="bottom" id="S3j-Di-gCY"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="scheduleBarLabel" destination="o2t-1R-sZ9" id="YnG-RG-OyG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XRI-Bw-pqf" id="5qQ-Yx-i95"/>
+                                    <outlet property="delegate" destination="XRI-Bw-pqf" id="RNe-B0-yoG"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NbH-Ms-d39">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YXW-uo-imC">
+                                    <size key="itemSize" width="304" height="515"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="outerCollectionViewCellID" id="g9P-BI-lCC" customClass="ScheduleDataCollectionViewCell" customModule="Hackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="41" width="304" height="515"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="515"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2p3-Ep-e3h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="515"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <prototypes>
+                                                        <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleDataTableViewCellID" rowHeight="131" id="Pcp-RR-EyR" customClass="MainScheduleTableViewCell" customModule="Hackathon" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="28" width="304" height="131"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pcp-RR-EyR" id="bSX-Jh-zb4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="130.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdC-Ni-9AP">
+                                                                        <rect key="frame" x="81" y="60.5" width="10" height="10"/>
+                                                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.2956271701" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="10" id="H9u-qx-pJr"/>
+                                                                            <constraint firstAttribute="width" constant="10" id="bQM-x7-pWC"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XK-6S-4PA">
+                                                                        <rect key="frame" x="24" y="55" width="50" height="20.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="50" id="gEO-jE-fIe"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKe-QW-6dd">
+                                                                        <rect key="frame" x="86" y="0.0" width="1" height="130"/>
+                                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="1" id="5Or-wm-JD5"/>
+                                                                            <constraint firstAttribute="height" constant="130" id="avO-H2-2UI"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rb4-Rc-rgZ">
+                                                                        <rect key="frame" x="103" y="41" width="177" height="49.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-fG-cgw">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqa-Ou-Ov9">
+                                                                                <rect key="frame" x="0.0" y="32.5" width="177" height="17"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="YKe-QW-6dd" firstAttribute="leading" secondItem="4XK-6S-4PA" secondAttribute="trailing" constant="12" id="J4a-MX-W1e"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Rb4-Rc-rgZ" secondAttribute="trailing" constant="24" id="Rbd-Y6-NCQ"/>
+                                                                    <constraint firstItem="CdC-Ni-9AP" firstAttribute="centerY" secondItem="YKe-QW-6dd" secondAttribute="centerY" id="abP-SF-06C"/>
+                                                                    <constraint firstItem="YKe-QW-6dd" firstAttribute="centerY" secondItem="4XK-6S-4PA" secondAttribute="centerY" id="eNK-gT-Psk"/>
+                                                                    <constraint firstItem="Rb4-Rc-rgZ" firstAttribute="centerY" secondItem="CdC-Ni-9AP" secondAttribute="centerY" id="l8M-ZN-him"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="YKe-QW-6dd" secondAttribute="bottom" id="l8k-Y2-peY"/>
+                                                                    <constraint firstItem="CdC-Ni-9AP" firstAttribute="centerX" secondItem="YKe-QW-6dd" secondAttribute="centerX" id="oF2-cq-JWL"/>
+                                                                    <constraint firstItem="4XK-6S-4PA" firstAttribute="leading" secondItem="bSX-Jh-zb4" secondAttribute="leading" constant="24" id="vCB-IS-cfM"/>
+                                                                    <constraint firstItem="Rb4-Rc-rgZ" firstAttribute="leading" secondItem="CdC-Ni-9AP" secondAttribute="trailing" constant="12" id="wT4-Lq-eoM"/>
+                                                                    <constraint firstItem="YKe-QW-6dd" firstAttribute="top" secondItem="bSX-Jh-zb4" secondAttribute="top" id="xQp-yW-bb8"/>
+                                                                </constraints>
+                                                            </tableViewCellContentView>
+                                                            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <connections>
+                                                                <outlet property="scheduleDateLabel" destination="4XK-6S-4PA" id="jpD-p8-fhR"/>
+                                                                <outlet property="scheduleLocationLabel" destination="Vqa-Ou-Ov9" id="cEX-Ng-azH"/>
+                                                                <outlet property="scheduleTitleLabel" destination="HDk-fG-cgw" id="wBr-BW-cgl"/>
+                                                            </connections>
+                                                        </tableViewCell>
+                                                    </prototypes>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="D6i-pz-5tr" id="E4T-sG-UER"/>
+                                                        <outlet property="delegate" destination="D6i-pz-5tr" id="FLi-J9-hOo"/>
+                                                    </connections>
+                                                </tableView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2p3-Ep-e3h" secondAttribute="trailing" id="Cd8-XF-5BC"/>
+                                            <constraint firstItem="2p3-Ep-e3h" firstAttribute="top" secondItem="g9P-BI-lCC" secondAttribute="top" id="GMj-2k-Ktd"/>
+                                            <constraint firstItem="2p3-Ep-e3h" firstAttribute="leading" secondItem="g9P-BI-lCC" secondAttribute="leading" id="NUy-qT-Xv2"/>
+                                            <constraint firstAttribute="bottom" secondItem="2p3-Ep-e3h" secondAttribute="bottom" id="SXH-m5-jqO"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="scheduleTableView" destination="2p3-Ep-e3h" id="u3l-zW-EY9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XRI-Bw-pqf" id="pGy-mG-P2T"/>
+                                    <outlet property="delegate" destination="XRI-Bw-pqf" id="wI4-Ge-Ikc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iTs-vA-sWg" firstAttribute="trailing" secondItem="2s1-Ny-Dbf" secondAttribute="trailing" id="CiR-ZZ-x5y"/>
+                            <constraint firstItem="2s1-Ny-Dbf" firstAttribute="trailing" secondItem="NbH-Ms-d39" secondAttribute="trailing" id="J61-pc-Lqp"/>
+                            <constraint firstItem="iTs-vA-sWg" firstAttribute="top" secondItem="2s1-Ny-Dbf" secondAttribute="top" id="PQo-sc-aFa"/>
+                            <constraint firstItem="iTs-vA-sWg" firstAttribute="leading" secondItem="2s1-Ny-Dbf" secondAttribute="leading" id="Zk8-5P-QAO"/>
+                            <constraint firstItem="NbH-Ms-d39" firstAttribute="top" secondItem="iTs-vA-sWg" secondAttribute="bottom" id="cZP-NX-Rd9"/>
+                            <constraint firstItem="NbH-Ms-d39" firstAttribute="leading" secondItem="2s1-Ny-Dbf" secondAttribute="leading" id="p3o-62-yS9"/>
+                            <constraint firstItem="2s1-Ny-Dbf" firstAttribute="bottom" secondItem="NbH-Ms-d39" secondAttribute="bottom" id="xk0-mo-JVz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2s1-Ny-Dbf"/>
+                    </view>
+                    <connections>
+                        <outlet property="scheduleOuterCollectionView" destination="NbH-Ms-d39" id="zDl-ZT-bdK"/>
+                        <outlet property="segmentCollectionView" destination="iTs-vA-sWg" id="ufq-4l-m7L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LcE-et-7un" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3933.5999999999999" y="139.880059970015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ynL-96-1ZN">

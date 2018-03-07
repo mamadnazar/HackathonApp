@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+	# Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
 target 'Hackathon' do
@@ -12,7 +12,7 @@ target 'Hackathon' do
     pod 'SJSegmentedScrollView'
     pod 'Kingfisher'
     pod 'SVProgressHUD'
-	pod 'Firebase/Core'
-	pod 'Firebase/Messaging'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
 
 end

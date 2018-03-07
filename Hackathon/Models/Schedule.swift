@@ -33,7 +33,18 @@ struct Schedule {
         title = json["title"].stringValue
         description = json["description"].stringValue
         location = json["location"].stringValue
-        start_time = json["start_time"].stringValue
+        //start_time = json["start_time"].stringValue
+        let time = json["start_time"].stringValue
+
+        let start = String.Index(encodedOffset: 0)
+        let end = String.Index(encodedOffset: 16)
+        let newDate = String(time[start..<end])
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+        let date = dateFormatter.date(from: newDate)!
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.dateFormat = "HH:mm"
+        start_time = dateFormatter.string(from: date)
         end_time = json["end_time"].stringValue
         color_hex = json["color_hex"].stringValue
     }
