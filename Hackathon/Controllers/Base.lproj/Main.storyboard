@@ -368,6 +368,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1U-DN-dfl">
+                                <rect key="frame" x="30" y="323" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-F6-VgR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <constraints>
@@ -376,14 +382,19 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.93499228395061729" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1mF-MB-WcB" firstAttribute="trailing" secondItem="g1U-DN-dfl" secondAttribute="trailing" constant="30" id="Pd6-W9-C7u"/>
+                            <constraint firstItem="g1U-DN-dfl" firstAttribute="leading" secondItem="1mF-MB-WcB" secondAttribute="leading" constant="30" id="TQF-Xu-Ta1"/>
                             <constraint firstItem="Qgt-F6-VgR" firstAttribute="centerX" secondItem="IYk-2f-zxH" secondAttribute="centerX" id="Ui8-BK-fA9"/>
                             <constraint firstItem="Qgt-F6-VgR" firstAttribute="centerY" secondItem="IYk-2f-zxH" secondAttribute="centerY" id="r1X-X4-8cy"/>
+                            <constraint firstItem="g1U-DN-dfl" firstAttribute="centerX" secondItem="IYk-2f-zxH" secondAttribute="centerX" id="w4j-8b-yEH"/>
+                            <constraint firstItem="g1U-DN-dfl" firstAttribute="centerY" secondItem="IYk-2f-zxH" secondAttribute="centerY" id="ziA-r5-fV2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1mF-MB-WcB"/>
                     </view>
                     <connections>
+                        <outlet property="lblMessage" destination="g1U-DN-dfl" id="YUO-hd-RKJ"/>
                         <outlet property="qrFrame" destination="Qgt-F6-VgR" id="Xjd-Ga-KW8"/>
                     </connections>
                 </viewController>
@@ -1265,7 +1276,7 @@
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKe-QW-6dd">
                                                                         <rect key="frame" x="86" y="0.0" width="1" height="130"/>
-                                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="1" id="5Or-wm-JD5"/>
                                                                             <constraint firstAttribute="height" constant="130" id="avO-H2-2UI"/>

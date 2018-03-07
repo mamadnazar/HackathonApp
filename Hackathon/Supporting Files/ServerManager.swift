@@ -93,6 +93,13 @@ class ServerManager: HTTPRequestManager  {
 			completion()
 		}) { (error) in }
 	}
+	
+	func getVotingStatus(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
+		self.get(api: "vote/status", completion: { (json) in
+			completion()
+		}, error: error)
+	}
+	
     
 //    func getTeams(_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "participants/teams", completion: { (json) in

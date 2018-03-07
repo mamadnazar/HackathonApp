@@ -67,21 +67,26 @@ class HTTPRequestManager {
             case HttpStatusCode.ok.statusCode,
                  HttpStatusCode.accepted.statusCode,
                  HttpStatusCode.created.statusCode:
-                let json = try? JSON(data: response.data!)
-                if json!["error"].stringValue.isEmpty {
+				
+				guard let json = try? JSON(data: response.data!) else {
+					completion(JSON())
+					return
+				}
+				
+                if json["status"].stringValue.isEmpty {
                     completion( try! JSON(data: response.data!))
                     break;
                 }
-                error(json!["error"].stringValue)
+                error(json["status"].stringValue)
                 break
             default:
 				guard let json = try? JSON(data: response.data!) else {
 					error("Неизвестная ошибка")
 					return
 				}
-				if (json.isEmpty) {
+				if (!json.isEmpty) {
 					print(json)
-					let message = json["error"].stringValue
+					let message = json["status"].stringValue
 					if  message != ""
 					{
 						error(message)
