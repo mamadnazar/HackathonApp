@@ -86,8 +86,13 @@ class MainScheduleViewController: UIViewController, UICollectionViewDataSource, 
         if collectionView == segmentCollectionView {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scheduleBarCellID", for: indexPath) as! ScheduleBarCollectionViewCell
-            cell.scheduleBarLabel.text = scheduleTypes.array[indexPath.item].date
-           
+			
+			let shortDate = String(scheduleTypes.array[indexPath.item].date.prefix(5)) 
+				cell.scheduleBarLabel.text = shortDate
+				
+			
+			
+			
             let selectedIndexPath = NSIndexPath(item: 0, section: 0)
             collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: [])
             

@@ -19,8 +19,8 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 							  Constants.schedule,
 							  Constants.faq,
 							  Constants.rules,
-							  Constants.teams,
-							  Constants.voting,
+							  //Constants.teams,
+							  //Constants.voting,
 							  Constants.feedback,
 							  Constants.aboutApp]
 
@@ -28,8 +28,10 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 					   "LifehacksVC", "PartnersVC",
 					   "MentorsVC",
                        "ScheduleVC",
-					   "QuestionsVC", "RulesVC", "TeamsVC",
-					   "VotingVC", "FeedbackVC", "AboutAppVC"]
+					   "QuestionsVC", "RulesVC",
+					   //"TeamsVC",
+					   //"VotingVC",
+					   "FeedbackVC", "AboutAppVC"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
