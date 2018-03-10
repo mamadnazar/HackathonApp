@@ -21,6 +21,7 @@
 		33FBC3782053800D000B5937 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC3772053800D000B5937 /* TeamTableViewCell.swift */; };
 		33FBC37A20539492000B5937 /* TeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC37920539492000B5937 /* TeamMemberTableViewCell.swift */; };
 		33FBC37C205395B0000B5937 /* TeamDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC37B205395B0000B5937 /* TeamDetailedViewController.swift */; };
+		33FBC37E2053AC47000B5937 /* MentorDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC37D2053AC46000B5937 /* MentorDetailedViewController.swift */; };
 		84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */; };
 		84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */; };
 		84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DEF203ADCF800229ED8 /* Extensions.swift */; };
@@ -91,6 +92,7 @@
 		33FBC3772053800D000B5937 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		33FBC37920539492000B5937 /* TeamMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberTableViewCell.swift; sourceTree = "<group>"; };
 		33FBC37B205395B0000B5937 /* TeamDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailedViewController.swift; sourceTree = "<group>"; };
+		33FBC37D2053AC46000B5937 /* MentorDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDetailedViewController.swift; sourceTree = "<group>"; };
 		616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackathonViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				84D1D127203F481000A5FEB8 /* MentorsCollectionReusableView.swift */,
 				84D1D129203F481000A5FEB8 /* MentorsViewController.swift */,
 				CE06ECDD203F9D4000ACE8E0 /* AMentorViewController.swift */,
+				33FBC37D2053AC46000B5937 /* MentorDetailedViewController.swift */,
 			);
 			path = Mentors;
 			sourceTree = "<group>";
@@ -482,6 +485,9 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -615,6 +621,7 @@
 				842BA98520285CCE00F731D0 /* ViewController.swift in Sources */,
 				84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */,
 				FC8660DC2034487800827B40 /* LifehacksViewController.swift in Sources */,
+				33FBC37E2053AC47000B5937 /* MentorDetailedViewController.swift in Sources */,
 				84DBB0B620458F050047F4AE /* Mentor.swift in Sources */,
 				842E78A82047F53F004EABAD /* ScheduleType.swift in Sources */,
 				33EC56BC2045C8F2009C040E /* Style.swift in Sources */,

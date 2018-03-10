@@ -19,10 +19,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
 			print("fcm token: \(fcmToken)")
 			let model = NotificationModel(token: fcmToken)
 			ServerManager.shared.registerFirebaseToken(model: model, {
-				print("REFRESHED TOKEN")
+				print("REFRESHED TOKEN1")
 			})
-			
-		//}
 	}
 	
 
@@ -54,14 +52,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
 	}
 	
 	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-		if let refreshedToken = InstanceID.instanceID().token() {
-			print("InstanceID token: \(refreshedToken)")
-			let model = NotificationModel(token: refreshedToken)
-			ServerManager.shared.registerFirebaseToken(model: model, {
-				print("REFRESHED TOKEN")
-			})
-			
-		}
+//		if let refreshedToken = InstanceID.instanceID().token() {
+//			print("InstanceID token: \(refreshedToken)")
+//			let model = NotificationModel(token: refreshedToken)
+//			ServerManager.shared.registerFirebaseToken(model: model, {
+//				print("REFRESHED TOKEN2")
+//			})
+//			
+//		}
 	}
 	
 }

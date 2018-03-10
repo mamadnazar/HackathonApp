@@ -20,16 +20,15 @@ class NotificationModel {
 		self.name =  UIDevice.current.name
 		self.deviceID = UIDevice.current.identifierForVendor?.uuidString ?? ""
 		self.isActive = true
-		self.type = "iOS"
+		self.type = "ios"
 	}
 	
 	func toDic() -> [String: Any] {
-		var dic = [String:Any]()
-		dic.updateValue(self.name, forKey: "name")
-		dic.updateValue(self.registrationId, forKey: "registration_id")
-		dic.updateValue(self.deviceID, forKey: "device_id")
-		dic.updateValue(self.isActive, forKey: "active")
-		dic.updateValue(self.type, forKey: "type")
+		let dic = ["name" : name,
+				   "device_id": deviceID,
+				   "registration_id" : registrationId,
+				   "active": true,
+				   "type": "ios"] as [String : Any]
 		return dic
 	}
 }

@@ -89,7 +89,7 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
 	func registerFirebaseToken(model: NotificationModel, _ completion: @escaping ()-> Void) {
-		self.post(api: "fcm/devices", parameters: model.toDic(), completion: { (json) in
+		self.post(api: "fcm/devices/", parameters: model.toDic(), completion: { (json) in
 			completion()
 		}) { (error) in }
 	}
