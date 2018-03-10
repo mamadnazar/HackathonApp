@@ -19,19 +19,23 @@ class BackTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 							  Constants.schedule,
 							  Constants.faq,
 							  Constants.rules,
-							  //Constants.teams,
-							  //Constants.voting,
+							  Constants.teams,
+							  Constants.voting,
 							  Constants.feedback,
 							  Constants.aboutApp]
 
-    private let vcs = ["AboutHackathonVC", "NewsVC",
-					   "LifehacksVC", "PartnersVC",
+    private let vcs = ["AboutHackathonVC",
+					   "NewsVC",
+					   "LifehacksVC",
+					   "PartnersVC",
 					   "MentorsVC",
                        "ScheduleVC",
-					   "QuestionsVC", "RulesVC",
-					   //"TeamsVC",
-					   //"VotingVC",
-					   "FeedbackVC", "AboutAppVC"]
+					   "QuestionsVC",
+					   "RulesVC",
+					   "TeamsVC",
+					   "VotingVC",
+					   "FeedbackVC",
+					   "AboutAppVC"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,6 +18,9 @@
 		33EC56C92045E1D4009C040E /* SimpleFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */; };
 		33EC56CB2045E680009C040E /* DetailedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */; };
 		33EFD2F12046A393001C967F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFD2F02046A392001C967F /* Constants.swift */; };
+		33FBC3782053800D000B5937 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC3772053800D000B5937 /* TeamTableViewCell.swift */; };
+		33FBC37A20539492000B5937 /* TeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC37920539492000B5937 /* TeamMemberTableViewCell.swift */; };
+		33FBC37C205395B0000B5937 /* TeamDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC37B205395B0000B5937 /* TeamDetailedViewController.swift */; };
 		84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */; };
 		84059DEE203AD8D400229ED8 /* AboutHackathonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */; };
 		84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84059DEF203ADCF800229ED8 /* Extensions.swift */; };
@@ -85,6 +88,9 @@
 		33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFeedTableViewCell.xib; sourceTree = "<group>"; };
 		33EC56CA2045E680009C040E /* DetailedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailedInfoViewController.swift; path = Controllers/DetailedInfoViewController.swift; sourceTree = "<group>"; };
 		33EFD2F02046A392001C967F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		33FBC3772053800D000B5937 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		33FBC37920539492000B5937 /* TeamMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberTableViewCell.swift; sourceTree = "<group>"; };
+		33FBC37B205395B0000B5937 /* TeamDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailedViewController.swift; sourceTree = "<group>"; };
 		616ADBBB92E46D508AB8722F /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84059DE9203AD4B300229ED8 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		84059DED203AD8D400229ED8 /* AboutHackathonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHackathonViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 				33EC56C32045D5DD009C040E /* FeedTableViewCell.xib */,
 				33EC56C62045E1D4009C040E /* SimpleFeedTableViewCell.swift */,
 				33EC56C72045E1D4009C040E /* SimpleFeedTableViewCell.xib */,
+				33FBC3772053800D000B5937 /* TeamTableViewCell.swift */,
+				33FBC37920539492000B5937 /* TeamMemberTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -248,6 +256,7 @@
 			children = (
 				8419F9E2203D8DBF00342EDE /* Shared.swift */,
 				847A783E20445B270025A9D5 /* TeamListViewController.swift */,
+				33FBC37B205395B0000B5937 /* TeamDetailedViewController.swift */,
 			);
 			path = TeamList;
 			sourceTree = "<group>";
@@ -601,6 +610,7 @@
 				84DBB0B720458F050047F4AE /* MentorType.swift in Sources */,
 				843429AC20444BEA00F6E77A /* Rule.swift in Sources */,
 				84DBB0B520458F050047F4AE /* FAQ.swift in Sources */,
+				33FBC37A20539492000B5937 /* TeamMemberTableViewCell.swift in Sources */,
 				8488C206203D8B03007DA602 /* SponsorsCollectionViewCell.swift in Sources */,
 				842BA98520285CCE00F731D0 /* ViewController.swift in Sources */,
 				84059DEA203AD4B300229ED8 /* AboutAppViewController.swift in Sources */,
@@ -635,6 +645,8 @@
 				84559DB92049374800EA4256 /* Team.swift in Sources */,
 				84059DF0203ADCF800229ED8 /* Extensions.swift in Sources */,
 				84DBB0B820458F050047F4AE /* Lifehack.swift in Sources */,
+				33FBC3782053800D000B5937 /* TeamTableViewCell.swift in Sources */,
+				33FBC37C205395B0000B5937 /* TeamDetailedViewController.swift in Sources */,
 				842BA99E2028639F00F731D0 /* ServerManager.swift in Sources */,
 				847A783B204453ED0025A9D5 /* Feedback.swift in Sources */,
 				FC8660E3203451FE00827B40 /* FAQViewController.swift in Sources */,
