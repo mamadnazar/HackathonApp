@@ -19,7 +19,7 @@ class HTTPRequestManager {
     
     let url = "http://165.227.147.84/"
     
-    private func request(method: HTTPMethod, api: String, parameters: Parameter, header: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+    private func request(method: HTTPMethod, api: String, parameters: Parameter, header: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         
         if !isConnectedToNetwork() {
             error("Нет подключения к интернету")
@@ -28,8 +28,15 @@ class HTTPRequestManager {
         
         let APIaddress = "\(url)\(api)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         //print(APIaddress)
+        var head: HTTPHeaders = [:]
         
-        let head: HTTPHeaders = [:]
+        if header?.count == 1 {
+            head["QR"] = "\(header!["QR"] ?? "")"
+        }
+        else if header?.count == 2 {
+            head["QR"] = "\(header!["QR"] ?? "")"
+            head["IMEI"] = "\(header!["IMEI"] ?? "")"
+        }
         
  
         
@@ -106,18 +113,18 @@ class HTTPRequestManager {
     }
     
     
-    internal func post(api: String, parameters: Parameter, header: String = "", completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+    internal func post(api: String, parameters: Parameter, header: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         request(method: .post, api: api, parameters: parameters, header: header, completion: completion, error: error)
     }
-    internal func delete(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+    internal func delete(api: String, parameters: Parameter,header: Parameter,  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         request(method: .delete, api: api, parameters: parameters, header: header, completion: completion, error: error)
     }
     
-    internal func put(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+    internal func put(api: String, parameters: Parameter,header: Parameter,  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         request(method: .put, api: api, parameters: parameters, header: header, completion: completion, error: error)
     }
-    internal func get(api: String, header: String = "", completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .get, api: api, parameters: nil, header: header, completion: completion, error: error)
+    internal func get(api: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+        request(method: .get, api: api, parameters: nil, header: [:], completion: completion, error: error)
     }
     
     

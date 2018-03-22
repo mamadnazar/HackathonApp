@@ -70,7 +70,7 @@ class ServerManager: HTTPRequestManager  {
     }
     
     func addFeedbacks(feedback: Feedback,_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
-        self.post(api: "feedback/", parameters: feedback.getDict(), completion: { (json) in
+        self.post(api: "feedback/", parameters: feedback.getDict(), header: [:], completion: { (json) in
             completion()
         }) { (message) in
             print(message)
@@ -89,18 +89,29 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
 	func registerFirebaseToken(model: NotificationModel, _ completion: @escaping ()-> Void) {
-		self.post(api: "fcm/devices/", parameters: model.toDic(), completion: { (json) in
+        self.post(api: "fcm/devices/", parameters: model.toDic(), header: [:], completion: { (json) in
 			completion()
 		}) { (error) in }
 	}
 	
-	func getVotingStatus(_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
+	func getVotingStatus(_ completion: @escaping (String)-> Void, error: @escaping (String)-> Void) {
 		self.get(api: "vote/status", completion: { (json) in
-			completion()
+			completion(json["status"].stringValue)
 		}, error: error)
 	}
 	
-    
+    func checkQR(qr: String,_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
+        self.post(api: "vote/", parameters: [:], header: ["QR": qr, "IMEI": "31213213"], completion: { (json) in
+            let teams = Teams(json: json)
+            completion(teams) 
+        }, error: error)
+    }
+    func voteForTeam(qr: String, imei: String, teamId: Int,_ completion: @escaping (String)-> Void, error: @escaping (String)-> Void) {
+        self.post(api: "vote/", parameters: ["team": teamId], header: ["QR": qr, "IMEI": imei], completion: { (json) in
+            let status = json["status"].stringValue
+            completion(status)
+        }, error: error)
+    }
 //    func getTeams(_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
 //        self.get(api: "participants/teams", completion: { (json) in
 //            completion(Teams(json: json))
