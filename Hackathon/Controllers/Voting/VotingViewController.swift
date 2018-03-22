@@ -76,13 +76,14 @@ class VotingViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                     ServerManager.shared.checkQR(qr: object.stringValue!, { (teams) in
                         self.teams = teams
                         self.votingTableView.isHidden = false
-                        //print(teams.array[0])
+                        
+                        // mozhet byt' oshibka s zakritiem session and video
+                        self.session.stopRunning()
+                        self.video.isHidden = true
+                        self.dismiss(animated: true, completion: nil)
                     }, error: { (message) in
                         //self.showErrorAlert(message: message)
-                        
-                        self.session.stopRunning()
-                self.video.isHidden = true
-                        self.dismiss(animated: true, completion: nil)
+                        self.lblMessage.text = message
                         
                     })
 				}
@@ -115,9 +116,11 @@ extension VotingViewController: UITableViewDelegate, UITableViewDataSource {
             ServerManager.shared.voteForTeam(qr: self.qrc!, imei: imei, teamId: self.selectedTeamID!, { (message) in
                 let alert = UIAlertController(title: "Вы успешно проголосовали", message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                //votingTableView.isHidden = true
-                //self.lblMessage.text = "You already voted"
-            }, error: self.showErrorAlert)
+                self.votingTableView.isHidden = true
+            }, error: { (message) in
+                self.votingTableView.isHidden = true
+                self.lblMessage.text = message
+            })
         }
         let cancel = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
         alert.addAction(sureAction)

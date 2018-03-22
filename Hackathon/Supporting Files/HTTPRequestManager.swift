@@ -123,8 +123,8 @@ class HTTPRequestManager {
     internal func put(api: String, parameters: Parameter,header: Parameter,  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         request(method: .put, api: api, parameters: parameters, header: header, completion: completion, error: error)
     }
-    internal func get(api: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .get, api: api, parameters: nil, header: [:], completion: completion, error: error)
+    internal func get(api: String, header: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+        request(method: .get, api: api, parameters: nil, header: header, completion: completion, error: error)
     }
     
     

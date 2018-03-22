@@ -20,13 +20,13 @@ class ServerManager: HTTPRequestManager  {
     }
     
     func getAboutHacks(_ completion: @escaping (AboutHacks)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/about", completion: { (json) in
+        self.get(api: "info/about", header: [:], completion: { (json) in
             completion(AboutHacks(json: json))
         }, error: error)
     }
     
     func getSponsors(_ completion: @escaping (SponsorTypes)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/companies", completion: { (json) in
+        self.get(api: "info/companies", header: [:], completion: { (json) in
             completion(SponsorTypes(json: json))
         }, error: error)
     }
@@ -34,37 +34,37 @@ class ServerManager: HTTPRequestManager  {
     
   
     func getMentors(_ completion: @escaping (MentorTypes)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/people", completion: { (json) in
+        self.get(api: "info/people", header: [:], completion: { (json) in
             completion(MentorTypes(json: json))
         }, error: error)
     }
     
     func getMentorByID(mentorID: Int,_ completion: @escaping (Mentor)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/people/\(mentorID)", completion: { (json) in
+        self.get(api: "info/people/\(mentorID)", header: [:], completion: { (json) in
             completion(Mentor(json: json))
         }, error: error)
     }
     
     func getFAQs(_ completion: @escaping (FAQs)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/faq", completion: { (json) in
+        self.get(api: "info/faq", header: [:], completion: { (json) in
             completion(FAQs(json: json))
         }, error: error)
     }
     
     func getNewses(_ completion: @escaping (Newses)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "updates/news", completion: { (json) in
+        self.get(api: "updates/news", header: [:], completion: { (json) in
             completion(Newses(json: json["results"]))
         }, error: error)
     }
     
     func getLifehacks(_ completion: @escaping (Lifehacks)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/lifehacks", completion: { (json) in
+        self.get(api: "info/lifehacks", header: [:], completion: { (json) in
             completion(Lifehacks(json: json))
         }, error: error)
     }
     
     func getRules(_ completion: @escaping (Rules)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "info/rules", completion: { (json) in
+        self.get(api: "info/rules", header: [:], completion: { (json) in
             completion(Rules(json: json))
         }, error: error)
     }
@@ -78,13 +78,13 @@ class ServerManager: HTTPRequestManager  {
     }
     
     func getScheduleTypes(_ completion: @escaping (ScheduleTypes)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "updates/getSchedule", completion: { (json) in
+        self.get(api: "updates/getSchedule", header: [:], completion: { (json) in
             completion(ScheduleTypes(json: json))
         }, error: error)
     }
             
     func getTeams(_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
-        self.get(api: "participants/teams/", completion: { (json) in
+        self.get(api: "participants/teams/", header: [:], completion: { (json) in
             completion(Teams(json: json))
         }, error: error)
     }
@@ -95,17 +95,26 @@ class ServerManager: HTTPRequestManager  {
 	}
 	
 	func getVotingStatus(_ completion: @escaping (String)-> Void, error: @escaping (String)-> Void) {
-		self.get(api: "vote/status", completion: { (json) in
+        self.get(api: "vote/status", header: [:],completion: { (json) in
 			completion(json["status"].stringValue)
 		}, error: error)
 	}
 	
-    func checkQR(qr: String,_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
-        self.post(api: "vote/", parameters: [:], header: ["QR": qr, "IMEI": "31213213"], completion: { (json) in
+    func checkQR(qr: String, _ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "vote/", header: ["QR": qr], completion: { (json) in
             let teams = Teams(json: json)
-            completion(teams) 
+            completion(teams)
         }, error: error)
     }
+    
+//
+//    func checkQRa(qr: String,_ completion: @escaping (Teams)-> Void, error: @escaping (String)-> Void) {
+//        self.post(api: "vote/", parameters: [:], header: ["QR": qr, "IMEI": "31213213"], completion: { (json) in
+//                let teams = Teams(json: json)
+//            completion(teams)
+//        }, error: error)
+//    }
+    
     func voteForTeam(qr: String, imei: String, teamId: Int,_ completion: @escaping (String)-> Void, error: @escaping (String)-> Void) {
         self.post(api: "vote/", parameters: ["team": teamId], header: ["QR": qr, "IMEI": imei], completion: { (json) in
             let status = json["status"].stringValue
