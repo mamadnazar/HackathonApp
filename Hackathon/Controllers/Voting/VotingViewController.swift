@@ -66,31 +66,56 @@ class VotingViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 		session.startRunning()
 
 	}
-	
-	func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-		if metadataObjects != nil && metadataObjects.count != 0 {
-			if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
-				if object.type == AVMetadataObject.ObjectType.qr {
-                    print(object.stringValue)
-                    qrc = object.stringValue
-                    ServerManager.shared.checkQR(qr: object.stringValue!, { (teams) in
-                        self.teams = teams
-                        self.votingTableView.isHidden = false
-                        
-                        // mozhet byt' oshibka s zakritiem session and video
-                        self.session.stopRunning()
-                        self.video.isHidden = true
-                        self.dismiss(animated: true, completion: nil)
-                    }, error: { (message) in
-                        //self.showErrorAlert(message: message)
-                        self.lblMessage.text = message
-                        
-                    })
-				}
-			}
+	func checkQrCode(code: String?) {
+		guard let code = code else {
+			return
 		}
-        
+		qrc = code
+		ServerManager.shared.checkQR(qr: code, showTeams, error: showErrorMessage)
+	}
+	
+	func showErrorMessage(message: String) {
+		 self.lblMessage.text = message
+	}
+	
+	func showTeams(teams: Teams) {
+		self.teams = teams
+		votingTableView.isHidden = false
+		votingTableView.reloadData()
+		session.stopRunning()
+		video.removeFromSuperlayer()
+		
+	}
+	func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+		guard !metadataObjects.isEmpty else {
+			return
+		}
+		guard let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else {
+			return
+		}
+		guard object.type == AVMetadataObject.ObjectType.qr else {
+			return
+		}
+		if self.qrc == object.stringValue {
+			return
+		}
+		self.checkQrCode(code: object.stringValue)
+		
     }
+	func voteForTeam(id: Int) {
+		let imei = UIDevice.current.identifierForVendor!.uuidString
+		
+		print("UUID: \(imei)")
+		ServerManager.shared.voteForTeam(qr: qrc!, imei: imei, teamId: id, { (message) in
+			self.alert(message: "Вы успешно проголосовали")
+			self.lblMessage.text = message
+			self.votingTableView.isHidden = true
+		}, error: { (message) in
+			self.votingTableView.isHidden = true
+			self.lblMessage.text = message
+		})
+	}
+	
     
 }
 extension VotingViewController: UITableViewDelegate, UITableViewDataSource {
@@ -107,24 +132,10 @@ extension VotingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.projectNameLabel.text = teams.array[indexPath.row].project_name
         return cell
     }
+	
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedTeamID = teams.array[indexPath.row].id
-        let alert = UIAlertController(title: "Вы действительно хотите проголосовать за выбранную команду?", message: "", preferredStyle: .alert)
-        let sureAction = UIAlertAction(title: "Да", style: .default) { (action) in
-            let imei = UIDevice.current.identifierForVendor!.uuidString
-            print("UUID: \(imei)")
-            ServerManager.shared.voteForTeam(qr: self.qrc!, imei: imei, teamId: self.selectedTeamID!, { (message) in
-                let alert = UIAlertController(title: "Вы успешно проголосовали", message: "", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.votingTableView.isHidden = true
-            }, error: { (message) in
-                self.votingTableView.isHidden = true
-                self.lblMessage.text = message
-            })
-        }
-        let cancel = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
-        alert.addAction(sureAction)
-        alert.addAction(cancel)
-        self.present(alert, animated: true, completion: nil)
+		self.alert(message: "Вы действительно хотите проголосовать за выбранную команду?", {
+			self.voteForTeam(id: self.teams.array[indexPath.row].id!)
+		}) {}
     }
 }
