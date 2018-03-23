@@ -19,6 +19,13 @@ class DataManager {
         }
         return Static.instance
     }
+	
+	func isVoted() -> Bool {
+		return UserDefaults.standard.bool(forKey: "isVoted")
+	}
+	func setVote() {
+		 UserDefaults.standard.set(true, forKey: "isVoted")
+	}
     
     
 }

@@ -24,16 +24,17 @@ class VotingViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBar()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.title = "Голосование"
+		if DataManager.shared.isVoted() {
+			self.lblMessage.text = "Вы уже голосовали"
+			return
+		}
         ServerManager.shared.getVotingStatus({ (status) in
             self.showCamera()
-
-            //self.showErrorAlert(message: message)
         }) { (message) in
             self.lblMessage.text = message
 
@@ -105,12 +106,12 @@ class VotingViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 	func voteForTeam(id: Int) {
 		let imei = UIDevice.current.identifierForVendor!.uuidString
 		
-		print("UUID: \(imei)")
 		ServerManager.shared.voteForTeam(qr: qrc!, imei: imei, teamId: id, { (message) in
-			self.alert(message: "Вы успешно проголосовали")
+			DataManager.shared.setVote()
 			self.lblMessage.text = message
 			self.votingTableView.isHidden = true
 		}, error: { (message) in
+			DataManager.shared.setVote()
 			self.votingTableView.isHidden = true
 			self.lblMessage.text = message
 		})

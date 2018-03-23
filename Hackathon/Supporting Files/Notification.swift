@@ -52,14 +52,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
 	}
 	
 	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//		if let refreshedToken = InstanceID.instanceID().token() {
-//			print("InstanceID token: \(refreshedToken)")
-//			let model = NotificationModel(token: refreshedToken)
-//			ServerManager.shared.registerFirebaseToken(model: model, {
-//				print("REFRESHED TOKEN2")
-//			})
-//			
-//		}
+		if let refreshedToken = InstanceID.instanceID().token() {
+			print("InstanceID token: \(refreshedToken)")
+			let model = NotificationModel(token: refreshedToken)
+			ServerManager.shared.registerFirebaseToken(model: model, {
+				print("REFRESHED TOKEN2")
+			})
+			
+		}
 	}
 	
 }
