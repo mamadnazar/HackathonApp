@@ -96,3 +96,24 @@ extension String {
     }
 }
 
+class Alert {
+    static let shared = Alert()
+    var tintColor: UIColor?
+    
+    func showCustomAlertIn(vc:UIViewController, withTitle title: String, message: String, actions:[UIAlertAction])  {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.view.tintColor = tintColor ?? .black
+        for action in actions {
+            alertController.addAction(action)
+        }
+        vc.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showSimpleAlertIn(vc:UIViewController, withTitle title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        alertController.addAction(okAction)
+        vc.present(alertController, animated: true, completion: nil)
+    }
+}
+

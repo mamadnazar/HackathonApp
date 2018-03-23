@@ -16,6 +16,7 @@ struct Mentor {
     var work_area: String
     var image_url: String
     var description: String
+    var contacts: Contacts
     
     init() {
         id = 0
@@ -24,6 +25,7 @@ struct Mentor {
         work_area = ""
         image_url = ""
         description = ""
+        contacts = Contacts.init()
     }
     
     init (json: JSON) {
@@ -33,6 +35,7 @@ struct Mentor {
         work_area = json["work_area"].stringValue
         image_url = json["image_url"].stringValue
         description = json["description"].stringValue
+        contacts = Contacts.init(json: json["contacts"])
     }
 }
 
@@ -46,6 +49,38 @@ struct Mentors {
         let jsonArray: [JSON] = json.arrayValue
         for i in jsonArray {
             let temp = Mentor(json: i)
+            array.append(temp)
+        }
+    }
+}
+
+struct Contact {
+    var id: Int
+    var type: String
+    var value: String
+    
+    init() {
+        id = 0
+        type = ""
+        value = ""
+    }
+    
+    init(json: JSON) {
+        id = json["id"].intValue
+        type = json["type"].stringValue
+        value = json["value"].stringValue
+    }
+}
+struct Contacts {
+    var array: Array = Array<Contact>()
+    
+    init() {
+    }
+    
+    init(json: JSON) {
+        let jsonArray: [JSON] = json.arrayValue
+        for i in jsonArray {
+            let temp = Contact(json: i)
             array.append(temp)
         }
     }

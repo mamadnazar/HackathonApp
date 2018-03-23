@@ -65,12 +65,13 @@ class MentorsViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "aMentorVC") as! AMentorViewController
-        vc.mentor_name = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
-        vc.mentor_workarea = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_area + " " + mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
-        vc.mentor_image = mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url
+        let vc = storyboard.instantiateViewController(withIdentifier: "mentorVC") as! MentorDetailedViewController
+        vc.mentorId = mentorTypes.array[indexPath.section].items.array[indexPath.row].id
+//        vc.mentor_name = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
+//        vc.mentor_workarea = mentorTypes.array[indexPath.section].items.array[indexPath.item].work_area + " " + mentorTypes.array[indexPath.section].items.array[indexPath.item].work_place
+//        vc.mentor_image = mentorTypes.array[indexPath.section].items.array[indexPath.item].image_url
         //vc.mentor_description = mentorTypes.array[indexPath.section].items.array[indexPath.item].full_name
-        vc.mentorID = mentorTypes.array[indexPath.section].items.array[indexPath.item].id
+//        vc.mentorID = mentorTypes.array[indexPath.section].items.array[indexPath.item].id
         self.navigationController?.show(vc, sender: self)
     }
     

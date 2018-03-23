@@ -31,8 +31,6 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
     
-    
-  
     func getMentors(_ completion: @escaping (MentorTypes)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "info/people", header: [:], completion: { (json) in
             completion(MentorTypes(json: json))
